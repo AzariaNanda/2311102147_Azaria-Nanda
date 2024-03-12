@@ -8,7 +8,7 @@ Tipe data adalah klasifikasi nilai suatu variabel yang membantu operasi komputer
 1. Tipe Data Primitif<br/>
 Tipe data primitif adalah tipe data dasar yang tersedia secara langsung pada suatu bahasa pemrograman. Sebagai contoh, tipe data integer dan char merupakan beberapa contoh dari tipe data primitive tersebut.
 
-2. Tipe Data Abstract<br/>
+2. Tipe Data Abstrak<br/>
 Tipe data abstrak merupakan suatu konsep dalam pemrograman yang menyediakan representasi data dan operasi terkait tanpa harus mengungkapkan detail implementasinya. Konsep ini bertujuan untuk meningkatkan tingkat abstraksi dan modularitas dalam pengembangan perangkat lunak. Contoh dari tipe data abstrak meliputi tumpukan (stack), antrian (queue), dan daftar (list).
 
 3. Tipe Data Koleksi<br/>
