@@ -13,11 +13,11 @@ Tipe data abstrak merupakan suatu konsep dalam pemrograman yang menyediakan repr
 
 3. Tipe Data Koleksi<br/>
 Tipe data koleksi adalah jenis data dalam pemrograman yang memungkinkan penyimpanan dan pengolahan sekumpulan data, seperti array. Hal ini memungkinkan pengelompokan data untuk pengolahan yang lebih efisien. Contoh data koleksi:
-    - Array (struktur data yang menyimpan sekumpulan
+- Array (struktur data yang menyimpan sekumpulan
  nilai yang memiliki tipe data yang sama)
-    - Vector (sama seperti array. Tetapi bisa berubah ukuran dan memori secara dinamis,
+- Vector (sama seperti array. Tetapi bisa berubah ukuran dan memori secara dinamis,
  cocok untuk himpunan nilai yang fleksibel)
-    - Map (Tipe data map memetakan kunci ke nilai, 
+- Map (Tipe data map memetakan kunci ke nilai, 
 memudahkan penyimpanan dan akses data dengan cepat)
     
 ## Guided 
@@ -347,5 +347,5 @@ Tipe data C++ pada program diatas berfungsi untuk membantu programmer dalam meng
 
 ## Referensi
 [1] Meidyan Permata Putri, et al., Algoritma dan Struktur Data. Bandung: Widina Bhakti Persada Bandung, 2022.<br/>
-[2] MPutra, Muhammad Taufik D., et al. BELAJAR DASAR PEMROGRAMAN DENGAN C++. Edited by Damayanti, Evi, CV WIDINA MEDIA UTAMA, 2022
+[2] MPutra, Muhammad Taufik D., et al. BELAJAR DASAR PEMROGRAMAN DENGAN C++.Bandung: Edited by Damayanti, Evi, CV WIDINA MEDIA UTAMA, 2022
 
