@@ -282,7 +282,45 @@ int main() {
 }
 ```
 #### Output:
-![2311102147_Azaria Nanda unguided1](Unguided2.png)
+![2311102147_Azaria Nanda unguided2](Unguided2.png)
+
+Kode di atas menggunakan struktur data dan class dalam C++ untuk merepresentasikan sebuah rumah kos dengan kemampuan menambahkan kamar dan menampilkan daftar kamar. Ini dilakukan dengan menggunakan struct Kamar untuk mewakili nomor dan lantai kamar, serta class RumahKos untuk mewakili rumah kos dengan menggunakan vektor kamar. Metode tambahKamar digunakan untuk menambahkan kamar baru, sementara tampilkanKamar menampilkan daftar kamar yang telah ditambahkan. Fungsi main membuat objek kosan, menambahkan beberapa kamar, dan menampilkan daftar kamar tersebut. Keseluruhan, program ini menunjukkan penggunaan struktur data dan class dalam mengelola data di program C++.
+
+Kesimpulan Tipe Data Primitif:<br/>
+-Fungsi dari Class:
+Class adalah sebuah konsep dalam pemrograman berorientasi objek (OOP) yang berguna untuk mengumpulkan data dan operasi-operasi terkait ke dalam satu kesatuan. Ini memungkinkan pembuatan objek dengan ciri-ciri khusus (data) dan tindakan-tindakan yang dapat dilakukan oleh objek tersebut (metode). 
+
+-Fungsi dari Struct:
+Struct, yang juga dikenal sebagai struktur data, ini digunakan ketika kita ingin mengelompokkan beberapa jenis data yang berbeda menjadi satu entitas atau untuk membuat representasi dari sebuah data yang terstruktur. Dengan menggunakan struct, kita dapat membuat jenis data baru yang terdiri dari berbagai jenis data yang berbeda.
+
+// Sinta Sarwo - 2311102132
+
+#include <iostream>
+#include <map> // Library untuk menggunakan fungsi map dalam int main
+
+using namespace std;
+
+int main() {
+    
+    // Deklarasi map dengan key int dan value string
+    map<int, string> book_2132;
+  
+    // Elemen-elemen ke dalam map
+    book_2132[1] = "Book of Life";
+    book_2132[2] = "The Ugly Ducklings";
+    book_2132[3] = "Little Red Riding Hood";
+    book_2132[4] = "Snow White";
+    book_2132[5] = "Cinderella";
+    book_2132[6] = "The Gingerbread Man";
+    book_2132[7] = "Rapunzel";
+
+    cout << " 2132 Library Book 2132 " << endl;
+    for (int i = 1; i <= book_2132.size(); ++i) { // Looping untuk menampilkan semua elemen pada amap
+        cout << "No." << i << " " << book_2132[i] << endl; // Menampilkan elemen map
+    }
+
+    return 0;
+}
 
 ## Referensi
 [1] I. Holm, Narrator, and J. Fullerton-Smith, Producer, How to Build a Human [DVD]. London: BBC; 2002.
