@@ -234,7 +234,7 @@ int main() {
 
 Kode di atas digunakan untuk menghitung nilai rata-rata siswa dan menentukan apakah siswa tersebut naik kelas. Pengguna diminta untuk memasukkan nilai sesuai jumlah siswa melalui fungsi inputNilai. Nilainya disimpan dalam array. Fungsi hitungRataRata menghitung rata-rata nilai, dan kenaikanKelas menentukan apakah siswa naik kelas dengan melihat rata-rata. Fungsi main mengatur eksekusi, meminta input, menampilkan status kenaikan kelas, dan daftar siswa yang tidak naik kelas. Pengguna dapat mengulang program sesuai keinginan. Program ini memberikan informasi jelas dan interaktif tentang kenaikan kelas berdasarkan nilai rata-rata siswa.
 
-## Kesimpulan Tipe Data Primitif:<br/>
+Kesimpulan Tipe Data Primitif:<br/>
 Tipe data primitif adalah tipe data yang telah ditetapkan oleh sistem dan tersedia dalam berbagai bahasa pemrograman. Ini berfungsi sebagai dasar untuk menyimpan nilai-nilai sederhana, memberikan fondasi penting dalam penyimpanan informasi dalam program.
 
 ### 2. Jelaskan fungsi dari class dan struct secara detail dan berikan contoh programnya!
