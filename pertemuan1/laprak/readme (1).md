@@ -287,11 +287,11 @@ int main() {
 Kode di atas menggunakan struktur data dan class dalam C++ untuk merepresentasikan sebuah rumah kos dengan kemampuan menambahkan kamar dan menampilkan daftar kamar. Ini dilakukan dengan menggunakan struct Kamar untuk mewakili nomor dan lantai kamar, serta class (Rumah Kos) untuk mewakili rumah kos dengan menggunakan vektor kamar. Metode (tambah Kamar) digunakan untuk menambahkan kamar baru, sementara (tampilkan Kamar) menampilkan daftar kamar yang telah ditambahkan. Fungsi main membuat objek kosan, menambahkan beberapa kamar, dan menampilkan daftar kamar tersebut. Keseluruhan, program ini menunjukkan penggunaan struktur data dan class dalam mengelola data di program C++.
 
 
-Fungsi dari Class:<br/>
+a. Fungsi dari Class:<br/>
     -Class adalah sebuah konsep dalam pemrograman berorientasi objek (OOP) yang berguna untuk mengumpulkan data dan operasi-operasi terkait ke dalam satu kesatuan. Ini memungkinkan pembuatan objek dengan ciri-ciri khusus (data) dan tindakan-tindakan yang dapat dilakukan oleh objek tersebut (metode). 
 
-Fungsi dari Struct:<br/>
-    -Struct, yang juga dikenal sebagai struktur data, ini digunakan ketika kita ingin mengelompokkan beberapa jenis data yang berbeda menjadi satu entitas atau untuk membuat representasi dari sebuah data yang terstruktur. Dengan menggunakan struct, kita dapat membuat jenis data baru yang terdiri dari berbagai jenis data yang berbeda.
+b. Fungsi dari Struct:<br/>
+-Struct, yang juga dikenal sebagai struktur data, ini digunakan ketika kita ingin mengelompokkan beberapa jenis data yang berbeda    menjadi satu entitas atau untuk membuat representasi dari sebuah data yang terstruktur. Dengan menggunakan struct, kita dapat membuat jenis data baru yang terdiri dari berbagai jenis data yang berbeda.
 
 
 
