@@ -299,9 +299,6 @@ Struct, yang juga dikenal sebagai struktur data, ini digunakan ketika kita ingin
 ### 3. Buat dan jelaskan program menggunakan fungsi map dan jelaskan perbedaan dari array dengan map!
 ```C++
 #include <iostream>
-#include <map> // Library untuk menggunakan fungsi map dalam int main
-
-#include <iostream>
 #include <map>
 #include <string>
 using namespace std;
@@ -309,20 +306,20 @@ using namespace std;
 int main() {
     
     // Deklarasi map dengan key int dan value string
-    map<int, string> japan_cartoon;
+    map<int, string> kartun_jepang;
   
     // Memasukkan elemen-elemen ke dalam map
-    japan_cartoon[1] = "Shinchan";
-    japan_cartoon[2] = "Doraemon";
-    japan_cartoon[3] = "Nobita";
-    japan_cartoon[4] = "Suneo";
-    japan_cartoon[5] = "Himawari";
-    japan_cartoon[6] = "Kazama";
-    japan_cartoon[7] = "Gian";
+    kartun_jepang[1] = "Shinchan";
+    kartun_jepang[2] = "Doraemon";
+    kartun_jepang[3] = "Spy x Family";
+    kartun_jepang[4] = "Suzume";
+    kartun_jepang[5] = "From up on puppy hill";
+    kartun_jepang[6] = "Detective Conan";
+    kartun_jepang[7] = "Onepiece";
 
-    cout << " Japanese Cartoon Characters " << endl;
-    for (int i = 1; i <= japan_cartoon.size(); ++i) { // Looping untuk menampilkan semua elemen pada map
-        cout << "No." << i << ": " << japan_cartoon[i] << endl; // Menampilkan elemen map
+    cout << " Pilihan Kartun Jepang " << endl;
+    for (int i = 1; i <= kartun_jepang.size(); ++i) { // Looping untuk menampilkan semua elemen pada map
+        cout << "No." << i << ": " << kartun_jepang[i] << endl; // Menampilkan elemen map
     }
 
     return 0;
