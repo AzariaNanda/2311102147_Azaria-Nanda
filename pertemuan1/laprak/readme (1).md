@@ -288,39 +288,44 @@ Kode di atas menggunakan struktur data dan class dalam C++ untuk merepresentasik
 
 
 a. Fungsi dari Class:<br/>
-    -Class adalah sebuah konsep dalam pemrograman berorientasi objek (OOP) yang berguna untuk mengumpulkan data dan operasi-operasi terkait ke dalam satu kesatuan. Ini memungkinkan pembuatan objek dengan ciri-ciri khusus (data) dan tindakan-tindakan yang dapat dilakukan oleh objek tersebut (metode). 
+Class adalah sebuah konsep dalam pemrograman berorientasi objek (OOP) yang berguna untuk mengumpulkan data dan operasi-operasi terkait ke dalam satu kesatuan. Ini memungkinkan pembuatan objek dengan ciri-ciri khusus (data) dan tindakan-tindakan yang dapat dilakukan oleh objek tersebut (metode). 
 
 b. Fungsi dari Struct:<br/>
--Struct, yang juga dikenal sebagai struktur data, ini digunakan ketika kita ingin mengelompokkan beberapa jenis data yang berbeda    menjadi satu entitas atau untuk membuat representasi dari sebuah data yang terstruktur. Dengan menggunakan struct, kita dapat membuat jenis data baru yang terdiri dari berbagai jenis data yang berbeda.
+Struct, yang juga dikenal sebagai struktur data, ini digunakan ketika kita ingin mengelompokkan beberapa jenis data yang berbeda    menjadi satu entitas atau untuk membuat representasi dari sebuah data yang terstruktur. Dengan menggunakan struct, kita dapat membuat jenis data baru yang terdiri dari berbagai jenis data yang berbeda.
 
-
-
+### ### 3. Buat dan jelaskan program menggunakan fungsi map dan jelaskan perbedaan dari array dengan map!
+```C++
 #include <iostream>
 #include <map> // Library untuk menggunakan fungsi map dalam int main
 
+#include <iostream>
+#include <map>
+#include <string>
 using namespace std;
 
 int main() {
     
     // Deklarasi map dengan key int dan value string
-    map<int, string> book_2132;
+    map<int, string> japan_cartoon;
   
-    // Elemen-elemen ke dalam map
-    book_2132[1] = "Book of Life";
-    book_2132[2] = "The Ugly Ducklings";
-    book_2132[3] = "Little Red Riding Hood";
-    book_2132[4] = "Snow White";
-    book_2132[5] = "Cinderella";
-    book_2132[6] = "The Gingerbread Man";
-    book_2132[7] = "Rapunzel";
+    // Memasukkan elemen-elemen ke dalam map
+    japan_cartoon[1] = "Shinchan";
+    japan_cartoon[2] = "Doraemon";
+    japan_cartoon[3] = "Nobita";
+    japan_cartoon[4] = "Suneo";
+    japan_cartoon[5] = "Himawari";
+    japan_cartoon[6] = "Kazama";
+    japan_cartoon[7] = "Gian";
 
-    cout << " 2132 Library Book 2132 " << endl;
-    for (int i = 1; i <= book_2132.size(); ++i) { // Looping untuk menampilkan semua elemen pada amap
-        cout << "No." << i << " " << book_2132[i] << endl; // Menampilkan elemen map
+    cout << " Japanese Cartoon Characters " << endl;
+    for (int i = 1; i <= japan_cartoon.size(); ++i) { // Looping untuk menampilkan semua elemen pada map
+        cout << "No." << i << ": " << japan_cartoon[i] << endl; // Menampilkan elemen map
     }
 
     return 0;
 }
+```
+#### Output:
 
 ## Referensi
 [1] I. Holm, Narrator, and J. Fullerton-Smith, Producer, How to Build a Human [DVD]. London: BBC; 2002.
