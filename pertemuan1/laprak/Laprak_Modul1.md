@@ -296,6 +296,9 @@ Class adalah  menentukan jenis variabel yang akan digunakan untuk menyimpan obje
 b. Fungsi dari Struct:<br/>
 Struct, yang juga dikenal sebagai struktur data, ini digunakan ketika kita ingin mengelompokkan beberapa jenis data yang berbeda    menjadi satu entitas atau untuk membuat representasi dari sebuah data yang terstruktur. Dengan menggunakan struct, kita dapat membuat jenis data baru yang terdiri dari berbagai jenis data yang berbeda.
 
+Data struktur, atau Struct dalam pemrograman C++, adalah sekumpulan data yang dikelompokkan ke dalam sebuah “tabel” yang memiliki elemen-elemenyang saling terkait.Struct digunakan apabila data yang ingin dikelompokkan memiliki tipe data yang berbeda atau membuat struktur dari suatu record.
+
+
 ### 3. Buat dan jelaskan program menggunakan fungsi map dan jelaskan perbedaan dari array dengan map!
 ```C++
 #include <iostream>
@@ -346,3 +349,5 @@ Tipe data C++ pada program diatas berfungsi untuk membantu programmer dalam meng
 
 ## Referensi
 [1] Meidyan Permata Putri, et al., Algoritma dan Struktur Data. Bandung: Widina Bhakti Persada Bandung, 2022.<br/>
+[2] MPutra, Muhammad Taufik D., et al. BELAJAR DASAR PEMROGRAMAN DENGAN C++. Edited by Damayanti, Evi, CV WIDINA MEDIA UTAMA, 2022
+
