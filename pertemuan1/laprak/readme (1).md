@@ -232,14 +232,10 @@ int main() {
 #### Output:
 ![2311102147_Azaria Nanda unguided1](Unguided1.png)
 
-Kode di atas digunakan untuk mencetak teks "ini adalah file code guided praktikan" ke layar menggunakan function cout untuk mengeksekusi nya.
+Kode di atas digunakan untuk menghitung nilai rata-rata siswa dan menentukan apakah siswa tersebut naik kelas. Pengguna diminta untuk memasukkan nilai sesuai jumlah siswa melalui fungsi inputNilai. Nilainya disimpan dalam array. Fungsi hitungRataRata menghitung rata-rata nilai, dan kenaikanKelas menentukan apakah siswa naik kelas dengan melihat rata-rata. Fungsi main mengatur eksekusi, meminta input, menampilkan status kenaikan kelas, dan daftar siswa yang tidak naik kelas. Pengguna dapat mengulang program sesuai keinginan. Program ini memberikan informasi jelas dan interaktif tentang kenaikan kelas berdasarkan nilai rata-rata siswa.
 
-#### Full code Screenshot:
-![240309_10h21m35s_screenshot](https://github.com/suxeno/Struktur-Data-Assignment/assets/111122086/41e9641c-ad4e-4e50-9ca4-a0215e336b04)
-
-
-## Kesimpulan
-Ringkasan dan interpretasi pandangan kalia dari hasil praktikum dan pembelajaran yang didapat[1].
+## Kesimpulan Tipe Data Primitif:<br/>
+Tipe data primitif adalah tipe data yang telah ditetapkan oleh sistem dan tersedia dalam berbagai bahasa pemrograman. Ini berfungsi sebagai dasar untuk menyimpan nilai-nilai sederhana, memberikan fondasi penting dalam penyimpanan informasi dalam program.
 
 ### 2. Jelaskan fungsi dari class dan struct secara detail dan berikan contoh programnya!
 ```C++
