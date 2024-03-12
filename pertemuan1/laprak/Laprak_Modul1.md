@@ -341,5 +341,8 @@ Map
 - Ukuran map dinamis dan dapat berubah sesuai dengan penambahan atau penghapusan elemen.
 - Berguna untuk menyimpan pasangan data kunci-nilai yang tidak harus memiliki tipe data yang sama.
 
+## Kesimpulan
+Tipe data C++ pada program diatas berfungsi untuk membantu programmer dalam mengorganisir data dan mengoptimalkan kinerja program, secara efisien dan akurat.
+
 ## Referensi
 [1] I. Holm, Narrator, and J. Fullerton-Smith, Producer, How to Build a Human [DVD]. London: BBC; 2002.
