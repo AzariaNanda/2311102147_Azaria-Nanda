@@ -329,9 +329,17 @@ int main() {
 ![2311102147_Azaria Nanda unguided3](Unguided3.png)
 Kode diatas mencetak isi map kartun_jepang, yang menyimpan nama-nama kartun Jepang, dengan menggunakan perulangan for. Setiap elemen map ditampilkan dengan nomor urut indeksnya dan nama kartun Jepang yang sesuai, memudahkan pemahaman mengenai konten map.
 
--Array merupakan suatu kelompok data yang tersusun secara berurutan dan dapat diakses menggunakan nomor urutan. Dengan ukuran yang sudah ditentukan saat dideklarasikan, cocok digunakan untuk data-data yang memiliki tipe yang sama didalamnya.
+Berikut adalah perbedaan antara Array dan Map:
 
--Map adalah struktur data yang menghubungkan suatu kunci dengan nilai tertentu, memungkinkan akses ke nilai berdasarkan kunci yang unik. Ukuran map bisa berubah-ubah sesuai dengan penambahan atau penghapusan elemen, sangat berguna untuk menyimpan pasangan data kunci-nilai yang tidak harus memiliki tipe data yang sama.
+Array
+- Tersusun secara berurutan dan diakses menggunakan nomor urutan.
+- Memiliki ukuran tetap yang ditentukan saat dideklarasikan.
+- Cocok untuk menyimpan data dengan tipe yang sama.
+
+Map
+- Menghubungkan suatu kunci dengan nilai tertentu, memungkinkan akses nilai berdasarkan kunci yang unik.
+- Ukuran map dinamis dan dapat berubah sesuai dengan penambahan atau penghapusan elemen.
+- Berguna untuk menyimpan pasangan data kunci-nilai yang tidak harus memiliki tipe data yang sama.
 
 ## Referensi
 [1] I. Holm, Narrator, and J. Fullerton-Smith, Producer, How to Build a Human [DVD]. London: BBC; 2002.
