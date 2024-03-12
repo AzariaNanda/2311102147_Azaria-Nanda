@@ -293,7 +293,7 @@ Class adalah sebuah konsep dalam pemrograman berorientasi objek (OOP) yang bergu
 b. Fungsi dari Struct:<br/>
 Struct, yang juga dikenal sebagai struktur data, ini digunakan ketika kita ingin mengelompokkan beberapa jenis data yang berbeda    menjadi satu entitas atau untuk membuat representasi dari sebuah data yang terstruktur. Dengan menggunakan struct, kita dapat membuat jenis data baru yang terdiri dari berbagai jenis data yang berbeda.
 
-### ### 3. Buat dan jelaskan program menggunakan fungsi map dan jelaskan perbedaan dari array dengan map!
+### 3. Buat dan jelaskan program menggunakan fungsi map dan jelaskan perbedaan dari array dengan map!
 ```C++
 #include <iostream>
 #include <map> // Library untuk menggunakan fungsi map dalam int main
