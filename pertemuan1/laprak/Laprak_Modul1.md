@@ -13,13 +13,12 @@ Tipe data abstrak merupakan suatu konsep dalam pemrograman yang menyediakan repr
 
 3. Tipe Data Koleksi<br/>
 Tipe data koleksi adalah jenis data dalam pemrograman yang memungkinkan penyimpanan dan pengolahan sekumpulan data, seperti array. Hal ini memungkinkan pengelompokan data untuk pengolahan yang lebih efisien. Contoh data koleksi:
-    - Array (truktur data yang menyimpan sekumpulan
-    nilai yang memiliki tipe data yang sama)
-    - Vector (walaupun seperti array, tetapi bisa berubah ukuran dan memori
-      secara dinamis. Cocok untuk himpunan nilai yang fleksibel)
-    - Map (Map terasa mirip dengan array namun dengan index yang memungkinkan
-    untuk berupa tipe data selain integer)
-
+-Array (struktur data yang menyimpan sekumpulan
+ nilai yang memiliki tipe data yang sama)
+-Vector (sama seperti array. Tetapi bisa berubah ukuran dan memori secara dinamis,
+ cocok untuk himpunan nilai yang fleksibel)
+-Map (Tipe data map memetakan kunci ke nilai, 
+memudahkan penyimpanan dan akses data dengan cepat)
     
 ## Guided 
 
@@ -300,9 +299,6 @@ Struct, yang juga dikenal sebagai struktur data, ini digunakan ketika kita ingin
 ### 3. Buat dan jelaskan program menggunakan fungsi map dan jelaskan perbedaan dari array dengan map!
 ```C++
 #include <iostream>
-#include <map> // Library untuk menggunakan fungsi map dalam int main
-
-#include <iostream>
 #include <map>
 #include <string>
 using namespace std;
@@ -310,26 +306,27 @@ using namespace std;
 int main() {
     
     // Deklarasi map dengan key int dan value string
-    map<int, string> japan_cartoon;
+    map<int, string> kartun_jepang;
   
     // Memasukkan elemen-elemen ke dalam map
-    japan_cartoon[1] = "Shinchan";
-    japan_cartoon[2] = "Doraemon";
-    japan_cartoon[3] = "Nobita";
-    japan_cartoon[4] = "Suneo";
-    japan_cartoon[5] = "Himawari";
-    japan_cartoon[6] = "Kazama";
-    japan_cartoon[7] = "Gian";
+    kartun_jepang[1] = "Shinchan";
+    kartun_jepang[2] = "Doraemon";
+    kartun_jepang[3] = "Spy x Family";
+    kartun_jepang[4] = "Suzume";
+    kartun_jepang[5] = "From up on puppy hill";
+    kartun_jepang[6] = "Detective Conan";
+    kartun_jepang[7] = "Onepiece";
 
-    cout << " Japanese Cartoon Characters " << endl;
-    for (int i = 1; i <= japan_cartoon.size(); ++i) { // Looping untuk menampilkan semua elemen pada map
-        cout << "No." << i << ": " << japan_cartoon[i] << endl; // Menampilkan elemen map
+    cout << " Pilihan Kartun Jepang " << endl;
+    for (int i = 1; i <= kartun_jepang.size(); ++i) { // Looping untuk menampilkan semua elemen pada map
+        cout << "No." << i << ": " << kartun_jepang[i] << endl; // Menampilkan elemen map
     }
 
     return 0;
 }
 ```
 #### Output:
+![2311102147_Azaria Nanda unguided3](Unguided3.png)
 
 ## Referensi
 [1] I. Holm, Narrator, and J. Fullerton-Smith, Producer, How to Build a Human [DVD]. London: BBC; 2002.
