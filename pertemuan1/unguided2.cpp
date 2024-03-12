@@ -1,56 +1,41 @@
 #include <iostream>
+#include <vector>
+using namespace std;
 
-// Mendefinisikan struct untuk anggota boygroup
-struct AnggotaBoygroup {
-    char nama[50];
-    int umur;
-    char posisi[20];
+// Mendefinisikan struct untuk Kamar
+struct Kamar {
+    int nomor_kamar;
+    int lantai;
 };
+// Mendefinisikan class untuk Rumah Kos
+class RumahKos {
+    private:
+        vector<Kamar> kamar; // Menggunakan vector untuk menyimpan kamar
+    public:
+        void tambahKamar(int nomor_kamar, int lantai) {
+            // Menambahkan kamar ke Rumah Kos
+            kamar.push_back({nomor_kamar, lantai});
+        }
 
-// Mendefinisikan class untuk biografi boygroup
-class BiografiBoygroup {
-public:
-    // Properti (variabel) dari class BiografiBoygroup
-    char namaGrup[50];
-    int tahunDebut;
-    AnggotaBoygroup anggota[7]; // Maksimal 7 anggota dalam NCT Dream
-
-    // Metode (fungsi) dari class BiografiBoygroup
-    void displayInfo() {
-        std::cout << "Nama Boygroup: " << namaGrup << std::endl;
-        std::cout << "Tahun Debut: " << tahunDebut << std::endl;
-        std::cout << "Anggota Boygroup:" << std::endl;
-
-        for (int i = 0; i < 7; ++i) {
-            if (anggota[i].nama[0] != '\0') {
-                std::cout << "  Anggota " << (i + 1) << ":" << std::endl;
-                std::cout << "    Nama: " << anggota[i].nama << std::endl;
-                std::cout << "    Umur: " << anggota[i].umur << " tahun" << std::endl;
-                std::cout << "    Posisi: " << anggota[i].posisi << std::endl;
+        void tampilkanKamar() {
+            // Menampilkan semua kamar di Rumah Kos
+            for(const auto& k : kamar) {
+                cout << "Nomor Kamar: " << k.nomor_kamar << ", Lantai: " << k.lantai << endl;
             }
         }
-    }
 };
-
 int main() {
-    // Membuat objek dari class BiografiBoygroup
-    BiografiBoygroup nctDream;
-
-    // Mengatur nilai properti objek
-    strcpy(nctDream.namaGrup, "NCT Dream");
-    nctDream.tahunDebut = 2016;
-
-    // Mengatur nilai properti anggota
-    strcpy(nctDream.anggota[0].nama, "Mark");
-    nctDream.anggota[0].umur = 23;
-    strcpy(nctDream.anggota[0].posisi, "Leader");
-
-    strcpy(nctDream.anggota[1].nama, "Renjun");
-    nctDream.anggota[1].umur = 22;
-    strcpy(nctDream.anggota[1].posisi, "Main Vocal");
-
-    // Memanggil metode untuk menampilkan informasi
-    nctDream.displayInfo();
-
+    RumahKos kosan;
+    kosan.tambahKamar(1, 1);
+    kosan.tambahKamar(2, 1);
+    kosan.tambahKamar(3, 1);
+    kosan.tambahKamar(4, 1);
+    kosan.tambahKamar(5, 1);
+    kosan.tambahKamar(6, 2);
+    kosan.tambahKamar(7, 2);
+    kosan.tambahKamar(8, 2);
+    kosan.tambahKamar(9, 2);
+    kosan.tambahKamar(10, 2);
+    kosan.tampilkanKamar();
     return 0;
 }
