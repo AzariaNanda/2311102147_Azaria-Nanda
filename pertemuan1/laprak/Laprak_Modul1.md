@@ -291,7 +291,7 @@ Kode di atas menggunakan struktur data dan class dalam C++ untuk merepresentasik
 
 
 a. Fungsi dari Class:<br/>
-Class adalah sebuah konsep dalam pemrograman berorientasi objek (OOP) yang berguna untuk mengumpulkan data dan operasi-operasi terkait ke dalam satu kesatuan. Ini memungkinkan pembuatan objek dengan ciri-ciri khusus (data) dan tindakan-tindakan yang dapat dilakukan oleh objek tersebut (metode). 
+Class adalah  menentukan jenis variabel yang akan digunakan untuk menyimpan objek. Ini memungkinkan pembuatan objek dengan data khusus dan tindakan yang dapat dilakukan oleh objek metode tersebut.
 
 b. Fungsi dari Struct:<br/>
 Struct, yang juga dikenal sebagai struktur data, ini digunakan ketika kita ingin mengelompokkan beberapa jenis data yang berbeda    menjadi satu entitas atau untuk membuat representasi dari sebuah data yang terstruktur. Dengan menggunakan struct, kita dapat membuat jenis data baru yang terdiri dari berbagai jenis data yang berbeda.
@@ -345,4 +345,4 @@ Map
 Tipe data C++ pada program diatas berfungsi untuk membantu programmer dalam mengorganisir data dan mengoptimalkan kinerja program, secara efisien dan akurat.
 
 ## Referensi
-[1] I. Holm, Narrator, and J. Fullerton-Smith, Producer, How to Build a Human [DVD]. London: BBC; 2002.
+[1] Meidyan Permata Putri, et al., Algoritma dan Struktur Data. Bandung: Widina Bhakti Persada Bandung, 2022.<br/>
