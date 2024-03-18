@@ -75,17 +75,19 @@ memudahkan penyimpanan dan akses data dengan cepat)
     }
  }
 ```
-Program di atas adalah sebuah program yang digunakan untuk menyimpan nilai-nilai dalam sebuah kumpulan data yang disusun dalam tiga tingkat. Pertama-tama, program membuat tempat untuk menyimpan data tersebut dengan cara menyatakan bahwa kita ingin membuat tempat yang berukuran seperti tabel dengan 2 baris, 3 kolom, dan dalam setiap kotaknya lagi ada 3 angka. Kemudian, program meminta pengguna untuk menambahkan angka ke dalam tabel tersebut dengan cara bertanya-tanya tiga kali, yaitu untuk baris, kolom, dan angka di dalam kotak tersebut. Setelah pengguna selesai menambahkan angka-angka tersebut, program akan menampilkan kembali apa yang telah dimasukkan pengguna tadi dalam bentuk tabel dengan menampilkan angka-angka beserta dengan nomor kotaknya. Selain itu, program juga menampilkan angka-angka tersebut tanpa menggunakan tanda kurung siku.
+Kode di atas adalah sebuah program yang digunakan untuk menyimpan nilai-nilai dalam sebuah tabel tiga dimensi. Pengguna diminta untuk menambahkan angka-angka ke dalam tabel tersebut dengan cara memberikan informasi tentang baris, kolom, dan nilai di dalam kotak tersebut. Setelah selesai, program menampilkan kembali nilai-nilai tersebut dalam bentuk tabel bersama dengan nomor kotaknya. Selain itu, program juga menampilkan nilai-nilai tersebut tanpa tanda kurung siku.
 
 ### 2. Program Mencari Nilai Maksimal pada Array
 
 ```C++
- #include <iostream>
+#include <iostream>
 
- using namespace std;
+using namespace std;
 
- int main()
- {
+// Program Mencari Nilai Maksimal pada Array
+
+int main()
+{
     int maks, a, i = 1, lokasi;
     cout << "Masukkan panjang array: ";
     cin >> a;
@@ -95,7 +97,7 @@ Program di atas adalah sebuah program yang digunakan untuk menyimpan nilai-nilai
     {
         cout << "Array ke-" << (i) << ": ";
         cin >> array[i];
-    }  
+    }
     maks = array[0];
     for (i = 0; i < a; i++)
     {
@@ -104,133 +106,18 @@ Program di atas adalah sebuah program yang digunakan untuk menyimpan nilai-nilai
             maks = array[i];
             lokasi = i;
         }
-        }
-        cout << "Nilai maksimum adalah " << maks << " berada di Array ke " << lokasi << endl;
- }
-```
-Kode di atas digunakan untuk mencetak isi dari struct. Struct merupakan salah satu contoh dari tipe data abstrak. Pada kode di atas terdapat sebuah struct Mahasiswa. Pada struct Mahasiswa ini, terdapat 3 nilai, yaitu char name dengan ukuran 50, char address dengan ukuran 50 juga, dan int age. Lalu pada int main, diisi nilai dan dideklarasikan struct Mahasiswa dengan 2 objek, yaitu mhs1 dengan nama Dian dan mhs2 dengan nama Bambang.
-
-### 3. Tipe Data Koleksi
-
-```C++
-#include <iostream>
-#include <array>
-
-using namespace std;
-
-int main() {
-    // Deklarasi dan inisialisasi array
-    int nilai[5];
-    nilai[0] = 23;
-    nilai[1] = 50;
-    nilai[2] = 34;
-    nilai[3] = 78;
-    nilai[4] = 90;
-
-    // Mencetak array dengan tab
-    cout << "Isi array pertama : " << nilai[0] << endl;
-    cout << "Isi array kedua : " << nilai[1] << endl;
-    cout << "Isi array ketiga : " << nilai[2] << endl;
-    cout << "Isi array keempat : " << nilai[3] << endl;
-    cout << "Isi array kelima : " << nilai[4] << endl;
-
-    return 0;
+    }
+    cout << "Nilai maksimum adalah " << maks << " berada di Array ke " << lokasi << endl;
 }
 ```
-Kode di atas digunakan untuk mencetak isi dari sebuah array. Array merupakan salah satu contoh dari tipe data koleksi. Pada kode di atas, terdapat library array yang membantu proses pemrogramannya. Terdapat array nilai yang dapat menampung 5 nilai, yaitu 23, 50, 34, 78, dan 90. Lalu dideklarasikan di bawahnya.
+Kode tersebut bertujuan untuk mencari nilai maksimum dalam suatu array setelah pengguna memasukkan panjang array dan nilai-nilai elemennya. Setelah memasukkan nilai-nilai, program akan menggunakan perulangan for dan if untuk mencari nilai maksimum. Nilai maksimum tersebut akan disimpan dalam variabel maks dan indeksnya dalam variabel lokasi. Program kemudian akan menampilkan nilai maksimum beserta indeksnya.
 
 ## Unguided 
 
-### 1. Buatlah program menggunakan tipe data primitif minimal dua fungsi dan bebas. Menampilkan program, jelaskan program tersebut dan ambil kesimpulan dari materi tipe data primitif!
+### 1. Buatlah program untuk menampilkan output seperti berikut dengan data yang diinputkan oleh user!
 
 ```C++
-#include <iostream>
 
-using namespace std;
-
-// Deklarasi struct untuk data siswa
-struct Siswa {
-    float nilai;
-};
-
-// Fungsi untuk menghitung rata-rata nilai
-float hitungRataRata(Siswa siswa[], int jumlahSiswa) {
-    float total = 0;
-    for (int i = 0; i < jumlahSiswa; i++) {
-        total += siswa[i].nilai;
-    }
-    return total / jumlahSiswa;
-}
-
-// Fungsi untuk menentukan status kenaikan kelas
-string kenaikanKelas(float rataRata) {
-    if (rataRata >= 75) {
-        return "Selamat, siswa Naik kelas!";
-    } else {
-        return "Tidak Naik Kelas";
-    }
-}
-
-// Fungsi untuk input nilai siswa
-void inputNilai(Siswa siswa[], int jumlahSiswa) {
-    for (int i = 0; i < jumlahSiswa; i++) {
-        cout << "Masukkan nilai siswa ke-" << (i + 1) << ": ";
-        cin >> siswa[i].nilai;
-    }
-}
-
-int main() {
-    char ulangi;
-    int jumlahSiswa;
-
-    do {
-        cout << "\n|================================|" << endl;
-        cout << "|  PROGRAM NILAI KENAIKAN KELAS  |" << endl;
-        cout << "|================================|" << endl;
-        cout << "|Azaria Nanda Putri|" << endl;
-        cout << "|====2311102147====|" << endl;
-        cout << "|==================|" << endl;
-        cout << "\nMasukkan Jumlah Siswa: ";
-        cin >> jumlahSiswa;
-
-        // Membuat array dari struct Siswa
-        Siswa nilaiSiswa[jumlahSiswa];
-
-        // Memanggil fungsi inputNilai dengan parameter struct Siswa
-        inputNilai(nilaiSiswa, jumlahSiswa);
-
-        // Memanggil fungsi hitungRataRata dengan parameter struct Siswa
-        float rataRataNilai = hitungRataRata(nilaiSiswa, jumlahSiswa);
-
-        // Memanggil fungsi kenaikanKelas dengan parameter rata-rata nilai
-        string status = kenaikanKelas(rataRataNilai);
-
-        cout << "================================" << endl;
-        cout << "Rata-rata nilai siswa yang diperoleh: " << rataRataNilai << endl;
-        cout << "Apakah siswa Naik kelas? " << status << endl;
-        cout << "\nSiswa yang tidak naik kelas:\n";
-
-        // Loop untuk menampilkan siswa yang tidak naik kelas
-        bool adaSiswaTidakNaikKelas = false;
-        for (int i = 0; i < jumlahSiswa; i++) {
-            if (nilaiSiswa[i].nilai < 75) {
-                cout << "Siswa ke-" << (i + 1) << ": " << nilaiSiswa[i].nilai << endl;
-                adaSiswaTidakNaikKelas = true;
-            }
-        }
-
-        // Menampilkan pesan jika tidak ada siswa yang tidak naik kelas
-        if (!adaSiswaTidakNaikKelas) {
-            cout << "Tidak ada siswa yang tidak naik kelas.\n";
-        }
-
-        cout << "Anda ingin mengulang program? (Yes/No): ";
-        cin >> ulangi;
-
-    } while (ulangi == 'y' || ulangi == 'Y');
-
-    return 0;
-}
 ```
 #### Output:
 ![2311102147_Azaria Nanda unguided1](output_Unguided1.png)
