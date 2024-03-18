@@ -3,22 +3,7 @@
 
 ## Dasar Teori
 
-Tipe data adalah klasifikasi nilai suatu variabel yang membantu operasi komputer untuk mengenali nilai data tanpa menghasilkan kesalahan keluaran. Tipe data dalam program memudahkan dalam mendeteksi berbagai jenis informasi. Selain itu, tipe data juga memastikan sistem operasional dapat berjalan dengan lancar dan meminimalkan kesalahan (error).
-
-1. Tipe Data Primitif<br/>
-Tipe data primitif adalah tipe data dasar yang tersedia secara langsung pada suatu bahasa pemrograman. Sebagai contoh, tipe data integer dan char merupakan beberapa contoh dari tipe data primitive tersebut.
-
-2. Tipe Data Abstrak<br/>
-Tipe data abstrak merupakan suatu konsep dalam pemrograman yang menyediakan representasi data dan operasi terkait tanpa harus mengungkapkan detail implementasinya. Konsep ini bertujuan untuk meningkatkan tingkat abstraksi dan modularitas dalam pengembangan perangkat lunak. Contoh dari tipe data abstrak meliputi tumpukan (stack), antrian (queue), dan daftar (list).
-
-3. Tipe Data Koleksi<br/>
-Tipe data koleksi adalah jenis data dalam pemrograman yang memungkinkan penyimpanan dan pengolahan sekumpulan data, seperti array. Hal ini memungkinkan pengelompokan data untuk pengolahan yang lebih efisien. Contoh data koleksi:
-- Array (struktur data yang menyimpan sekumpulan
- nilai yang memiliki tipe data yang sama)
-- Vector (sama seperti array. Tetapi bisa berubah ukuran dan memori secara dinamis,
- cocok untuk himpunan nilai yang fleksibel)
-- Map (Tipe data map memetakan kunci ke nilai, 
-memudahkan penyimpanan dan akses data dengan cepat)
+---
     
 ## Guided 
 
@@ -169,12 +154,9 @@ int main() {
 #### Output:
 ![Screenshot Unguided Q1](output_Unguided1.png)
 
-Kode di atas digunakan untuk menghitung nilai rata-rata siswa dan menentukan apakah siswa tersebut naik kelas. Pengguna diminta untuk memasukkan nilai sesuai jumlah siswa melalui fungsi inputNilai. Nilainya disimpan dalam array. Fungsi hitungRataRata menghitung rata-rata nilai, dan kenaikanKelas menentukan apakah siswa naik kelas dengan melihat rata-rata. Fungsi main mengatur eksekusi, meminta input, menampilkan status kenaikan kelas, dan daftar siswa yang tidak naik kelas. Pengguna dapat mengulang program sesuai keinginan. Program ini memberikan informasi jelas dan interaktif tentang kenaikan kelas berdasarkan nilai rata-rata siswa.
+----
+### 2. Buatlah program input array tiga dimensi (seperti pada guided) tetapi jumlah atau ukuran elemennya diinputkan oleh user!
 
-Kesimpulan Tipe Data Primitif:<br/>
-Tipe data primitif adalah tipe data yang telah ditetapkan oleh sistem dan tersedia dalam berbagai bahasa pemrograman. Ini berfungsi sebagai dasar untuk menyimpan nilai-nilai sederhana, memberikan fondasi penting dalam penyimpanan informasi dalam program.
-
-### 2. Jelaskan fungsi dari class dan struct secara detail dan berikan contoh programnya!
 ```C++
 #include <iostream>
 using namespace std;
@@ -220,61 +202,148 @@ int main()
 ![Screenshot Unguided Q1](output_Unguided2.png)
 
 
-Kode di atas menggunakan struktur data dan class dalam C++ untuk merepresentasikan sebuah rumah kos dengan kemampuan menambahkan kamar dan menampilkan daftar kamar. Ini dilakukan dengan menggunakan struct Kamar untuk mewakili nomor dan lantai kamar, serta class (Rumah Kos) untuk mewakili rumah kos dengan menggunakan vektor kamar. Metode (tambah Kamar) digunakan untuk menambahkan kamar baru, sementara (tampilkan Kamar) menampilkan daftar kamar yang telah ditambahkan. Fungsi main membuat objek kosan, menambahkan beberapa kamar, dan menampilkan daftar kamar tersebut. Keseluruhan, program ini menunjukkan penggunaan struktur data dan class dalam mengelola data di program C++.
+Kode di atas 
 
+### 3. Buatlah program menu untuk mencari nilai maksimum, minimum dan nilai rata – rata dari suatu array dengan input yang dimasukkan oleh user!
 
-a. Fungsi dari Class:<br/>
-Class adalah  menentukan jenis variabel yang akan digunakan untuk menyimpan objek. Ini memungkinkan pembuatan objek dengan data khusus dan tindakan yang dapat dilakukan oleh objek metode tersebut.
-
-b. Fungsi dari Struct:<br/>
-Struct, yang juga dikenal sebagai struktur data, ini digunakan ketika kita ingin mengelompokkan beberapa jenis data yang berbeda    menjadi sebuah "Tabel" atau untuk membuat representasi dari sebuah data yang terstruktur. Dengan menggunakan struct, kita dapat membuat jenis data baru yang terdiri dari berbagai jenis data yang berbeda.
-
-
-### 3. Buat dan jelaskan program menggunakan fungsi map dan jelaskan perbedaan dari array dengan map!
 ```C++
 #include <iostream>
-#include <map>
-#include <string>
 using namespace std;
 
 int main() {
-    
-    // Deklarasi map dengan key int dan value string
-    map<int, string> kartun_jepang;
-  
-    // Memasukkan elemen-elemen ke dalam map
-    kartun_jepang[1] = "Shinchan";
-    kartun_jepang[2] = "Doraemon";
-    kartun_jepang[3] = "Spy x Family";
-    kartun_jepang[4] = "Suzume";
-    kartun_jepang[5] = "From up on puppy hill";
-    kartun_jepang[6] = "Detective Conan";
-    kartun_jepang[7] = "Onepiece";
-
-    cout << " Pilihan Kartun Jepang " << endl;
-    for (int i = 1; i <= kartun_jepang.size(); ++i) { // Looping untuk menampilkan semua elemen pada map
-        cout << "No." << i << ": " << kartun_jepang[i] << endl; // Menampilkan elemen map
+    int pilihan, ukuran;
+    cout << "Operasi Array\n";
+    cout << "Masukkan ukuran array: ";
+    cin >> ukuran;
+    int Array[ukuran];
+    cout << "\nMasukkan " << ukuran << " angka\n";
+    for (int i = 0; i < ukuran; i++) {
+        cout << "Array[" << i + 1 << "]: ";
+        cin >> Array[i];
     }
-
+    cout << "\nData array: ";
+    for (int i = 0; i < ukuran; i++) {
+        cout << Array[i] << ", ";
+    }
+    cout << "\n\nOperator Array\n";
+    cout << "1. Maksimum\n";
+    cout << "2. Minimum\n";
+    cout << "3. Rata-rata\n";
+    cout << "4. Keluar\n";
+    cout << "Masukkan pilihan Anda: ";
+    cin >> pilihan;
+    
+    switch (pilihan) {
+        case 1: {
+            int maksimum = Array[0], posisi = 0;
+            for (int i = 1; i < ukuran; i++) {
+                if (Array[i] > maksimum) {
+                    maksimum = Array[i];
+                    posisi = i;
+                }
+            }
+            cout << "Nilai maksimum " << maksimum << " berada pada posisi " << posisi + 1 << endl;
+            break;
+        }
+        case 2: {
+            int minimum = Array[0], posisi = 0;
+            for (int i = 1; i < ukuran; i++) {
+                if (Array[i] < minimum) {
+                    minimum = Array[i];
+                    posisi = i;
+                }
+            }
+            cout << "Nilai minimum " << minimum << " berada pada posisi " << posisi + 1 << endl;
+            break;
+        }
+        case 3: {
+            int jumlah = 0;
+            for (int i = 0; i < ukuran; i++) {
+                jumlah += Array[i];
+            }
+            double rata_rata = static_cast<double>(jumlah) / ukuran;
+            cout << "Rata-rata array: " << rata_rata << endl;
+            break;
+        }
+        case 4: 
+            cout << "Terima kasih telah menggunakan program!" << endl;
+            break;
+        default: 
+            cout << "Pilihan tidak valid!" << endl;
+    }
     return 0;
 }
+#include <iostream>
+using namespace std;
+
+int main() {
+    int pilihan, ukuran;
+    cout << "Operasi Array\n";
+    cout << "Masukkan ukuran array: ";
+    cin >> ukuran;
+    int Array[ukuran];
+    cout << "\nMasukkan " << ukuran << " angka\n";
+    for (int i = 0; i < ukuran; i++) {
+        cout << "Array[" << i + 1 << "]: ";
+        cin >> Array[i];
+    }
+    cout << "\nData array: ";
+    for (int i = 0; i < ukuran; i++) {
+        cout << Array[i] << ", ";
+    }
+    cout << "\n\nOperator Array\n";
+    cout << "1. Maksimum\n";
+    cout << "2. Minimum\n";
+    cout << "3. Rata-rata\n";
+    cout << "4. Keluar\n";
+    cout << "Masukkan pilihan Anda: ";
+    cin >> pilihan;
+    
+    switch (pilihan) {
+        case 1: {
+            int maksimum = Array[0], posisi = 0;
+            for (int i = 1; i < ukuran; i++) {
+                if (Array[i] > maksimum) {
+                    maksimum = Array[i];
+                    posisi = i;
+                }
+            }
+            cout << "Nilai maksimum " << maksimum << " berada pada posisi " << posisi + 1 << endl;
+            break;
+        }
+        case 2: {
+            int minimum = Array[0], posisi = 0;
+            for (int i = 1; i < ukuran; i++) {
+                if (Array[i] < minimum) {
+                    minimum = Array[i];
+                    posisi = i;
+                }
+            }
+            cout << "Nilai minimum " << minimum << " berada pada posisi " << posisi + 1 << endl;
+            break;
+        }
+        case 3: {
+            int jumlah = 0;
+            for (int i = 0; i < ukuran; i++) {
+                jumlah += Array[i];
+            }
+            double rata_rata = static_cast<double>(jumlah) / ukuran;
+            cout << "Rata-rata array: " << rata_rata << endl;
+            break;
+        }
+        case 4: 
+            cout << "Terima kasih telah menggunakan program!" << endl;
+            break;
+        default: 
+            cout << "Pilihan tidak valid!" << endl;
+    }
+    return 0;
+}
+
 ```
 #### Output:
 ![2311102147_Azaria Nanda unguided3](output_Unguided3.png)
-Kode diatas mencetak isi map kartun_jepang, yang menyimpan nama-nama kartun Jepang, dengan menggunakan perulangan for. Setiap elemen map ditampilkan dengan nomor urut indeksnya dan nama kartun Jepang yang sesuai, memudahkan pemahaman mengenai konten map.
-
-Berikut adalah perbedaan antara Array dan Map:
-
-Array
-- Tersusun secara berurutan dan diakses menggunakan nomor urutan.
-- Memiliki ukuran tetap yang ditentukan saat dideklarasikan.
-- Cocok untuk menyimpan data dengan tipe yang sama.
-
-Map
-- Menghubungkan suatu kunci dengan nilai tertentu, memungkinkan akses nilai berdasarkan kunci yang unik.
-- Ukuran map dinamis dan dapat berubah sesuai dengan penambahan atau penghapusan elemen.
-- Berguna untuk menyimpan pasangan data kunci-nilai yang tidak harus memiliki tipe data yang sama.
-
+------beloom
 ## Kesimpulan
 Tipe data C++ pada program diatas berfungsi untuk membantu programmer dalam mengorganisir data dan mengoptimalkan kinerja program, secara efisien dan akurat.
 
