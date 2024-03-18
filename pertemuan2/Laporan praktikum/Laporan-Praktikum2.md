@@ -117,26 +117,29 @@ Kode di atas bertujuan untuk mencari nilai maksimum dalam suatu array setelah pe
 ### 1. Buatlah program untuk menampilkan output seperti berikut dengan data yang diinputkan oleh user!
 
 ```C++
+}
+
+int main() {
+```C++
 #include <iostream>
-#include <vector>
 
 using namespace std;
 
-int main() {
-    int a_2147; // Deklarasi variabel
+int a_2147, i;
 
-    cout << "\n2147==Program Ganjil Genap==2147" << endl;
+int main() {
+    cout << "\n 2147==Program Ganjil Genap==2147" << endl;
     cout << "\nInput angka: " << endl;
     cin >> a_2147;
 
-    vector<int> Array_2147; // Deklarasi array sebagai vector
-
-    // Untuk memasukan bilangan array
-    for (int i = 0; i < a_2147; i++) {
+    int Array_2147[a_2147];
+    cout << "\n";
+    cout << "input " << a_2147 << " amount of number\n";
+    
+    //Untuk memasukan bilangan array
+    for (i = 0; i < a_2147; i++){
         cout << "Array " << "[" << i + 1 << "]" << " :";
-        int num;
-        cin >> num;
-        Array_2147.push_back(num);
+        cin >> Array_2147[i];
     }
 
     // Menampilkan data array yang sudah diinput oleh user
@@ -176,41 +179,44 @@ Tipe data primitif adalah tipe data yang telah ditetapkan oleh sistem dan tersed
 ### 2. Jelaskan fungsi dari class dan struct secara detail dan berikan contoh programnya!
 ```C++
 #include <iostream>
+#include <vector>
 using namespace std;
 
-int main()
-{
-    // Deklarasi isi array
-    int ukurax_2147, ukurany_2147, ukuranz_2147;
+// Mendefinisikan struct untuk Kamar
+struct Kamar {
+    int nomor_kamar;
+    int lantai;
+};
+// Mendefinisikan class untuk Rumah Kos
+class RumahKos {
+    private:
+        vector<Kamar> kamar; // Menggunakan vector untuk menyimpan kamar
+    public:
+        void tambahKamar(int nomor_kamar, int lantai) {
+            // Menambahkan kamar ke Rumah Kos
+            kamar.push_back({nomor_kamar, lantai});
+        }
 
-    // Meminta input ukuran array dari user
-    cout << "\n Array Tiga Dimensi -- by nanda" << endl;
-    cout << "Input ukuran 'x' dalam array: "; cin >> ukurax_2147;
-    cout << "Input ukuran 'y' dalam array: "; cin >> ukurany_2147;
-    cout << "Input ukuran 'z' dalam array: "; cin >> ukuranz_2147;
-
-    int arr[ukurax_2147][ukurany_2147][ukuranz_2147];
-
-    for (int x = 0; x < ukurax_2147; x++) {
-        for (int y = 0; y < ukurany_2147; y++) {
-            for (int z = 0; z < ukuranz_2147; z++) {
-                cout << "Input Array[" << x << "][" << y << "][" << z << "] = ";
-                cin >> arr[x][y][z];
+        void tampilkanKamar() {
+            // Menampilkan semua kamar di Rumah Kos
+            for(const auto& k : kamar) {
+                cout << "Nomor Kamar: " << k.nomor_kamar << ", Lantai: " << k.lantai << endl;
             }
         }
-        cout << endl;
-    }
-
-    for (int x = 0; x < ukurax_2147; x++) {
-        for (int y = 0; y < ukurany_2147; y++) {
-            for (int z = 0; z < ukuranz_2147; z++) {
-                cout << arr[x][y][z] << " ";
-            }
-            cout << endl;
-        }
-        cout << endl;
-    }
-
+};
+int main() {
+    RumahKos kosan;
+    kosan.tambahKamar(1, 1);
+    kosan.tambahKamar(2, 1);
+    kosan.tambahKamar(3, 1);
+    kosan.tambahKamar(4, 1);
+    kosan.tambahKamar(5, 1);
+    kosan.tambahKamar(6, 2);
+    kosan.tambahKamar(7, 2);
+    kosan.tambahKamar(8, 2);
+    kosan.tambahKamar(9, 2);
+    kosan.tambahKamar(10, 2);
+    kosan.tampilkanKamar();
     return 0;
 }
 ```

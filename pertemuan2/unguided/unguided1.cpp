@@ -24,7 +24,7 @@ int main() {
     cout << "Data array: ";
     for (int i = 0; i < a_2147; ++i) { // Melakukan perulangan untuk menampilkan data array
         cout << Array_2147[i] << " ";
-    }10
+    }
     cout << endl;
 
     // Menampilkan angka genap, jika angkanya habis dibagi 2 maka akan ditampilkan
