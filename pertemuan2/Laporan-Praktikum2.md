@@ -115,7 +115,7 @@ Kode di atas bertujuan untuk mencari nilai maksimum dalam suatu array setelah pe
 ## Unguided 
 
 ### 1. Buatlah program untuk menampilkan output seperti berikut dengan data yang diinputkan oleh user!
-![Screenshot Unguided Q1](Unguided-Q1.png)
+![2311102147_Azaria Nanda Unguided Q1](Unguided-Q1.png)
 
 ```C++
 #include <iostream>
