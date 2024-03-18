@@ -117,7 +117,56 @@ Kode di atas bertujuan untuk mencari nilai maksimum dalam suatu array setelah pe
 ### 1. Buatlah program untuk menampilkan output seperti berikut dengan data yang diinputkan oleh user!
 
 ```C++
+}
 
+int main() {
+```C++
+#include <iostream>
+
+using namespace std;
+
+int a_2147, i;
+
+int main() {
+    cout << "\n 2147==Program Ganjil Genap==2147" << endl;
+    cout << "\nInput angka: " << endl;
+    cin >> a_2147;
+
+    int Array_2147[a_2147];
+    cout << "\n";
+    cout << "input " << a_2147 << " amount of number\n";
+    
+    //Untuk memasukan bilangan array
+    for (i = 0; i < a_2147; i++){
+        cout << "Array " << "[" << i + 1 << "]" << " :";
+        cin >> Array_2147[i];
+    }
+
+    // Menampilkan data array yang sudah diinput oleh user
+    cout << "Data array: ";
+    for (int i = 0; i < a_2147; ++i) { // Melakukan perulangan untuk menampilkan data array
+        cout << Array_2147[i] << " ";
+    }
+    cout << endl;
+
+    // Menampilkan angka genap, jika angkanya habis dibagi 2 maka akan ditampilkan
+    cout << "Nomor genap  : ";
+    for (int i = 0; i < a_2147; ++i) { // Melakukan perulangan untuk mengecek angka genap
+        if (Array_2147[i] % 2 == 0)
+            cout << Array_2147[i] << ", ";
+    }
+    cout << endl;
+
+    // Menampilkan angka ganjil, jika angkanya tidak habis dibagi 2 maka akan ditampilkan
+    cout << "Nomor ganjil : ";
+    for (int i = 0; i < a_2147; ++i) { // Melakukan perulangan untuk mengecek angka ganjil
+        if (Array_2147[i] % 2 != 0)
+            cout << Array_2147[i] << ", ";
+    }
+    cout << endl;
+
+    return 0;
+}
 ```
 #### Output:
 ![2311102147_Azaria Nanda unguided1](output_Unguided1.png)
