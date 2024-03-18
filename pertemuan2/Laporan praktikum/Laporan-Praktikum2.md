@@ -216,7 +216,9 @@ int main()
 }
 ```
 #### Output:
+![2311102147_Azaria Nanda unguided2](output_Unguided-2.png)
 ![2311102147_Azaria Nanda unguided2](output_Unguided2.png)
+
 
 Kode di atas menggunakan struktur data dan class dalam C++ untuk merepresentasikan sebuah rumah kos dengan kemampuan menambahkan kamar dan menampilkan daftar kamar. Ini dilakukan dengan menggunakan struct Kamar untuk mewakili nomor dan lantai kamar, serta class (Rumah Kos) untuk mewakili rumah kos dengan menggunakan vektor kamar. Metode (tambah Kamar) digunakan untuk menambahkan kamar baru, sementara (tampilkan Kamar) menampilkan daftar kamar yang telah ditambahkan. Fungsi main membuat objek kosan, menambahkan beberapa kamar, dan menampilkan daftar kamar tersebut. Keseluruhan, program ini menunjukkan penggunaan struktur data dan class dalam mengelola data di program C++.
 
