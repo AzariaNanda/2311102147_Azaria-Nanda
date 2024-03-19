@@ -322,3 +322,5 @@ Array adalah suatu struktur yang terdiri dari sejumlah elemen yang memiliki tipe
 ## Referensi
 [1] Indrajani Martin., Pemrograman Objek Dengan C++. Jakarta: Elex media, 2019.<br/>
 [2] Gemar Belajar Struktur Data. Jakarta: Buku kita, 2019.
+[3] Dr. Joseph Teguh Santoso., Struktur Data dan ALgoritma. Semarang: Yayasan Prima Agus Teknik, 2021.
+
