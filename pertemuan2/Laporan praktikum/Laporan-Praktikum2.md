@@ -7,8 +7,12 @@ Array merupakan sekumpulan nilai yang tersusun dalam urutan tertentu dan dikenal
     -Array satu dimensi tidak lain adalah kumpulan elemen-elemen identik yang tersusun dalam satu baris. Elemen-elemen tersebut memiliki tipe data yang sama, tetapi isi dari elemen tersebut boleh berbeda.
 
     Pendeklarasian array diawali dengan penyebutan tipe data diikuti nama variabel array, diikuti dengan jumlah elemen. Jika array hendak diberi nilai awal, nilai-nilai awal dapat dituliskan dalam inisialisasi. Jika inisialisasi kurang dari jumlah elemen array, sisanya
-    akan diinisialisasikan dengan nol. Elemen array diakses dengan menyebutkan indeks posisi elemen tersebut dalam array seperti pada contoh berikut. Ingatlah bahwa
-    elemen pertama array memiliki indeks 0. Contoh:
+    akan diinisialisasikan dengan nol.
+    
+    Elemen array diakses dengan menyebutkan indeks posisi elemen tersebut dalam array seperti pada contoh berikut. Ingatlah bahwa
+    elemen pertama array memiliki indeks 0. 
+    
+    Contoh:
     // Tinggi Badan memiliki 100 elemen unsigned int Tinggi Badan [100];
     Tinggi Badan [0] = 7;
     Tinggi Badan [5] = 16;
@@ -17,7 +21,9 @@ Array merupakan sekumpulan nilai yang tersusun dalam urutan tertentu dan dikenal
     -Array dua dimensi, sering digambarkan sebagai matriks yang memiliki perluasan dari array satu dimensi. Jika array satu dimensi hanya memiliki satu baris dengan beberapa elemen kolom, maka array dua dimensi memiliki beberapa baris dan beberapa kolom elemen yang memiliki tipe yang sama.
 
     Pendeklarasian array dua dimensi hampir sama dengan pendeklarasian array satu dimensi, kecuali bahwa array dua dimensi terdapat dua jumlah elemen array yang terdapat di dalam kurung siku dan keduanya boleh tidak sama.
-    Elemen array dua dimensi diakses dengan menuliskan kedua indeks elemennya dalam kurung siku seperti pada contoh berikut.
+    Elemen array dua dimensi diakses dengan menuliskan kedua indeks elemennya dalam kurung siku.
+
+    contoh:
     // Papan memiliki 2 baris dan 5 kolom
     bool Papan [2] [5];
     Papan [0] [0] = true;
@@ -25,13 +31,15 @@ Array merupakan sekumpulan nilai yang tersusun dalam urutan tertentu dan dikenal
     Papan [1] [2] = true;
     Papan [1] [4] = false
 
-    -Array multidimensi, kita bisa menjelaskannya sebagai kumpulan array, di mana setiap array berada di dalam array lainnya. Pendeklarasian array multidimensi ini pada dasarnya serupa dengan pendeklarasian array satu dimensi, dengan menambahkan tanda kurung siku [] sesuai dengan jumlah dimensi yang diinginkan.
+    -Array multidimensi, kita bisa menjelaskannya sebagai kumpulan array, di mana setiap array berada di dalam array lainnya.
+    
+    Pendeklarasian array multidimensi ini pada dasarnya serupa dengan pendeklarasian array satu dimensi, dengan menambahkan tanda kurung siku [] sesuai dengan jumlah dimensi yang diinginkan.
+
     Contoh:
     int [] [] arr2; //-> Array 2 dimensi
     int [] [] [] arr3; //-> Array 3 dimensi
     int[][][][] arr4; //-> Array 4 dimensi
-    Untuk pengalokasian memori array multidimensi, memiliki sintaks yang sama dengan array satu dimensi, contoh:
-    int[][] arr2 = new int [3] [4];
+    
     
 ## Guided 
 
