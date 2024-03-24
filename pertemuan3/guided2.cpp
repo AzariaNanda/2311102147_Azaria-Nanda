@@ -1,127 +1,155 @@
- #include<iostream>
- using namespace std;
+// Latihan Double Linked List
+#include <iostream>
+using namespace std;
 
- classNode{
-    public:intdata;
-    Node*prev;
-    Node*next;
- };
- classDoublyLinkedList{
-        public:
-        Node*head;
-        Node*tail;
-        DoublyLinkedList(){
-            head=nullptr;
-            tail=nullptr;
-  }
-  voidpush(intdata){
-        Node*newNode=newNode;
-        newNode->data=data;
-        newNode->prev=nullptr;
-        newNode->next=head;
-        if(head!=nullptr){
-            head->prev=newNode;
+class Node {
+public:
+    int data;
+    Node* prev;
+    Node* next;
+};
+
+class DoublyLinkedList {
+public:
+    Node* head;
+    Node* tail;
+
+    DoublyLinkedList() {
+        head = nullptr;
+        tail = nullptr;
+    }
+
+    void push(int data) {
+        Node* newNode = new Node;
+        newNode->data = data;
+        newNode->prev = nullptr;
+        newNode->next = head;
+
+        if (head != nullptr) {
+            head->prev = newNode;
         }
-        else{
-        tail=newNode;
+        else {
+            tail = newNode;
         }
-        head=newNode;
+
+        head = newNode;
     }
-    voidpop(){
-        if(head==nullptr){
-         return;
-    }
-    Node*temp=head;
-    head=head->next;
-    if(head!=nullptr){
-      head->prev=nullptr;
-    }
-    else{
-      tail=nullptr;
-    }
-    deletetemp;
-  }
-  boolupdate(intoldData,intnewData){
-    Node*current=head;while(current!=nullptr){
-      if(current->data==oldData){
-        current->data=newData;
-        returntrue;
-      }
-      current=current->next;
-    }
-    returnfalse;
-  }
-  voiddeleteAll(){
-    Node*current=head;
-    while(current!=nullptr){
-      Node*temp=current;
-      current=current->next;
-      deletetemp;
-    }
-    head=nullptr;
-    tail=nullptr;
-  }
-  voiddisplay(){
-    Node*current=head;
-    while(current!=nullptr){
-      cout<<current->data<<"";
-      current=current->next;
-    }
-    cout<<endl;
-    }
- };
- intmain(){
-  DoublyLinkedListlist;
-  while(true){
-    cout<<"1.Adddata"<<endl;
-    cout<<"2.Deletedata"<<endl;
-    cout<<"3.Updatedata"<<endl;
-    cout<<"4.Cleardata"<<endl;
-    cout<<"5.Displaydata"<<endl;
-    cout<<"6.Exit"<<endl;intchoice;
-    cout<<"Enteryourchoice:";
-    cin>>choice;
-    switch(choice){
-      case1:{
-        int data;
-        cout<<"Enterdatatoadd:";
-        cin>>data;
-        list.push(data);
-        break;
-      }
-      case2:{
-        list.pop();
-        break;
-      }
-      case3:{
-        intoldData,newData;
-        cout<<"Enterolddata:";
-        cin>>oldData;
-        cout<<"Enternewdata:";
-        cin>>newData;
-        boolupdated=list.update(oldData,
- newData);
-        if(!updated){
-          cout<<"Datanotfound"<<endl;
+
+    void pop() {
+        if (head == nullptr) {
+            return;
         }
-        break;
-      }
-      case4:{
-        list.deleteAll();
-        break;
+
+        Node* temp = head;
+        head = head->next;
+
+        if (head != nullptr) {
+            head->prev = nullptr;
         }
-        case 5: {
-        list.display();
-        break;
+        else {
+            tail = nullptr;
         }
-        case 6: {
-        return 0;
+
+        delete temp;
+    }
+
+    bool update(int oldData, int newData) {
+        Node* current = head;
+
+        while (current != nullptr) {
+            if (current->data == oldData) {
+                current->data = newData;
+                return true;
+            }
+            current = current->next;
         }
-        default: {
-        cout << "Invalid choice" << endl;
-        break;
+
+        return false;
+    }
+
+    void deleteAll() {
+        Node* current = head;
+
+        while (current != nullptr) {
+            Node* temp = current;
+            current = current->next;
+            delete temp;
+        }
+
+        head = nullptr;
+        tail = nullptr;
+    }
+
+    void display() {
+        Node* current = head;
+
+        while (current != nullptr) {
+            cout << current->data << " ";
+            current = current->next;
+        }
+
+        cout << endl;
+    }
+};
+
+int main() {
+    DoublyLinkedList list;
+
+    while (true) {
+        cout << "1. Add data" << endl;
+        cout << "2. Delete data" << endl;
+        cout << "3. Update data" << endl;
+        cout << "4. Clear data" << endl;
+        cout << "5. Display data" << endl;
+        cout << "6. Exit" << endl;
+
+        int choice;
+        cout << "Enter your choice: ";
+        cin >> choice;
+
+        switch (choice) {
+            case 1: {
+                int data;
+                cout << "Enter data to add: ";
+                cin >> data;
+                list.push(data);
+                break;
+            }
+            case 2: {
+                list.pop();
+                break;
+            }
+            case 3: {
+                int oldData, newData;
+                cout << "Enter old data: ";
+                cin >> oldData;
+                cout << "Enter new data: ";
+                cin >> newData;
+
+                bool updated = list.update(oldData, newData);
+
+                if (!updated) {
+                    cout << "Data not found" << endl;
+                }
+                break;
+            }
+            case 4: {
+                list.deleteAll();
+                break;
+            }
+            case 5: {
+                list.display();
+                break;
+            }
+            case 6: {
+                return 0;
+            }
+            default: {
+                cout << "Invalid choice" << endl;
+                break;
+            }
         }
     }
- }
- return 0;
- }
+
+    return 0;
+}
