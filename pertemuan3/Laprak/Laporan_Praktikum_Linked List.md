@@ -787,6 +787,7 @@ int main() {
 ```
 #### Output:
 ![Screenshot Unguided Q1](output_Unguided1.png)
+![Screenshot Unguided Q1](output_Unguided1(1).png)
 
 kode berikut merupakan kode sederhana yang memisahkan bilangan ganjil dan genap dari input pengguna. Langkah-langkahnya termasuk deklarasi header file yang diperlukan, inisialisasi variabel untuk menyimpan jumlah bilangan yang dimasukkan, penginputan bilangan, penyimpanan bilangan dalam vektor, pencetakan kembali bilangan, pencetakan bilangan genap dan ganjil, serta pengakhiran eksekusi. Program ini mengilustrasikan penggunaan vektor dan loop dalam C++ untuk memproses input pengguna.
 
