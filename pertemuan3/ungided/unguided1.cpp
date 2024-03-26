@@ -267,7 +267,7 @@ int main() {
 
     while (true)
     {
-        cout << "\n1. Tambah Depan\n" << endl;
+        cout << "1. Tambah Depan" << endl;
         cout << "2. Tambah Belakang" << endl;
         cout << "3. Tambah Tengah" << endl;
         cout << "4. Hapus Depan" << endl;
@@ -278,7 +278,7 @@ int main() {
         cout << "9. Tampilkan Data" << endl;
         cout << "10. Exit" << endl;
         int choice;
-        cout << "\nMasukkan pilihan: \n";
+        cout << "Masukkan pilihan:  ";
         cin >> choice;
         switch (choice)
         {
@@ -286,7 +286,7 @@ int main() {
         {
             string nama;
             int umur;
-            cout << "Masukkan nama: ";
+            cout << "Masukkan nama\n: ";
             cin >> nama;
             cout << "Masukkan umur: ";
             cin >> umur;
@@ -298,7 +298,7 @@ int main() {
         {
             string nama;
             int umur;
-            cout << "Masukkan nama: ";
+            cout << "Masukkan nama\n: ";
             cin >> nama;
             cout << "Masukkan umur: ";
             cin >> umur;
@@ -310,7 +310,7 @@ int main() {
         {
             string nama;
             int umur, posisi;
-            cout << "Masukkan nama: ";
+            cout << "Masukkan nama\n: ";
             cin >> nama;
             cout << "Masukkan umur: ";
             cin >> umur;
@@ -335,7 +335,7 @@ int main() {
         case 6:
         {
             int posisi;
-            cout << "Masukkan posisi: ";
+            cout << "Masukkan posisi\n: ";
             cin >> posisi;
             hapusTengah(posisi);
             cout << "Data berhasil dihapus" << endl;
@@ -345,7 +345,7 @@ int main() {
         {
             string nama;
             int umur, posisi;
-            cout << "Masukkan nama: ";
+            cout << "Masukkan nama\n: ";
             cin >> nama;
             cout << "Masukkan umur: ";
             cin >> umur;

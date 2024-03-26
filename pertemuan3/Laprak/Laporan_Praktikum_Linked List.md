@@ -1135,6 +1135,9 @@ int main(){
 ```
 #### Output:
 ![Screenshot Unguided Q1](output_Unguided2.png)
+![Screenshot Unguided Q1](output_Unguided2(2).png)
+![Screenshot Unguided Q1](output_Unguided2(3).png)
+
 
 Kode di atas menggunakan C++ untuk menunjukkan penggunaan array tiga dimensi yang memungkinkan penyimpanan data dalam tiga dimensi dengan tiga indeks. Setelah pengguna memasukkan ukuran x, y, dan z, program membuat array sesuai dengan ukuran yang dimasukkan. Dengan perulangan bersarang, pengguna diminta memasukkan nilai untuk setiap elemen array, yang kemudian dicetak oleh program. Akhirnya, program berakhir dengan mengembalikan nilai 0, memberikan kemampuan kepada pengguna untuk mengelola array tiga dimensi sesuai kebutuhan.
 
