@@ -1120,92 +1120,9 @@ int main(){
 }
 ```
 #### Output:
-![Screenshot Unguided Q1](output_Unguided-2.png)
 ![Screenshot Unguided Q1](output_Unguided2.png)
 
 Kode di atas menggunakan C++ untuk menunjukkan penggunaan array tiga dimensi yang memungkinkan penyimpanan data dalam tiga dimensi dengan tiga indeks. Setelah pengguna memasukkan ukuran x, y, dan z, program membuat array sesuai dengan ukuran yang dimasukkan. Dengan perulangan bersarang, pengguna diminta memasukkan nilai untuk setiap elemen array, yang kemudian dicetak oleh program. Akhirnya, program berakhir dengan mengembalikan nilai 0, memberikan kemampuan kepada pengguna untuk mengelola array tiga dimensi sesuai kebutuhan.
-
-### 3. Buatlah program menu untuk mencari nilai maksimum, minimum dan nilai rata – rata dari suatu array dengan input yang dimasukkan oleh user!
-
-```C++
-#include <iostream>
-
-using namespace std;
-
-void maksimum(int arr[], int size) {
-    int max = arr[0];
-    for (int i = 1; i < size; i++) {
-        if (arr[i] > max) {
-            max = arr[i];
-        }
-    }
-    cout << "Nilai maksimum " << max << endl;
-}
-
-void minimum(int arr[], int size) {
-    int min = arr[0];
-    for (int i = 1; i < size; i++) {
-        if (arr[i] < min) {
-            min = arr[i];
-        }
-    }
-    cout << "Nilai minimum " << min << endl;
-}
-
-void rata_rata(int arr[], int size) {
-    int sum = 0;
-    for (int i = 0; i < size; i++) {
-        sum += arr[i];
-    }
-    double average = static_cast<double>(sum) / size;
-    cout << "Rata-rata array: " << average << endl;
-}
-int main() {
-    int size, pilihan;
-    cout << "Masukkan ukuran array: ";
-    cin >> size;
-    int Array[size];
-    cout << "\nMasukkan " << size << " angka\n";
-    for (int i = 0; i < size; i++) {
-        cout << "Array[" << i + 1 << "]: ";
-        cin >> Array[i];
-    }
-    cout << "\nData array: ";
-    for (int i = 0; i < size; i++) {
-        cout << Array[i] << ", ";
-    }
-    do {cout << "\n\nOperator Array\n";
-        cout << "1. Maksimum\n";
-        cout << "2. Minimum\n";
-        cout << "3. Rata-rata\n";
-        cout << "4. Keluar\n";
-        cout << "Masukkan pilihan Anda: ";
-        cin >> pilihan;
-        switch (pilihan) {
-            case 1:
-                maksimum(Array, size);
-                break;
-            case 2:
-                minimum(Array, size);
-                break;
-            case 3:
-                rata_rata(Array, size);
-                break;
-            case 4:
-                cout << "Terima kasih telah menggunakan program!" << endl;
-                break;
-            default:
-                cout << "Pilihan tidak valid!" << endl;
-        }
-    } while (pilihan != 4);
-    return 0;
-}
-```
-#### Output:
-![Screenshot Unguided Q1](output_Unguided3-1.png)
-![Screenshot Unguided Q1](output_Unguided3.png)
-
-kode diatas digunakan untuk melakukan operasi seperti mencari nilai maksimum, minimum, dan rata-rata. Pengguna memasukkan angka ke dalam sebuah array, Setelah memasukkan ukuran array dan angka-angka, program memberikan opsi operasi kepada pengguna. Fungsi terpisah digunakan untuk setiap operasi, dan pengguna diberi opsi untuk melakukan operasi lain atau keluar. Program berakhir dengan pesan terima kasih setelah pengguna memilih untuk keluar. Ini memberikan pengguna kemampuan untuk mengelola dan melakukan operasi pada array angka dengan sederhana.
 
 ## Kesimpulan
 Array adalah suatu struktur yang terdiri dari sejumlah elemen yang memiliki tipe data yang sama. Elemen-elemen array tersusun secara sekuensial dalam memori komputer. Array dapat berupa satu dimensi, dua dimensi, tiga dimensi, ataupun banyak dimensi.
