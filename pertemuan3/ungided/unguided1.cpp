@@ -1,43 +1,43 @@
-//Coding by Azaria Nanda Putri - 2311102147
+//Coding Milik Mahija Danadyaksa Sadtomo (2311102157)
 
-#include <iostream>
-#include <iomanip>
+#include <iostream> 
+#include <iomanip> 
 
-using namespace std;
+using namespace std; 
 
-//Deklarasi Struct Node
+//Deklarasi Struct Node yang berisi nama dan umur
 struct Node {
-    string Nama_2147;
-    int Umur_2147;
-    Node* next;
+    string nama_2147;
+    int umur_2147;
+    Node* next; // Pointer ke node selanjutnya
 };
 
-Node* head;
-Node* tail;
+Node* head; 
+Node* tail; 
 
-//Inisialisasi Node
-void init_2147() {
+//Inisialisasi Node (head dan tail)
+void init() {
     head = NULL;
     tail = NULL;
 }
 
-// Pengecekan
-bool Empty_2147() {
+// Pengecekan apakah list kosong atau tidak
+bool isEmpty() {
     if (head == NULL)
         return true;
     else
         return false;
 }
 
-//Tambah Depan
-void InsertDepan_2147(string nama, int umur) {
+
+void insertDepan(string nama, int umur) {
     //Buat Node baru
     Node* baru = new Node;
-    baru->Nama_2147 = nama;
-    baru->Umur_2147 = umur;
+    baru->nama_2147 = nama;
+    baru->umur_2147 = umur;
     baru->next = NULL;
 
-    if (Empty_2147() == true) {
+    if (isEmpty() == true) {
         head = tail = baru;
         tail->next = NULL;
     }
@@ -48,14 +48,15 @@ void InsertDepan_2147(string nama, int umur) {
 }
 
 //Tambah Belakang
-void InsertBelakang_2147(string nama, int umur) {
+void insertBelakang(string nama, int umur) {
+
     //Buat Node baru
     Node* baru = new Node;
-    baru->Nama_2147 = nama;
-    baru->Umur_2147 = umur;
+    baru->nama_2147 = nama;
+    baru->umur_2147 = umur;
     baru->next = NULL;
 
-    if (Empty_2147() == true) {
+    if (isEmpty() == true) {
         head = tail = baru;
         tail->next = NULL;
     }
@@ -66,7 +67,7 @@ void InsertBelakang_2147(string nama, int umur) {
 }
 
 //Hitung Jumlah List
-int HitungList_2147() {
+int hitungList() {
     Node* hitung;
     hitung = head;
     int jumlah = 0;
@@ -80,20 +81,20 @@ int HitungList_2147() {
 }
 
 //Tambah Tengah
-void InsertTengah_2147(string nama, int umur, int posisi) {
-    if (posisi < 1 || posisi > HitungList_2147()) {
-        cout << "Posisi diluar jangkauan!" << endl;
+void insertTengah(string nama,int umur, int posisi) {
+    if (posisi < 1 || posisi > hitungList()) {
+        cout << "Posisi diluar jangkauan" << endl;
     }
     else if (posisi == 1) {
-        cout << "Posisi tidak berada ditengah!" << endl;
+        cout << "Posisi ga di tengah" << endl;
     }
     else {
         Node* baru, * bantu;
         baru = new Node();
-        baru->Nama_2147 = nama;
-        baru->Umur_2147 = umur;
+        baru->nama_2147 = nama;
+        baru->umur_2147 = umur;
 
-        // tranversing
+        // tranversing 
         bantu = head;
         int nomor = 1;
 
@@ -108,10 +109,10 @@ void InsertTengah_2147(string nama, int umur, int posisi) {
 }
 
 //Hapus Depan
-void HapusDepan_2147() {
+void hapusDepan() {
     Node* hapus;
 
-    if (Empty_2147() == false) {
+    if (isEmpty() == false) {
         if (head->next != NULL) {
             hapus = head;
             head = head->next;
@@ -122,16 +123,16 @@ void HapusDepan_2147() {
         }
     }
     else {
-        cout << "List masih kosong!" << endl;
+        cout << "Listnya kosong!" << endl;
     }
 }
 
 //Hapus Belakang
-void HapusBelakang_2147() {
+void hapusBelakang() {
     Node* hapus;
     Node* bantu;
 
-    if (Empty_2147() == false) {
+    if (isEmpty() == false) {
         if (head != tail) {
             hapus = tail;
             bantu = head;
@@ -149,19 +150,19 @@ void HapusBelakang_2147() {
         }
     }
     else {
-        cout << "List masih kosong!" << endl;
+        cout << "Listnya kosong!" << endl;
     }
 }
 
 //Hapus Tengah
-void HapusTengah_2147(int posisi) {
+void hapusTengah(int posisi) {
     Node* hapus, * bantu, * bantu2;
 
-    if (posisi < 1 || posisi > HitungList_2147()) {
-        cout << "Posisi diluar jangkauan" << endl;
+    if (posisi < 1 || posisi > hitungList()) {
+        cout << "Posisi di luar jangkauan" << endl;
     }
     else if (posisi == 1) {
-        cout << "Posisi tidak ditengah" << endl;
+        cout << "Posisi gak di tengah" << endl;
     }
     else {
         int nomor = 1;
@@ -185,27 +186,16 @@ void HapusTengah_2147(int posisi) {
     }
 }
 
-//Ubah Depan
-void UbahDepan_2147(string nama, int umur) {
-    if (Empty_2147() == false) {
-        head->Nama_2147 = nama;
-        head->Umur_2147 = umur;
-    }
-    else {
-        cout << "apakah ini sama?" << endl;
-    }
-}
-
 //Ubah Tengah
-void UbahTengah_2147(string nama, int umur, int posisi) {
+void ubahTengah(string nama,int umur, int posisi) {
     Node* bantu;
 
-    if (Empty_2147() == false) {
-        if (posisi < 1 || posisi > HitungList_2147()) {
-            cout << "Posisi diluar jangkauan" << endl;
+    if (isEmpty() == false) {
+        if (posisi < 1 || posisi > hitungList()) {
+            cout << "Posisi di luar jangkauan" << endl;
         }
         else if (posisi == 1) {
-            cout << "Posisi tidak ditengah" << endl;
+            cout << "Posisi bukan posisi tengah" << endl;
         }
         else {
             bantu = head;
@@ -216,28 +206,18 @@ void UbahTengah_2147(string nama, int umur, int posisi) {
                 nomor++;
             }
 
-            bantu->Nama_2147 = nama;
-            bantu->Umur_2147 = umur;
+            bantu->nama_2147 = nama;
+            bantu->umur_2147 = umur;
         }
     }
     else {
-        cout << "List masih kosong!" << endl;
+        cout << "Listnya masih kosong!" << endl;
     }
 }
 
-//Ubah Belakang
-void UbahBelakang_2147(string nama, int umur) {
-    if (Empty_2147() == false) {
-        tail->Nama_2147 = nama;
-        tail->Umur_2147 = umur;
-    }
-    else {
-        cout << "List masih kosong!" << endl;
-    }
-}
 
 //Hapus List
-void HapusList_2147() {
+void clearList() {
     Node* bantu, * hapus;
     bantu = head;
 
@@ -248,19 +228,18 @@ void HapusList_2147() {
     }
 
     head = tail = NULL;
-    cout << "Bagus, listnya sudah terhapus" << endl;
+    cout << "list berhasil dihapus!" << endl;
 }
 
 //Tampilkan List
-void Tampil_2147() {
+void tampil() {
     Node* bantu;
     bantu = head;
 
-    cout << left << setw(15) << "-Nama-" << right << setw(4) << "-Usia-" << endl; // Supaya rapi
-
-    if (Empty_2147() == false) {
+    cout<< left << setw(20) << "Nama" << setw(20) << "Umur" << endl;
+    if (isEmpty() == false) {
         while (bantu != NULL) {
-            cout << left << setw(15) << bantu->Nama_2147 << right << setw(4) << bantu->Umur_2147 << endl; // Supaya lurus di output
+            cout << left << setw(20) << bantu->nama_2147 << setw(20) << bantu->umur_2147 << endl;
             bantu = bantu->next;
         }
 
@@ -272,38 +251,153 @@ void Tampil_2147() {
 }
 
 int main() {
-    init_2147(); // Inisialisasi Linked List
-    cout << "\n 2147   Program penyimpanan nama dan usia Mahasiswa   2147 " << endl; // Menampilkan point a 
-    InsertDepan_2147("Karin", 18);
-    InsertDepan_2147("Hoshino", 18);
-    InsertDepan_2147("Akechi", 20); 
-    InsertDepan_2147("Yusuke", 19);
-    InsertDepan_2147("Michael", 18);
-    InsertDepan_2147("Jane", 20);
-    InsertDepan_2147("John", 19);
-    InsertDepan_2147("Nanda", 19);
-    Tampil_2147 ();
+    init();
 
-    // Poin b
-    cout << " 2147   (B) Menghapus data 'Akechi'   2132 " << endl;
-    HapusTengah_2147(6);
-    Tampil_2147();
+    // Tampilan awal
 
-    // Poin c
-    cout << " 2147   (C) Menambah data 'Futaba 18' diantara John & Jane   2132 " << endl;
-    InsertTengah_2147("Futaba", 18, 3);
-    Tampil_2147();
+    insertDepan("Karin", 18);
+    insertDepan("Hoshino", 18);
+    insertDepan("Akechi", 20);
+    insertDepan("Yusuke", 19);
+    insertDepan("Michael", 18);
+    insertDepan("Jane", 20);
+    insertDepan("John", 19);
+    insertDepan("Nanda", 19);
+    tampil();
 
-    // Poin d
-    cout << " 2147   (D) Menambah data 'Igor 20' di awal   2132 " << endl;
-    InsertDepan_2147("Igor", 20);
-    Tampil_2147();
+    while (true)
+    {
+        cout << "1. Tambah Depan" << endl;
+        cout << "2. Tambah Belakang" << endl;
+        cout << "3. Tambah Tengah" << endl;
+        cout << "4. Hapus Depan" << endl;
+        cout << "5. Hapus Belakang" << endl;
+        cout << "6. Hapus Tengah" << endl;
+        cout << "7. Ubah Tengah" << endl;
+        cout << "8. Hapus Semua" << endl;
+        cout << "9. Tampilkan Data" << endl;
+        cout << "10. Exit" << endl;
+        int choice;
+        cout << "Masukkan pilihan: ";
+        cin >> choice;
+        switch (choice)
+        {
+        case 1:
+        {
+            string nama;
+            int umur;
+            cout << "Masukkan nama: ";
+            cin >> nama;
+            cout << "Masukkan umur: ";
+            cin >> umur;
+            insertDepan(nama, umur);
+            cout << "Data berhasil ditambahkan" << endl;
+            break;
+        }
+        case 2:
+        {
+            string nama;
+            int umur;
+            cout << "Masukkan nama: ";
+            cin >> nama;
+            cout << "Masukkan umur: ";
+            cin >> umur;
+            insertBelakang(nama, umur);
+            cout << "Data berhasil ditambahkan" << endl;
+            break;
+        }
+        case 3:
+        {
+            string nama;
+            int umur, posisi;
+            cout << "Masukkan nama: ";
+            cin >> nama;
+            cout << "Masukkan umur: ";
+            cin >> umur;
+            cout << "Masukkan posisi: ";
+            cin >> posisi;
+            insertTengah(nama, umur, posisi);
+            cout << "Data berhasil ditambahkan" << endl;
+            break;
+        }
+        case 4:
+        {
+            hapusDepan();
+            cout << "Data berhasil dihapus" << endl;
+            break;
+        }
+        case 5:
+        {
+            hapusBelakang();
+            cout << "Data berhasil dihapus" << endl;
+            break;
+        }
+        case 6:
+        {
+            int posisi;
+            cout << "Masukkan posisi: ";
+            cin >> posisi;
+            hapusTengah(posisi);
+            cout << "Data berhasil dihapus" << endl;
+            break;
+        }
+        case 7:
+        {
+            string nama;
+            int umur, posisi;
+            cout << "Masukkan nama: ";
+            cin >> nama;
+            cout << "Masukkan umur: ";
+            cin >> umur;
+            cout << "Masukkan posisi: ";
+            cin >> posisi;
+            ubahTengah(nama, umur, posisi);
+            cout << "Data berhasil diubah" << endl;
+            break;
+        }
+        case 8:
+        {
+            clearList();
+            break;
+        }
+        case 9:
+        {
+            tampil();
+            break;
+        }
+        case 10:
+        {
+            return 0;
+        }
+        default:
+        {
+            cout << "Pilihan tidak sesuai!" << endl;
+            break;
+        }
+        }
+    }
+    // // Tampilan setelah menghapus akechi di posisi 6
+    // cout<<"===== B) Hapus 'Akechi' (B =====\n";
+    // hapusTengah(6);
+    // tampil();
 
-    // Poin e & f
-    cout << " 2147   (E) Mengubah data 'Michael' menjadi 'Reyn (18)'   2132 " << endl;
-    cout << "-=-=-= (F) Tampilan Akhir! =-=-=-" << endl;
-    UbahTengah_2147("Reyn", 18, 6);
-    Tampil_2147();
+    // // Tampilan setelah menambahkan futaba di posisi 3
+    // cout<<"===== C) Insert 'Futaba' (C =====\n";
+    // insertTengah("Futaba", 18, 3);
+    // tampil();
+
+    // // Tampilan setelah menambahkan igor di depan
+    // cout<<"===== D) Insert 'Igor' (D =====\n";
+    // insertDepan("Igor", 20);
+    // tampil();
+
+    // // Tampilan setelah mengubah michael menjadi reyn
+    // cout<<"===== E) Ubah 'Michael' menjadi 'Reyn'(E =====\n";
+    // ubahTengah("Reyn", 18, 6);
+
+    // // Tampilan terakhir
+    // cout<<"===== F) Tampilan Seluruh Data (F =====\n";
+    // tampil();
 
     return 0;
 }
