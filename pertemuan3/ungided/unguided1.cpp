@@ -267,7 +267,7 @@ int main() {
 
     while (true)
     {
-        cout << "1. Tambah Depan" << endl;
+        cout << "\n1. Tambah Depan\n" << endl;
         cout << "2. Tambah Belakang" << endl;
         cout << "3. Tambah Tengah" << endl;
         cout << "4. Hapus Depan" << endl;
@@ -278,7 +278,7 @@ int main() {
         cout << "9. Tampilkan Data" << endl;
         cout << "10. Exit" << endl;
         int choice;
-        cout << "Masukkan pilihan: ";
+        cout << "\nMasukkan pilihan: \n";
         cin >> choice;
         switch (choice)
         {
