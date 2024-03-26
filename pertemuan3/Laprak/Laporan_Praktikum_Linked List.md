@@ -1137,7 +1137,7 @@ int main(){
 }
 ```
 #### Output:
-![Screenshot Unguided Q1](output_Unguided2.png)
+![Screenshot Unguided Q1](output_Unguided2(1).png)
 ![Screenshot Unguided Q1](output_Unguided2(2).png)
 ![Screenshot Unguided Q1](output_Unguided2(3).png)
 
