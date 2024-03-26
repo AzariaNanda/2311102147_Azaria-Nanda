@@ -1,4 +1,4 @@
-//Sinta Sarwo - 2311102132
+//Coding by Azaria Nanda Putri - 2311102147
 
 #include <iostream>
 #include <iomanip>
@@ -82,10 +82,10 @@ int HitungList_2147() {
 //Tambah Tengah
 void InsertTengah_2147(string nama, int umur, int posisi) {
     if (posisi < 1 || posisi > HitungList_2147()) {
-        cout << "Posisiton out of range!" << endl;
+        cout << "Posisi diluar jangkauan!" << endl;
     }
     else if (posisi == 1) {
-        cout << "The position is not in the middle!" << endl;
+        cout << "Posisi tidak berada ditengah!" << endl;
     }
     else {
         Node* baru, * bantu;
@@ -122,7 +122,7 @@ void HapusDepan_2147() {
         }
     }
     else {
-        cout << "Nothing there." << endl;
+        cout << "List masih kosong!" << endl;
     }
 }
 
@@ -149,7 +149,7 @@ void HapusBelakang_2147() {
         }
     }
     else {
-        cout << "Nothing there." << endl;
+        cout << "List masih kosong!" << endl;
     }
 }
 
@@ -158,10 +158,10 @@ void HapusTengah_2147(int posisi) {
     Node* hapus, * bantu, * bantu2;
 
     if (posisi < 1 || posisi > HitungList_2147()) {
-        cout << "Posisiton out of range!" << endl;
+        cout << "Posisi diluar jangkauan" << endl;
     }
     else if (posisi == 1) {
-        cout << "The position is not in the middle!" << endl;
+        cout << "Posisi tidak ditengah" << endl;
     }
     else {
         int nomor = 1;
@@ -192,7 +192,7 @@ void UbahDepan_2147(string nama, int umur) {
         head->Umur_2147 = umur;
     }
     else {
-        cout << "It's the same?" << endl;
+        cout << "apakah ini sama?" << endl;
     }
 }
 
@@ -202,10 +202,10 @@ void UbahTengah_2147(string nama, int umur, int posisi) {
 
     if (Empty_2147() == false) {
         if (posisi < 1 || posisi > HitungList_2147()) {
-            cout << "Posisiton out of range!" << endl;
+            cout << "Posisi diluar jangkauan" << endl;
         }
         else if (posisi == 1) {
-            cout << "The position is not in the middle!" << endl;
+            cout << "Posisi tidak ditengah" << endl;
         }
         else {
             bantu = head;
@@ -221,7 +221,7 @@ void UbahTengah_2147(string nama, int umur, int posisi) {
         }
     }
     else {
-        cout << "Nothing there." << endl;
+        cout << "List masih kosong!" << endl;
     }
 }
 
@@ -232,7 +232,7 @@ void UbahBelakang_2147(string nama, int umur) {
         tail->Umur_2147 = umur;
     }
     else {
-        cout << "Nothing there." << endl;
+        cout << "List masih kosong!" << endl;
     }
 }
 
@@ -248,7 +248,7 @@ void HapusList_2147() {
     }
 
     head = tail = NULL;
-    cout << "Nice, the list have been deleted." << endl;
+    cout << "Bagus, listnya sudah terhapus" << endl;
 }
 
 //Tampilkan List
@@ -267,7 +267,7 @@ void Tampil_2147() {
         cout << endl;
     }
     else {
-        cout << "Nothing there." << endl;
+        cout << "List masih kosong!" << endl;
     }
 }
 
