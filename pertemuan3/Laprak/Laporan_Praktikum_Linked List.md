@@ -746,18 +746,19 @@ int main() {
 
     while (true)
     {
-        cout << "1. Tambah Depan" << endl;
-        cout << "2. Tambah Belakang" << endl;
-        cout << "3. Tambah Tengah" << endl;
-        cout << "4. Hapus Depan" << endl;
-        cout << "5. Hapus Belakang" << endl;
-        cout << "6. Hapus Tengah" << endl;
-        cout << "7. Ubah Tengah" << endl;
+        cout << "\n2147 DAFTAR DATA MAHASISWA\n" << endl;
+        cout << "1. menambah data di depan" << endl;
+        cout << "2. menambah data di  Belakang" << endl;
+        cout << "3. menambah data di  Tengah" << endl;
+        cout << "4. menghapus data di depan" << endl;
+        cout << "5. menghapus data di belakang" << endl;
+        cout << "6. menghapus data di tengah" << endl;
+        cout << "7. mengubah data di tengah" << endl;
         cout << "8. Hapus Semua" << endl;
-        cout << "9. Tampilkan Data" << endl;
+        cout << "9. Menampilkan Data" << endl;
         cout << "10. Exit" << endl;
         int choice;
-        cout << "Masukkan pilihan: ";
+        cout << "\nMasukkan pilihan:  ";
         cin >> choice;
         switch (choice)
         {
