@@ -475,7 +475,7 @@ Kode tersebut adalah implementasi dari double linked list yang terdiri dari dua 
 ### 1. Buatlah program menu Single Linked List Non-Circular untuk menyimpan Nama dan Usia mahasiswa, dengan menggunakan inputan dari user. Lakukan operasi berikut:</br> ㅤa. Masukkan data sesuai urutan berikut. (Gunakan insert depan, belakang atau tengah). Data pertama yang dimasukkan adalah nama dan usia anda.</br> ㅤb. Hapus data Akechi</br> ㅤc. Tambahkan data berikut diantara John dan Jane: "Futaba 18"</br> ㅤd. Tambahkan data berikut di awal: "Igor 20"</br> ㅤe. Ubah data Michael menjadi: "Reyn 18"</br> ㅤf. Tampilkan seluruh data
 
 ```C++
-//Sinta Sarwo - 2311102132
+//Coding by Azaria Nanda Putri - 2311102147
 
 #include <iostream>
 #include <iomanip>
