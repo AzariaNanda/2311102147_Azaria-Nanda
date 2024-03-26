@@ -1,4 +1,4 @@
-# <h1 align="center">Laporan Praktikum Modul Array</h1>
+# <h1 align="center">Laporan Praktikum Modul Linked List</h1>
 <p align="center">Azaria Nanda Putri - 2311102147</p>
 
 ## Dasar Teori
