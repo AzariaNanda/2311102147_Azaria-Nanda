@@ -883,12 +883,12 @@ int main() {
 }
 ```
 #### Output:
-![Screenshot Unguided Q1](output_Unguided1(1).png)
-![Screenshot Unguided Q1](output_Unguided1(2).png)
-![Screenshot Unguided Q1](output_Unguided1(3).png)
-![Screenshot Unguided Q1](output_Unguided1(4).png)
-![Screenshot Unguided Q1](output_Unguided1(5).png)
-![Screenshot Unguided Q1](output_Unguided1(6).png)
+![Screenshot Unguided Q1](output_unguided1(1).png)
+![Screenshot Unguided Q1](output_unguided1(2).png)
+![Screenshot Unguided Q1](output_unguided1(3).png)
+![Screenshot Unguided Q1](output_unguided1(4).png)
+![Screenshot Unguided Q1](output_unguided1(5).png)
+![Screenshot Unguided Q1](output_unguided1(6).png)
 
 Kode di atas adalah implementasi single linked list dengan node yang memiliki integer data dan pointer next. Inisialisasi menggunakan void init(), dan pointer head dan tail diatur nullptr. Fungsi bool IsEmpty() memeriksa apakah linked list kosong. Fungsi lainnya meliputi: insertDepan(int value), insertBelakang(int value), jumlah(), insertTengah(int value, int posisi), hapusDepan(), hapusBelakang(), hapusTengah(int posisi), tampil(), ubahDepan(int value), ubahBelakang(int value), dan ubahTengah(int value, int posisi). Pada main(), program inisialisasi linked list, lalu menampilkan data, menghapus 'Akechi', menambah 'Futaba (18)' dan 'Igor (20)', mengubah 'Michael' menjadi 'Reyn (18)', dan menampilkan data lagi.
 
