@@ -886,16 +886,37 @@ int main() {
 ![Screenshot Unguided Q1](output_Unguided11.png)
 ![Screenshot Unguided Q1](output_Unguided111.png)
 ![Screenshot Unguided Q1](output_Unguided1111.png)
+
 Kode di atas adalah implementasi single linked list dengan node yang memiliki integer data dan pointer next. Inisialisasi menggunakan void init(), dan pointer head dan tail diatur nullptr. Fungsi bool IsEmpty() memeriksa apakah linked list kosong. Fungsi lainnya meliputi: insertDepan(int value), insertBelakang(int value), jumlah(), insertTengah(int value, int posisi), hapusDepan(), hapusBelakang(), hapusTengah(int posisi), tampil(), ubahDepan(int value), ubahBelakang(int value), dan ubahTengah(int value, int posisi). Pada main(), program inisialisasi linked list, lalu menampilkan data, menghapus 'Akechi', menambah 'Futaba (18)' dan 'Igor (20)', mengubah 'Michael' menjadi 'Reyn (18)', dan menampilkan data lagi.
 
 
-### 2. Buatlah program input array tiga dimensi (seperti pada guided) tetapi jumlah atau ukuran elemennya diinputkan oleh user!
+### 2. Modifikasi Guided Double Linked List dilakukan dengan penambahan operasi untuk menambah data, menghapus, dan update di tengah / di urutan tertentu yang diminta. Selain itu, buatlah agar tampilannya menampilkan Nama Produk dan Harga. </br>Case:</br> ㅤ1. Tambahkan produk Azarine dengan harga 65000 diantara Somethinc dan Skintific</br> ㅤ2. Hapus produk Wardah</br> ㅤ3. Update produk Hanasui menjadi Cleora dengan harga 55000</br> ㅤ4. Tampilkan menu, di mana tampilan akhirnya akan menjadi seperti dibawah ini:
 
 ```C++
 #include<iostream>
 #include<iomanip>
 
 using namespace std;
+
+const string MENU_UTAMA = 
+    "--- TOKO SKINCARE PURWOKERTO BY AZARIA NANDA ^-^ ---\n"
+    "1. Tambah data\n"
+    "2. Hapus data\n"
+    "3. Update data\n"
+    "4. Tambah data urutan tertentu\n"
+    "5. Hapus data urutan tertentu\n"
+    "6. Hapus seluruh data\n"
+    "7. Tampilkan data\n"
+    "8. exit\n"
+    "Pilihan anda = ";
+
+const string PESAN_TAMBAH = "- Tambah Data Produk -\n";
+const string PESAN_HAPUS = "- Hapus Data Produk Pertama -\n";
+const string PESAN_UPDATE = "- Update Data Produk -\n";
+const string PESAN_TAMBAH_URUTAN = "- Tambah Data Urutan Tertentu -\n";
+const string PESAN_HAPUS_URUTAN = "- Hapus Data Urutan Tertentu -\n";
+const string PESAN_HAPUS_SEMUA = "- Hapus Seluruh Data -\n";
+const string PESAN_TAMPIL = "- Tampilkan Data -\n";
 
 struct node{
     string barang_147;
@@ -1032,91 +1053,84 @@ int main(){
     TambahNode_147("Originote", 60000, 1);
     TampilData_147();
 
-    MenuUtama:
-    cout << "--- TOKO SKINCARE PURWOKERTO ---" << endl;
-    cout << "1. Tambah data" << endl;
-    cout << "2. Hapus data" << endl;
-    cout << "3. Update data" << endl;
-    cout << "4. Tambah data urutan tertentu" << endl;
-    cout << "5. Hapus data urutan tertentu" << endl;
-    cout << "6. Hapus seluruh data" << endl;
-    cout << "7. Tampilkan data" << endl;
-    cout << "8. exit" << endl;
-    cout << "Pilihan anda = "; cin >> pilih_147;
+    while (true) {
+    cout << MENU_UTAMA;
+    cin >> pilih_147;
     cout << endl;
 
     switch(pilih_147){
         case 1 :
-            cout << "- Tambah Data Produk -" << endl;
-            cout << "Masukkan nama produk yang ingin ditambahkan = "; cin >> ProdukBaru_147;
-            cout << "Masukkan harga produk = "; cin >> HargaBaru_147;
+            cout << PESAN_TAMBAH << endl;
+            cout << "Masukkan nama produk yang ingin ditambahkan = ";
+            cin >> ProdukBaru_147;
+            cout << "Masukkan harga produk = "; 
+            cin >> HargaBaru_147;
             TambahNode_147(ProdukBaru_147, HargaBaru_147, 1);
             cout << "Produk telah ditambahkan" << endl;
             cout << endl;
-            goto MenuUtama;
             break;
         case 2 :
-                cout << "- Hapus Data Produk Pertama - " << endl;
+            cout << PESAN_HAPUS << endl;
             HapusNode_147(1);
             cout << "Data produk ke-1 telah dihapus" << endl;
             cout << endl;
-            goto MenuUtama;
             break;
         case 3 :
-            cout << "- Update Data Produk -" << endl;
-            cout << "Masukkan produk lama yang ingin diganti = ";cin >> ProdukLama_147;
+            cout << PESAN_UPDATE << endl;
+            cout << "Masukkan produk lama yang ingin diganti = ";
+            cin >> ProdukLama_147;
             cout << "Masukkan nama produk baru = "; cin >> ProdukBaru_147;
             cout << "Masukkan harga produk baru = "; cin >> HargaBaru_147;
             UpdateData_147(ProdukLama_147, ProdukBaru_147, HargaBaru_147);
             cout << "Produk telah diupdate" << endl;
             cout << endl;
-            goto MenuUtama;
             break;
         case 4 :
-            cout << "- Tambah Data Urutan Tertentu -" << endl;
-            cout << "Masukkan nama produk yang ingin ditambahkan = "; cin >> ProdukBaru_147;
-            cout << "Masukkan harga produk baru = "; cin >> HargaBaru_147;
-            cout << "Masukkan posisi produk dalam database = "; cin >> PosisiProduk_147;
+            cout << PESAN_TAMBAH_URUTAN << endl;
+            cout << "Masukkan nama produk yang ingin ditambahkan = "; 
+            cin >> ProdukBaru_147;
+            cout << "Masukkan harga produk baru = "; 
+            cin >> HargaBaru_147;
+            cout << "Masukkan posisi produk dalam database = "; 
+            cin >> PosisiProduk_147;
             TambahNode_147(ProdukBaru_147, HargaBaru_147, PosisiProduk_147);
             cout << "Produk telah ditambahkan" << endl;
             cout << endl;
-            goto MenuUtama;
             break;
         case 5 :
-            cout << "- Hapus Data Urutan Tertentu -" << endl;
-            cout << "Masukkan urutan produk yang ingin dihapus = "; cin >> PosisiProduk_147;
+            cout << PESAN_HAPUS_URUTAN << endl;
+            cout << "Masukkan urutan produk yang ingin dihapus = "; 
+            cin >> PosisiProduk_147;
             HapusNode_147(PosisiProduk_147);
             cout << "Data produk urutan ke-" << PosisiProduk_147 << " telah dihapus" << endl;
             cout << endl;
-            goto MenuUtama;
             break;
         case 6 :
-            cout << "- Hapus Seluruh Data -" << endl;
-            cout << "Apakah anda yakin ingin menghapus semua produk? [y/n] = "; cin >> yakin_147;
+            cout << PESAN_HAPUS_SEMUA << endl;
+            cout << "Apakah anda yakin ingin menghapus semua produk? [y/n] = "; 
+            cin >> yakin_147;
             if(yakin_147 == 'y' || yakin_147 == 'Y'){
-                HapusSemua_147();
-                cout << "Semua data produk telah dihapus" << endl;
+            HapusSemua_147();
+            cout << "Semua data produk telah dihapus" << endl;
             } else if(yakin_147 == 'n' || yakin_147 == 'N'){
                 cout << "Aksi dibatalkan" << endl;
             }
             cout << endl;
-            goto MenuUtama;
             break;
         case 7 :
-            cout << "- Tampilkan Data -" << endl;
+            cout << PESAN_TAMPIL << endl;
             TampilData_147();
             cout << endl;
-            goto MenuUtama;
             break;
         case 8 :
             cout << "Anda keluar dari program" << endl;
             return 0;
         default :
-            cout << "Pilihan yang anda masukkan tidak tersedia" << endl;
-            cout << endl;
-            goto MenuUtama;
+            cout << "Pilihan yang anda input tidak tersedia" << endl;
             break;
+        }
     }
+    return 0;
 }
 ```
 #### Output:
