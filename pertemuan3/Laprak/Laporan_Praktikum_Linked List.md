@@ -1137,9 +1137,9 @@ int main(){
 }
 ```
 #### Output:
-![Screenshot Unguided Q1](output_Unguided2(1).png)
-![Screenshot Unguided Q1](output_Unguided2(2).png)
-![Screenshot Unguided Q1](output_Unguided2(3).png)
+![Screenshot Unguided Q1](output_unguided2(1).png)
+![Screenshot Unguided Q1](output_unguided2(2).png)
+![Screenshot Unguided Q1](output_unguided2(3).png)
 
 
 Kode tersebut adalah program sederhana dalam bahasa C++ yang mengimplementasikan sebuah aplikasi manajemen produk perawatan kulit. Program ini memungkinkan pengguna untuk menambah, menghapus, memperbarui, menampilkan, serta menghapus semua data produk. Program memiliki menu utama dengan pilihan-pilihan yang sesuai dengan fungsi-fungsi tersebut. Program menggunakan struktur data linked list untuk menyimpan data produk, di mana setiap node dalam linked list menyimpan nama produk, harga produk, serta pointer ke node sebelumnya dan node berikutnya.
