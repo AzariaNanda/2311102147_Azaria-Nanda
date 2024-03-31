@@ -1,4 +1,4 @@
-//Coding Milik Mahija Danadyaksa Sadtomo (2311102157)
+
 
 #include <iostream> 
 #include <iomanip> 
