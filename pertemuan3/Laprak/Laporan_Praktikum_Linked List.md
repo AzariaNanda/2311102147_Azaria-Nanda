@@ -477,8 +477,6 @@ Kode tersebut adalah implementasi dari double linked list yang terdiri dari dua 
 ```C++
 //Coding by Azaria Nanda Putri - 2311102147
 
-//Coding Milik Mahija Danadyaksa Sadtomo (2311102157)
-
 #include <iostream> 
 #include <iomanip> 
 
