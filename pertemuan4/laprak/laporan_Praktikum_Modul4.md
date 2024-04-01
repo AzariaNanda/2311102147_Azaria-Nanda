@@ -1,4 +1,4 @@
-# <h1 align="center">Laporan Praktikum Modul Linked List</h1>
+# <h1 align="center">Laporan Praktikum Modul Linked List Circular dan Non Circular</h1>
 <p align="center">Azaria Nanda Putri - 2311102147</p>
 
 ## Dasar Teori
@@ -13,7 +13,7 @@ Linked list adalah kumpulan elemen yang terhubung melalui pointer. Setiap elemen
     
 ## Guided 
 
-### 1. Latihan Single Linked List
+### 1. Latihan Single Linked List Non Circular
 
 ```C++
 #include <iostream>
@@ -345,79 +345,67 @@ bool isEmpty()
 ```
 Kode di atas digunakan untuk menjalankan single linked list. Struct node dideklarasikan dengan int data dan Node* next, serta inisialisasi node dilakukan melalui prosedur void init() dengan head dan tailnya dideklarasikan NULL. Fungsi bool isEmpty() juga disediakan untuk mengecek apakah linked list kosong atau tidak. Dalam int main(), berbagai fungsi akan dipanggil untuk operasi-operasi seperti penambahan dan penghapusan data, serta modifikasi data di berbagai posisi. Fungsi-fungsi tersebut antara lain: insertDepan(), insertBelakang(), hitungList(), insertTengah(), hapusDepan(), hapusBelakang(), hapusTengah(), ubahDepan(), ubahTengah(), ubahBelakang(), clearList(), dan tampil(). Setelah pendeklarasian fungsi-fungsi tersebut di int main(), hasil akhir dari kode tersebut adalah 111.
 
-### 2. Latihan Double Linked List
-
-```C++
+### 2. Latihan Single Linked List Circular
+```c++
 #include <iostream>
 
 using namespace std;
-// PROGRAM SINGLE LINKED LIST CIRCULAR
 
-// Deklarasi struct node
+// Deklarasi Struct Node
+
+
 struct Node
 {
     string data;
-    Node *next;
+    Node* next;
 };
 
-Node *head, *tail, *baru, *bantu, *hapus;
+Node* head, * tail, * baru, * bantu, * hapus;
 
-// Inisialisasi Node
-void init()
-{
+//Inisialisasi node head & tail
+void init(){
     head = NULL;
-    tail = NULL;
+    tail = head;
 }
 
-// Pengecekkan apakah linked list kosong
-int isEmpty()
-{
-    if (head == NULL)
-    {
-        return 1;
-    }
-    else
-    {
-        return 0;
+//Pengecekan isi list
+int isEmpty(){
+    if (head == NULL){
+        return 1; // true
+    } else {
+        return 0; // false
     }
 }
 
-// Buat node baru
-void buatNode(string data)
-{
-    baru = new Node();
+//Buat Node Baru
+void buatNode(string data){
+    baru = new Node;
     baru->data = data;
-    baru->next = baru;
+    baru->next = NULL;
 }
 
-// Hitung list
-int hitungList()
-{
-    int jumlah = 0;
+//Hitung List
+int hitungList(){
     bantu = head;
-    while (bantu->next != head)
-    {
+    int jumlah = 0;
+    while (bantu != NULL) {
         jumlah++;
         bantu = bantu->next;
     }
     return jumlah;
 }
 
-// Tambah depan
-void insertDepan(string data)
-{
-    // Buat node baru
+//Tambah Depan
+void insertDepan(string data){
+    // Buat Node baru
     buatNode(data);
-    if (isEmpty() == 1)
-    {
+
+    if (isEmpty() == 1){
         head = baru;
         tail = head;
         baru->next = head;
-    }
-    else
-    {
-        while (tail->next != head)
-        {
+    } else {
+        while (tail->next != head){
             tail = tail->next;
         }
         baru->next = head;
@@ -426,21 +414,17 @@ void insertDepan(string data)
     }
 }
 
-// Tambah belakang
-void insertBelakang(string data)
-{
-    // Buat node baru
+//Tambah Belakang
+void insertBelakang(string data){
+    // Buat Node baru
     buatNode(data);
-    if (isEmpty() == 1)
-    {
+
+    if (isEmpty() == 1){
         head = baru;
         tail = head;
         baru->next = head;
-    }
-    else
-    {
-        while (tail->next != head)
-        {
+    } else {
+        while (tail->next != head){
             tail = tail->next;
         }
         tail->next = baru;
@@ -448,24 +432,18 @@ void insertBelakang(string data)
     }
 }
 
-// Tambah tengah
-void insertTengah(string data, int posisi)
-{
-    if (isEmpty() == 1)
-    {
+//Tambah Tengah
+void insertTengah(string data, int posisi){
+    if (isEmpty() == 1){
         head = baru;
         tail = head;
         baru->next = head;
-    }
-    else
-    {
+    } else {
         baru->data = data;
-
         // transversing
         int nomor = 1;
         bantu = head;
-        while (nomor < posisi - 1)
-        {
+        while (nomor < posisi - 1){
             bantu = bantu->next;
             nomor++;
         }
@@ -474,99 +452,77 @@ void insertTengah(string data, int posisi)
     }
 }
 
-// Hapus depan
-void hapusDepan()
-{
-    if (isEmpty() == 0)
-    {
+//Hapus Depan
+void hapusDepan(){
+    if (isEmpty() == 0){
         hapus = head;
         tail = head;
-
-        if (hapus->next == head)
-        {
+        if (hapus->next == head){
             head = NULL;
             tail = NULL;
             delete hapus;
-        }
-        else
-        {
-            while (tail->next != head)
-            {
+        } else {
+            while (tail->next != hapus){
                 tail = tail->next;
             }
             head = head->next;
             tail->next = head;
+            hapus->next = NULL;
             delete hapus;
         }
-    }
-    else
-    {
-        cout << "Linked list kosong" << endl;
+    } else {
+        cout << "List masih kosong!" << endl;
     }
 }
 
-// Hapus belakang
-void hapusBelakang()
-{
-    if (isEmpty() == 0)
-    {
+//Hapus Belakang
+void hapusBelakang(){
+    if (isEmpty() == 0){
         hapus = head;
         tail = head;
-
-        if (hapus->next == head)
-        {
+        if (hapus->next == head){
             head = NULL;
             tail = NULL;
             delete hapus;
-        }
-        else
-        {
-            while (hapus->next != head)
-            {
-                tail = hapus;
+        } else {
+            while (hapus->next != head){
                 hapus = hapus->next;
             }
+            while (tail->next != hapus){
+                tail = tail->next;
+            }
             tail->next = head;
+            hapus->next = NULL;
             delete hapus;
         }
-    }
-    else
-    {
-        cout << "Linked list kosong" << endl;
+    } else {
+        cout << "List masih kosong!" << endl;
     }
 }
 
-// hapus tengah
-void hapusTengah(int posisi)
-{
-    if (isEmpty() == 0)
-    {
+// Hapus Tengah
+void hapusTengah(int posisi){
+    if (isEmpty() == 0){
         // transversing
         int nomor = 1;
         bantu = head;
-        while (nomor < posisi - 1)
-        {
+        while (nomor < posisi - 1){
             bantu = bantu->next;
             nomor++;
         }
         hapus = bantu->next;
         bantu->next = hapus->next;
         delete hapus;
-    }
-    else
-    {
+    } else {
         cout << "List masih kosong!" << endl;
     }
 }
 
-// Hapus list
-void hapusList()
-{
-    if (head != NULL)
-    {
+//Hapus List
+void clearList(){
+    if (head != NULL){
         hapus = head->next;
-        while (hapus != head)
-        {
+        while (hapus != head){
             bantu = hapus->next;
             delete hapus;
             hapus = bantu;
@@ -577,27 +533,21 @@ void hapusList()
     cout << "List berhasil terhapus!" << endl;
 }
 
-// Tampilkan list
-void tampil()
-{
-    if (isEmpty() == 0)
-    {
+//Tampilkan List
+void tampil(){
+    if (isEmpty() == 0){
         tail = head;
-        do
-        {
+        do {
             cout << tail->data << ends;
             tail = tail->next;
         } while (tail != head);
         cout << endl;
-    }
-    else
-    {
+    } else {
         cout << "List masih kosong!" << endl;
     }
 }
 
-int main()
-{
+int main(){
     init();
     insertDepan("Ayam");
     tampil();
@@ -615,6 +565,7 @@ int main()
     tampil();
     hapusTengah(2);
     tampil();
+    
     return 0;
 }
 ```
@@ -1064,7 +1015,6 @@ int main()
 
     return 0;
 }
-
 ```
 #### Output:
 ![Screenshot Unguided Q1](output_unguided1(1).png)
