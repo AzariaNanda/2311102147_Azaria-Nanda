@@ -11,20 +11,20 @@ struct Node
     Node *next;
 };
 
-Node *head; // Deklarasi head
-Node *tail; // Deklarasi tail
+Node *head = nullptr; // Deklarasi head
+Node *tail = nullptr; // Deklarasi tail
 
 // Inisialisasi Node
 void Inisialisasi_147()
 {
-    head = NULL;
-    tail = NULL;
+    head = nullptr;
+    tail = nullptr;
 }
 
 // Pengecekkan apakah linked list kosong
 bool isEmpty_147()
 {
-    return head == NULL;
+    return head == nullptr;
 }
 
 // Tambah depan
@@ -33,7 +33,7 @@ void InsertDepan_147(string nama_147, long long int nim_147)
     Node *baru = new Node();
     baru->Nama_147 = nama_147;
     baru->NIM_147 = nim_147;
-    baru->next = NULL;
+    baru->next = nullptr;
 
     if (isEmpty_147())
     {
@@ -52,7 +52,7 @@ void insertBelakang_147(string nama_147, long long int nim_147)
     Node *baru = new Node();
     baru->Nama_147 = nama_147;
     baru->NIM_147 = nim_147;
-    baru->next = NULL;
+    baru->next = nullptr;
 
     if (isEmpty_147())
     {
@@ -70,7 +70,7 @@ int hitungList_147()
 {
     Node *hitung = head;
     int jumlah = 0;
-    while (hitung != NULL)
+    while (hitung != nullptr)
     {
         jumlah++;
         hitung = hitung->next;
@@ -84,10 +84,12 @@ void insertTengah_147(string nama_147, long long int nim_147, int posisi)
     if (posisi < 1 || posisi > hitungList_147())
     {
         cout << "Posisi di luar jangkauan" << endl;
+        return;
     }
     else if (posisi == 1)
     {
         cout << "Posisi bukan posisi tengah" << endl;
+        return;
     }
     else
     {
@@ -112,13 +114,13 @@ void hapusDepan_147()
     if (!isEmpty_147())
     {
         Node *hapus = head;
-        if (head->next != NULL)
+        if (head->next != nullptr)
         {
             head = head->next;
         }
         else
         {
-            head = tail = NULL;
+            head = tail = nullptr;
         }
         delete hapus;
     }
@@ -142,11 +144,11 @@ void hapusBelakang_147()
                 bantu = bantu->next;
             }
             tail = bantu;
-            tail->next = NULL;
+            tail->next = nullptr;
         }
         else
         {
-            head = tail = NULL;
+            head = tail = nullptr;
         }
         delete hapus;
     }
@@ -162,10 +164,12 @@ void hapusTengah_147(int posisi)
     if (posisi < 1 || posisi > hitungList_147())
     {
         cout << "Posisi di luar jangkauan" << endl;
+        return;
     }
     else if (posisi == 1)
     {
         cout << "Posisi bukan posisi tengah" << endl;
+        return;
     }
     else
     {
@@ -203,10 +207,12 @@ void ubahTengah_147(string nama_147, long long int nim_147, int posisi)
         if (posisi < 1 || posisi > hitungList_147())
         {
             cout << "Posisi di luar jangkauan" << endl;
+            return;
         }
         else if (posisi == 1)
         {
             cout << "Posisi bukan posisi tengah" << endl;
+            return;
         }
         else
         {
@@ -243,13 +249,13 @@ void ubahBelakang_147(string nama_147, long long int nim_147)
 void clearList_147()
 {
     Node *bantu = head;
-    while (bantu != NULL)
+    while (bantu != nullptr)
     {
         Node *hapus = bantu;
         bantu = bantu->next;
         delete hapus;
     }
-    head = tail = NULL;
+    head = tail = nullptr;
     cout << "List berhasil terhapus!" << endl;
 }
 
@@ -258,14 +264,12 @@ void tampilList_147()
 {
     if (!isEmpty_147())
     {
-        cout << "============ TAMPILKAN LIST ============" << endl;
+        cout << "------------ 2147 TAMPILKAN 2147 ---------------" << endl;
         cout << "----------------------------------------" << endl;
-        cout << left << setw(20) << "| Nama"
-             << "| NIM" << endl;
+        cout << left << setw(20) << "| Nama" << "| NIM" << endl;
         cout << "----------------------------------------" << endl;
-
         Node *bantu = head;
-        while (bantu != NULL)
+        while (bantu != nullptr)
         {
             cout << left << setw(20) << "| " + bantu->Nama_147 << "| " << bantu->NIM_147 << endl;
             bantu = bantu->next;
@@ -275,13 +279,11 @@ void tampilList_147()
     }
     else
     {
-        cout << "============ TAMPILKAN LIST ============" << endl;
+        cout << "------------ 2147 TAMPILKAN 2147 ---------------" << endl;
         cout << "----------------------------------------" << endl;
-        cout << left << setw(20) << "| Nama"
-             << "| NIM" << endl;
+        cout << left << setw(20) << "| Nama" << "| NIM" << endl;
         cout << "----------------------------------------" << endl;
-        cout << left << setw(20) << "| (NULL)"
-             << "| (NULL) " << endl;
+        cout << left << setw(20) << "| (NULL)" << "| (NULL) " << endl;
         cout << "----------------------------------------" << endl;
     }
 }
@@ -294,7 +296,7 @@ int main()
 
     Inisialisasi_147();
 
-    out << "========== PROGRAM SINGLE LINKED LIST NON-CIRCULAR ==========" << endl;
+    cout << "========== PROGRAM SINGLE LINKED LIST NON-CIRCULAR ==========" << endl;
 
     while (true)
     {
@@ -325,23 +327,22 @@ int main()
         cout << "Masukkan pilihan: ";
         cin >> pilihan;
 
-
         switch (pilihan)
         {
         case 1:
             cout << "Masukkan Nama: ";
-            cin >> nama_147;
+            cin >> nama_147;   
             cout << "Masukkan NIM: ";
             cin >> nim_147;
-            InsertDepan_147(nama_147, nim_147);
+            InsertDepan_147(nama_147, nim_147);     
             cout << "Data [" << nama_147 << "] berhasil ditambahkan di depan! " << endl;
             break;
 
         case 2:
-            cout << "Masukkan Nama: ";
+            cout << "Masukkan Nama: ";  
             cin >> nama_147;
             cout << "Masukkan NIM: ";
-            cin >> nim_147;
+            cin >> nim_147;       
             insertBelakang_147(nama_147, nim_147);
             cout << "Data [" << nama_147 << "] berhasil ditambahkan di belakang! " << endl;
             break;
