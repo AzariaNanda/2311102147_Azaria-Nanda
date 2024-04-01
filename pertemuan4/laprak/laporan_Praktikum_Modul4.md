@@ -625,8 +625,6 @@ Kode tersebut adalah implementasi dari double linked list yang terdiri dari dua 
 ### 1. Buatlah program menu Single Linked List Non-Circular untuk menyimpan Nama dan Usia mahasiswa, dengan menggunakan inputan dari user. Lakukan operasi berikut:</br> ㅤa. Masukkan data sesuai urutan berikut. (Gunakan insert depan, belakang atau tengah). Data pertama yang  dimasukkan adalah nama dan usia anda.</br> ㅤb. Hapus data Akechi</br> ㅤc. Tambahkan data berikut diantara John dan Jane: "Futaba 18"</br> ㅤd. Tambahkan data berikut di awal: "Igor 20"</br> ㅤe. Ubah data Michael menjadi: "Reyn 18"</br> ㅤf. Tampilkan seluruh data
 
 ```C++
-//Coding by Azaria Nanda Putri - 2311102147
-
 #include <iostream>
 #include <iomanip>
 
@@ -927,19 +925,29 @@ int main()
 
     while (true)
     {
-        cout << "1.  Tambah Depan" << endl;
-        cout << "2.  Tambah Belakang" << endl;
-        cout << "3.  Tambah Tengah" << endl;
-        cout << "4.  Ubah Depan" << endl;
-        cout << "5.  Ubah Belakang" << endl;
-        cout << "6.  Ubah Tengah" << endl;
-        cout << "7.  Hapus Depan" << endl;
-        cout << "8.  Hapus Belakang" << endl;
-        cout << "9.  Hapus Tengah" << endl;
-        cout << "10. Hapus List" << endl;
-        cout << "11. Tampilkan" << endl;
-        cout << "0. Keluar" << endl;
-
+        cout << "|-------------------------|" << endl; 
+        cout << "|1. menambah data di depan|" << endl; 
+        cout << "|-------------------------|" << endl;       
+        cout << "|2. menambah data di Belakang|" << endl;
+        cout << "|-------------------------|" << endl;       
+        cout << "|3. menambah data di Tengah|" << endl;
+        cout << "|-------------------------|" << endl;       
+        cout << "|5. mengubah data di belakang|" << endl;
+        cout << "|-------------------------|" << endl;       
+        cout << "|6. mengubah data di Tengah|" << endl;
+        cout << "|-------------------------|" << endl;       
+        cout << "|7. menghapus data di depan|" << endl;
+        cout << "|-------------------------|" << endl;       
+        cout << "|8. menghapus data di belakang|" << endl;
+        cout << "|-------------------------|" << endl;       
+        cout << "|9. menghapus data di tengah|" << endl;
+        cout << "|-------------------------|" << endl;       
+        cout << "|10.Hapus List|" << endl;
+        cout << "|-------------------------|" << endl;       
+        cout << "|11. Menampilkan Data|" << endl;
+        cout << "|-------------------------|" << endl;       
+        cout << "|0. Keluar|" << endl;
+        cout << "------------------------------------------" << endl;
         int pilihan;
         cout << "Masukkan pilihan: ";
         cin >> pilihan;
@@ -1042,8 +1050,6 @@ int main()
 
     return 0;
 }
-
-
 ```
 #### Output:
 ![Screenshot Unguided Q1](output_unguided1(1).png)

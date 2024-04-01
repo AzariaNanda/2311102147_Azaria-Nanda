@@ -294,26 +294,37 @@ int main()
 
     Inisialisasi_147();
 
-    cout << "========== PROGRAM SINGLE LINKED LIST NON-CIRCULAR ==========" << endl;
+    out << "========== PROGRAM SINGLE LINKED LIST NON-CIRCULAR ==========" << endl;
 
     while (true)
     {
-        cout << "1. menambah data di depan" << endl;        
-        cout << "2. menambah data di Belakang" << endl;
-        cout << "3. menambah data di Tengah" << endl;
-        cout << "4. mengubah data di depan" << endl;
-        cout << "5. mengubah data di belakang" << endl;
-        cout << "6. mengubah data di Tengah" << endl;
-        cout << "7. menghapus data di depan" << endl;
-        cout << "8. menghapus data di belakang" << endl;
-        cout << "9. menghapus data di tengah" << endl;
-        cout << "10.Hapus List" << endl;
-        cout << "11. Menampilkan Data" << endl;
-        cout << "0. Keluar" << endl;
+        cout << "|-------------------------|" << endl; 
+        cout << "|1. menambah data di depan|" << endl; 
+        cout << "|-------------------------|" << endl;       
+        cout << "|2. menambah data di Belakang|" << endl;
+        cout << "|-------------------------|" << endl;       
+        cout << "|3. menambah data di Tengah|" << endl;
+        cout << "|-------------------------|" << endl;       
+        cout << "|5. mengubah data di belakang|" << endl;
+        cout << "|-------------------------|" << endl;       
+        cout << "|6. mengubah data di Tengah|" << endl;
+        cout << "|-------------------------|" << endl;       
+        cout << "|7. menghapus data di depan|" << endl;
+        cout << "|-------------------------|" << endl;       
+        cout << "|8. menghapus data di belakang|" << endl;
+        cout << "|-------------------------|" << endl;       
+        cout << "|9. menghapus data di tengah|" << endl;
+        cout << "|-------------------------|" << endl;       
+        cout << "|10.Hapus List|" << endl;
+        cout << "|-------------------------|" << endl;       
+        cout << "|11. Menampilkan Data|" << endl;
+        cout << "|-------------------------|" << endl;       
+        cout << "|0. Keluar|" << endl;
         cout << "------------------------------------------" << endl;
         int pilihan;
         cout << "Masukkan pilihan: ";
         cin >> pilihan;
+
 
         switch (pilihan)
         {
