@@ -1035,18 +1035,37 @@ int main()
 }
 ```
 #### Output:
-![Screenshot Unguided Q1](output_unguided1(1).png)
-![Screenshot Unguided Q1](output_unguided1(2).png)
-![Screenshot Unguided Q1](output_unguided1(3).png)
-![Screenshot Unguided Q1](output_unguided1(4).png)
-![Screenshot Unguided Q1](output_unguided1(5).png)
-![Screenshot Unguided Q1](output_unguided1(6).png)
+![Screenshot Soal Unguided 1](output_unguided1(1).png)
+![Screenshot Soal Unguided 1](output_unguided1(2).png)
+![Screenshot Soal Unguided 1](output_unguided1(3).png)
+![Screenshot Soal Unguided 1](output_unguided1(4).png)
+![Screenshot Soal Unguided 1](output_unguided1(4).png)
+![Screenshot Soal Unguided 1](output_unguided1(5).png)
+![Screenshot Soal Unguided 1](output_unguided1(6).png)
 
-Kode di atas adalah implementasi single linked list dengan node yang memiliki integer data dan pointer next. Inisialisasi menggunakan void init(), dan pointer head dan tail diatur nullptr. Fungsi bool IsEmpty() memeriksa apakah linked list kosong. Fungsi lainnya meliputi: insertDepan(int value), insertBelakang(int value), jumlah(), insertTengah(int value, int posisi), hapusDepan(), hapusBelakang(), hapusTengah(int posisi), tampil(), ubahDepan(int value), ubahBelakang(int value), dan ubahTengah(int value, int posisi). Pada main(), program inisialisasi linked list, lalu menampilkan data, menghapus 'Akechi', menambah 'Futaba (18)' dan 'Igor (20)', mengubah 'Michael' menjadi 'Reyn (18)', dan menampilkan data lagi.
+Kode di atas adalah implementasi program dengan menggunakan single linked list non-circular. Program ini memungkinkan pengguna untuk melakukan operasi seperti menambah, mengubah, dan menghapus data dalam linked list serta melihat seluruh data yang ada. Struct Node digunakan untuk menyimpan informasi data dengan atribut Nama_147 dan NIM_147, serta pointer next untuk menunjuk ke node berikutnya. Program memiliki berbagai fungsi dasar seperti Inisialisasi_147() untuk inisialisasi, isEmpty_147() untuk memeriksa kekosongan linked list, dan fungsi lainnya untuk operasi tambah, hapus, ubah, dan tampil data. Di dalam fungsi main(), program menyediakan menu pilihan operasi untuk pengguna. Setelah memilih, program akan menjalankan fungsi yang sesuai dengan pilihan pengguna dan memberikan informasi hasil operasi melalui pesan pada layar.
+
+Di dalam main program terdapat beberapa pilihan menu yang bisa dipilih oleh user, yaitu:
+1. Tambah Depan
+2. Tambah Belakang
+3. Tambah Tengah
+4. Ubah Depan
+5. Ubah Belakang
+6. Ubah Tengah
+7. Hapus Depan
+8. Hapus Belakang
+9. Hapus Tengah
+10. Hapus List
+11. Tampilkan
+0. Keluar<br/>
+
+User dapat memilih menu yang diinginkan dengan memasukkan angka yang sesuai dengan menu yang diinginkan. User dapat memilih 0 apabila ingin keluar dari program,
 
 
 ## Kesimpulan
 Linked list adalah kumpulan elemen yang saling terhubung melalui pointer, di mana setiap elemen terhubung dengan elemen lainnya melalui sebuah pointer. Pointer adalah variabel yang menyimpan alamat memori dari variabel lain, yang bisa berupa data atau pointer lainnya. Oleh karena itu, setiap elemen dalam linked list selalu mengandung pointer. Secara umum, linked list terdiri dari beberapa elemen, di mana salah satu elemen pertama memiliki karakteristik khusus dan tidak digunakan untuk menyimpan data. Elemen ini dikenal dengan sebutan elemen kepala atau Head. Berikut adalah contoh sederhana dari linked list dengan satu elemen kepala dan beberapa elemen lainnya.
+
+linked list terbagi menjadi dua: single linked list dan double linked list. Dalam single linked list, operasi umum meliputi penambahan dan penghapusan simpul di awal atau akhir, serta pencarian dan pengambilan nilai pada simpul tertentu. Karena hanya memerlukan satu pointer per simpul, single linked list lebih efisien dalam penggunaan memori dibandingkan double linked list dan circular linked list. Circular linked list memiliki penunjuk next pada node terakhir yang selalu merujuk ke node pertama. Sementara dalam double linked list, struktur data ini memiliki tambahan pointer prev pada setiap simpul, yang menunjuk ke simpul sebelumnya. Dengan fitur ini, operasi penghapusan dan penambahan pada simpul dapat dilakukan secara efisien. Namun, double linked list menggunakan lebih banyak memori dan memerlukan waktu eksekusi lebih lama dibandingkan single linked list dalam operasi penambahan dan penghapusan. 
 
 
 ## Referensi
