@@ -343,7 +343,7 @@ bool isEmpty()
         return 0;
     }
 ```
-Kode di atas digunakan untuk menjalankan single linked list. Struct node dideklarasikan dengan int data dan Node* next, serta inisialisasi node dilakukan melalui prosedur void init() dengan head dan tailnya dideklarasikan NULL. Fungsi bool isEmpty() juga disediakan untuk mengecek apakah linked list kosong atau tidak. Dalam int main(), berbagai fungsi akan dipanggil untuk operasi-operasi seperti penambahan dan penghapusan data, serta modifikasi data di berbagai posisi. Fungsi-fungsi tersebut antara lain: insertDepan(), insertBelakang(), hitungList(), insertTengah(), hapusDepan(), hapusBelakang(), hapusTengah(), ubahDepan(), ubahTengah(), ubahBelakang(), clearList(), dan tampil(). Setelah pendeklarasian fungsi-fungsi tersebut di int main(), hasil akhir dari kode tersebut adalah 111.
+Kode di atas digunakan uProgram di atas adalah program untuk mengelola data dalam bentuk single linked list non-circular menggunakan bahasa C++. Pertama-tama, kita mendefinisikan struct Node yang berisi data dan pointer next. Lalu, kita mulai dengan head dan tail yang diinisialisasi sebagai NULL. Selanjutnya, kita buat beberapa fungsi untuk menambahkan data di awal, akhir, dan di tengah list. Selain itu, ada fungsi untuk menghitung panjang list, menghapus data di berbagai posisi, mengubah data di berbagai posisi, menghapus semua data, dan menampilkan data.
 
 ### 2. Latihan Single Linked List Circular
 ```c++
@@ -569,7 +569,15 @@ int main(){
     return 0;
 }
 ```
-Kode tersebut adalah implementasi dari double linked list yang terdiri dari dua kelas utama: Node dan DoublyLinkedList. Dalam kelas Node, terdapat tiga atribut: int data, Node* prev, dan Node* next. Sedangkan kelas DoublyLinkedList memiliki dua pointer: Node* head dan Node* tail. Konstruktor DoublyLinkedList() berfungsi untuk menginisialisasi head dan tail dengan nullptr. Program ini dilengkapi dengan beberapa fungsi, yaitu push(), pop(), update(), deleteAll(), dan display(), yang didefinisikan dalam fungsi main(). Dalam main(), objek DoublyLinkedList list dideklarasikan dan menu ditampilkan untuk memungkinkan pengguna melakukan operasi seperti penambahan, penghapusan, pembaruan, penghapusan semua data, dan penampilan data. Program ini berjalan dalam loop while yang terus berlangsung selama input dari pengguna valid (true).
+Kode tersebut adalah sebuah program yang menggunakan single linked list circular. Dalam program ini, kita memiliki sebuah struktur (struct) yang dinamakan Node yang berisi informasi data dalam bentuk string dan pointer yang menunjuk ke node berikutnya. Kemudian, mendeklarasikan struktur Node dengan informasi string data dan pointer next. Dan mendeklarasikan beberapa variabel seperti head, tail, baru, bantu, dan hapus yang semuanya bertipe pointer Node. selanjutnya, kita membuat beberapa fungsi untuk menambahkan data ke dalam list, baik di bagian depan, belakang, maupun di tengah list. Selain itu, ada juga fungsi untuk menghapus data dari list, menghitung jumlah data, menampilkan seluruh data, dan menghapus semua data dalam list.  Kemudian kita panggil fungsi-fungsi tersebut di dalam fungsi main. Tampilan output program di atas adalah: <br/>
+Ayam <br/>
+Bebek Ayam <br/>
+Bebek Ayam Cicak <br/>
+Bebek Ayam Cicak Domba <br/>
+Bebek Ayam Cicak <br/>
+Ayam Cicak <br/>
+Ayam Sapi Cicak <br/>
+Ayam Cicak <br/>
 
 ## Unguided 
 
