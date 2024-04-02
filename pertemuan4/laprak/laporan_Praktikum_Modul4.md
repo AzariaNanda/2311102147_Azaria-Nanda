@@ -14,13 +14,12 @@ Linked list adalah kumpulan elemen yang terhubung melalui pointer. Setiap elemen
    Double Linked List Non Circular, saat berada pada node yang berfungsi sebagai head atau node pertama dalam linked list, nilai dari pointer prev pada node tersebut akan diatur menjadi NULL. Hal ini dikarenakan node head tidak memiliki node sebelumnya. Sedangkan untuk node yang berfungsi sebagai tail atau node terakhir dalam linked list, nilai dari pointer next pada node tersebut akan diatur untuk menunjuk ke NULL, menandakan akhir dari linked list tersebut.
 
 - Single Circluar Linked List <br/>
-   Double Linked List Non Circular, saat berada pada node yang berfungsi sebagai head atau node pertama dalam linked list, nilai dari pointer prev pada node tersebut akan diatur menjadi NULL. Hal ini dikarenakan node head tidak memiliki node sebelumnya. Sedangkan untuk node yang berfungsi sebagai tail atau node terakhir dalam linked list, nilai dari pointer next pada node tersebut akan diatur untuk menunjuk ke NULL, menandakan akhir dari linked list tersebut.
+   Single Circular Linked List adalah suatu jenis linked list di mana setiap node memiliki sebuah field pointer yang menunjuk ke node berikutnya dalam urutan, tetapi dengan satu keistimewaan. Keistimewaan tersebut adalah pointer next dari node terakhir akan kembali menunjuk ke node pertama atau head, sehingga membentuk suatu lingkaran atau sirkuit. Dengan kata lain, dalam Single Circular Linked List, node tail atau node terakhir akan selalu menunjuk kembali ke node head atau node pertama, menghasilkan suatu struktur data yang berputar atau bersirkulasi.
 
 - Double Circluar Linked List <br/>
-   Double Linked List Non Circular, saat berada pada node yang berfungsi sebagai head atau node pertama dalam linked list, nilai dari pointer prev pada node tersebut akan diatur menjadi NULL. Hal ini dikarenakan node head tidak memiliki node sebelumnya. Sedangkan untuk node yang berfungsi sebagai tail atau node terakhir dalam linked list, nilai dari pointer next pada node tersebut akan diatur untuk menunjuk ke NULL, menandakan akhir dari linked list tersebut.
+  Double Circular Linked List adalah jenis linked list di mana field pointer-nya terdiri dari dua buah pointer yang bergerak ke dua arah, yaitu prev dan next. Selain itu, pointer next pada Double Circular Linked List akan menunjuk kembali pada elemen tersebut sendiri, menciptakan sebuah pola sirkular. Dengan kata lain, baik pointer next maupun pointer prev pada Double Circular Linked List akan membentuk sebuah loop yang menghubungkan setiap elemen dalam struktur data ini secara berputar.
 
 
-    
 ## Guided 
 
 ### 1. Latihan Single Linked List Non Circular
@@ -912,13 +911,15 @@ int main()
         cout << "|-------------------------|" << endl; 
         cout << "|1. menambah data di depan|" << endl; 
         cout << "|-------------------------|" << endl;       
-        cout << "|2. menambah data di Belakang|" << endl;
+        cout << "|2. menambah data di belakang|" << endl;
         cout << "|-------------------------|" << endl;       
-        cout << "|3. menambah data di Tengah|" << endl;
-        cout << "|-------------------------|" << endl;       
+        cout << "|3. menambah data di tengah|" << endl;
+        cout << "|-------------------------|" << endl;
+        cout << "|4. mengubah data di depan|" << endl;
+        cout << "|-------------------------|" << endl;        
         cout << "|5. mengubah data di belakang|" << endl;
         cout << "|-------------------------|" << endl;       
-        cout << "|6. mengubah data di Tengah|" << endl;
+        cout << "|6. mengubah data di tengah|" << endl;
         cout << "|-------------------------|" << endl;       
         cout << "|7. menghapus data di depan|" << endl;
         cout << "|-------------------------|" << endl;       
@@ -1036,13 +1037,22 @@ int main()
 }
 ```
 #### Output:
-![Screenshot Soal Unguided 1](output_unguided1(1).png)
-![Screenshot Soal Unguided 1](output_unguided1(2).png)
-![Screenshot Soal Unguided 1](output_unguided1(3).png)
-![Screenshot Soal Unguided 1](output_unguided1(4).png)
-![Screenshot Soal Unguided 1](output_unguided1(4).png)
-![Screenshot Soal Unguided 1](output_unguided1(5).png)
-![Screenshot Soal Unguided 1](output_unguided1(6).png)
+![Screenshot Soal Unguided 1](unguided1(1).png)
+![Screenshot Soal Unguided 1](unguided1(2).png)
+![Screenshot Soal Unguided 1](unguided1(3).png)
+![Screenshot Soal Unguided 1](unguided1(4).png)
+![Screenshot Soal Unguided 1](unguided1(4).png)
+![Screenshot Soal Unguided 1](unguided1(5).png)
+![Screenshot Soal Unguided 1](unguided1(6).png)
+![Screenshot Soal Unguided 1](unguided1(7).png)
+![Screenshot Soal Unguided 1](unguided1(8).png)
+![Screenshot Soal Unguided 1](unguided1(9).png)
+![Screenshot Soal Unguided 1](unguided1(10).png)
+![Screenshot Soal Unguided 1](unguided1(11).png)
+![Screenshot Soal Unguided 1](unguided1(12).png)
+![Screenshot Soal Unguided 1](unguided1(13).png)
+
+
 
 Kode di atas adalah implementasi program dengan menggunakan single linked list non-circular. Program ini memungkinkan pengguna untuk melakukan operasi seperti menambah, mengubah, dan menghapus data dalam linked list serta melihat seluruh data yang ada. Struct Node digunakan untuk menyimpan informasi data dengan atribut Nama_147 dan NIM_147, serta pointer next untuk menunjuk ke node berikutnya. Program memiliki berbagai fungsi dasar seperti Inisialisasi_147() untuk inisialisasi, isEmpty_147() untuk memeriksa kekosongan linked list, dan fungsi lainnya untuk operasi tambah, hapus, ubah, dan tampil data. Di dalam fungsi main(), program menyediakan menu pilihan operasi untuk pengguna. Setelah memilih, program akan menjalankan fungsi yang sesuai dengan pilihan pengguna dan memberikan informasi hasil operasi melalui pesan pada layar.
 
@@ -1060,7 +1070,7 @@ Di dalam main program terdapat beberapa pilihan menu yang bisa dipilih oleh user
 11. Tampilkan
 0. Keluar<br/>
 
-User dapat memilih menu yang diinginkan dengan memasukkan angka yang sesuai dengan menu yang diinginkan. User dapat memilih 0 apabila ingin keluar dari program,
+User dapat memilih menu yang diinginkan dengan memasukkan angka yang sesuai dengan menu yang diinginkan. User dapat memilih 0 apabila ingin keluar dari program.
 
 
 ## Kesimpulan
