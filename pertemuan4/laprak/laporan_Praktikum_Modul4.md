@@ -580,14 +580,14 @@ int main(){
 }
 ```
 Kode tersebut adalah sebuah program yang menggunakan single linked list circular. Dalam program ini, kita memiliki sebuah struktur (struct) yang dinamakan Node yang berisi informasi data dalam bentuk string dan pointer yang menunjuk ke node berikutnya. Kemudian, mendeklarasikan struktur Node dengan informasi string data dan pointer next. Dan mendeklarasikan beberapa variabel seperti head, tail, baru, bantu, dan hapus yang semuanya bertipe pointer Node. selanjutnya, kita membuat beberapa fungsi untuk menambahkan data ke dalam list, baik di bagian depan, belakang, maupun di tengah list. Selain itu, ada juga fungsi untuk menghapus data dari list, menghitung jumlah data, menampilkan seluruh data, dan menghapus semua data dalam list.  Kemudian kita panggil fungsi-fungsi tersebut di dalam fungsi main. Tampilan output program di atas adalah: <br/>
-Ayam <br/>
-Bebek Ayam <br/>
-Bebek Ayam Cicak <br/>
-Bebek Ayam Cicak Domba <br/>
-Bebek Ayam Cicak <br/>
-Ayam Cicak <br/>
-Ayam Sapi Cicak <br/>
-Ayam Cicak <br/>
+-Ayam <br/>
+-Bebek Ayam <br/>
+-Bebek Ayam Cicak <br/>
+-Bebek Ayam Cicak Domba <br/>
+-Bebek Ayam Cicak <br/>
+-Ayam Cicak <br/>
+-Ayam Sapi Cicak <br/>
+-Ayam Cicak <br/>
 
 ## Unguided 
 
