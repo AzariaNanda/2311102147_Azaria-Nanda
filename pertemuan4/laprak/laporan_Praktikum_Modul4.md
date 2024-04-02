@@ -1057,17 +1057,17 @@ int main()
 Kode di atas adalah implementasi program dengan menggunakan single linked list non-circular. Program ini memungkinkan pengguna untuk melakukan operasi seperti menambah, mengubah, dan menghapus data dalam linked list serta melihat seluruh data yang ada. Struct Node digunakan untuk menyimpan informasi data dengan atribut Nama_147 dan NIM_147, serta pointer next untuk menunjuk ke node berikutnya. Program memiliki berbagai fungsi dasar seperti Inisialisasi_147() untuk inisialisasi, isEmpty_147() untuk memeriksa kekosongan linked list, dan fungsi lainnya untuk operasi tambah, hapus, ubah, dan tampil data. Di dalam fungsi main(), program menyediakan menu pilihan operasi untuk pengguna. Setelah memilih, program akan menjalankan fungsi yang sesuai dengan pilihan pengguna dan memberikan informasi hasil operasi melalui pesan pada layar.
 
 Di dalam main program terdapat beberapa pilihan menu yang bisa dipilih oleh user, yaitu:
-1. Tambah Depan
-2. Tambah Belakang
-3. Tambah Tengah
-4. Ubah Depan
-5. Ubah Belakang
-6. Ubah Tengah
-7. Hapus Depan
-8. Hapus Belakang
-9. Hapus Tengah
-10. Hapus List
-11. Tampilkan
+1. Tambah Depan <br/>
+2. Tambah Belakang <br/>
+3. Tambah Tengah <br/>
+4. Ubah Depan <br/>
+5. Ubah Belakang <br/>
+6. Ubah Tengah <br/>
+7. Hapus Depan <br/>
+8. Hapus Belakang <br/>
+9. Hapus Tengah <br/>
+10. Hapus List <br/>
+11. Tampilkan <br/>
 0. Keluar<br/>
 
 User dapat memilih menu yang diinginkan dengan memasukkan angka yang sesuai dengan menu yang diinginkan. User dapat memilih 0 apabila ingin keluar dari program.
