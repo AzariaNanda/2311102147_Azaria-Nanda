@@ -1,15 +1,14 @@
-# <h1 align="center">Laporan Praktikum Modul Linked List Circular dan Non Circular</h1>
+# <h1 align="center">Laporan Praktikum Modul Hash Table</h1>
 <p align="center">Azaria Nanda Putri - 2311102147</p>
 
 ## Dasar Teori
 -
-### Terdapat beberapa jenis linked list, yaitu:
 - 
 
 
 ## Guided 
 
-### 1. Latihan Single Linked List Non Circular
+### 1. Latihan Hash Table
 
 ```C++
 #include <iostream>
@@ -163,7 +162,7 @@ Get key 4: -1
 2 : 20
 1 : 10
 
-### 2. Latihan Single Linked List Circular
+### 2. Latihan Hash Table dengan Node
 ```c++
 #include <iostream>
 #include <string>
@@ -512,13 +511,12 @@ int main()
 }
 ```
 #### Output:
-![Screenshot Soal Unguided 1](unguided1(1).png)
-![Screenshot Soal Unguided 1](unguided1(2).png)
-![Screenshot Soal Unguided 1](unguided1(3).png)
-![Screenshot Soal Unguided 1](unguided1(4).png)
-![Screenshot Soal Unguided 1](unguided1(4).png)
-![Screenshot Soal Unguided 1](unguided1(5).png)
-![Screenshot Soal Unguided 1](unguided1(6).png)
+![Screenshot Soal Unguided 1](Unguided1(1).png)
+![Screenshot Soal Unguided 1](Unguided1(2).png)
+![Screenshot Soal Unguided 1](Unguided1(3).png)
+![Screenshot Soal Unguided 1](Unguided1(4).png)
+![Screenshot Soal Unguided 1](Unguided1(4).png)
+![Screenshot Soal Unguided 1](Unguided1(5).png)
 
 
 Kode di atas adalah implementasi program dengan menggunakan single linked list non-circular. Program ini memungkinkan pengguna untuk melakukan operasi seperti menambah, mengubah, dan menghapus data dalam linked list serta melihat seluruh data yang ada. Struct Node digunakan untuk menyimpan informasi data dengan atribut Nama_147 dan NIM_147, serta pointer next untuk menunjuk ke node berikutnya. Program memiliki berbagai fungsi dasar seperti Inisialisasi_147() untuk inisialisasi, isEmpty_147() untuk memeriksa kekosongan linked list, dan fungsi lainnya untuk operasi tambah, hapus, ubah, dan tampil data. Di dalam fungsi main(), program menyediakan menu pilihan operasi untuk pengguna. Setelah memilih, program akan menjalankan fungsi yang sesuai dengan pilihan pengguna dan memberikan informasi hasil operasi melalui pesan pada layar.
