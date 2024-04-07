@@ -515,7 +515,6 @@ int main()
 ![Screenshot Soal Unguided 1](Unguided1(2).png)
 ![Screenshot Soal Unguided 1](Unguided1(3).png)
 ![Screenshot Soal Unguided 1](Unguided1(4).png)
-![Screenshot Soal Unguided 1](Unguided1(4).png)
 ![Screenshot Soal Unguided 1](Unguided1(5).png)
 
 
