@@ -2,7 +2,7 @@
 <p align="center">Azaria Nanda Putri - 2311102147</p>
 
 ## Dasar Teori
-Hashing dalam C++ adalah cara untuk mengubah kunci atau string menjadi angka. Dalam dunia pemrograman, pengguna sering menggunakan teknik hashing ini untuk membuat struktur data bernama hash table. Hash table dapat dibayangkan seperti sebuah daftar di mana kita dapat menyimpan informasi yang berpasangan  dengan kunci dan nilai yang terkait. Kunci ini berperan penting karena dapat membantu user menemukan nilai yang sesuai di dalam daftar. Untuk menentukan di mana tepatnya kunci tersebut disimpan, user menggunakan fungsi hash. Dengan bantuan fungsi hash ini, kita bisa dengan cepat menemukan dan mengakses informasi dalam hash table hanya dengan melihat indeks yang telah ditentukan sebelumnya. Hash table bekerja dengan memetakan kunci ke indeks array melalui fungsi hash, menyimpan data sesuai indeks tersebut. Saat mencari data, kunci diinput ke fungsi hash untuk menemukan posisi indeks data. Dalam hash collision, data disimpan dalam chaining, yaitu linked list di slot yang sama. 
+Hashing adalah cara untuk mengubah kunci atau string menjadi angka. Dalam dunia pemrograman, pengguna sering menggunakan teknik hashing ini untuk membuat struktur data bernama hash table. Hash table dapat dibayangkan seperti sebuah daftar di mana kita dapat menyimpan informasi yang berpasangan  dengan kunci dan nilai yang terkait. Kunci ini berperan penting karena dapat membantu menemukan nilai yang sesuai di dalam daftar. Untuk menentukan di mana tepatnya kunci tersebut disimpan menggunakan fungsi hash. Dengan bantuan fungsi hash ini, informasi bisa diakses dan ditemukan dengan cepat hanya dengan melihat indeks yang telah ditentukan sebelumnya. Hash table bekerja dengan memetakan kunci ke indeks array melalui fungsi hash, dan menyimpan data sesuai indeks tersebut. Saat mencari data, kunci diinput ke fungsi hash untuk menemukan posisi indeks data. 
 
 #### Ada dua teknik utama yang sering digunakan untuk menangani masalah kolisi dalam hash table: 
 
@@ -463,7 +463,7 @@ int main()
     do
     {
         // Menampilkan menu
-        cout << "\n ============ DAFTAR NILAI MAHASISWA ============" << endl;
+        cout << "\n ============2147 DAFTAR NILAI MAHASISWA 2147============" << endl;
         cout << "1. Tambah data Mahasiswa" << endl;
         cout << "2. Menghapus data Mahasiswa" << endl;
         cout << "3. Mencari data Nim Mahasiswa" << endl;
@@ -475,7 +475,7 @@ int main()
         switch (choice_147)
         {
         case 1:
-            cout << "\n ============== TAMBAHKAN DATA MAHASISWA ==============" << endl;
+            cout << "\n ==============2147 TAMBAHKAN DATA MAHASISWA 2147==============" << endl;
             cout << "Masukkan nama: ";
             cin >> name_147;
             cout << "Masukkan NIM: ";
@@ -485,19 +485,19 @@ int main()
             map.insert(name_147, nim_147, nilai_147);
             break;
         case 2:
-            cout << "\n =========== MENGHAPUS DATA MAHASISWA ===========" << endl;
+            cout << "\n ===========2147 MENGHAPUS DATA MAHASISWA 2147===========" << endl;
             cout << "Masukkan nama: ";
             cin >> name_147;
             map.remove(name_147);
             break;
         case 3:
-            cout << "\n ============ MENCARI DATA NIM MAHASISWA ============" << endl;
+            cout << "\n ============2147 MENCARI DATA NIM MAHASISWA 2147============" << endl;
             cout << "Masukkan NIM: ";
             cin >> nim_147;
             map.searchByNIM(nim_147);
             break;
         case 4:
-            cout << "\n ======= MENCARI DATA RENTANG NILAI MAHASISWA =======" << endl;
+            cout << "\n =======2147 MENCARI DATA RENTANG NILAI MAHASISWA 2147=======" << endl;
             cout << "Masukkan nilai minimum: ";
             cin >> search1_147;
             cout << "Masukkan nilai maksimum: ";

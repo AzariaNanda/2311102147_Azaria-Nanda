@@ -166,7 +166,7 @@ int main()
     do
     {
         // Menampilkan menu
-        cout << "\n ============ DAFTAR NILAI MAHASISWA ============" << endl;
+        cout << "\n ============2147 DAFTAR NILAI MAHASISWA 2147============" << endl;
         cout << "1. Tambah data Mahasiswa" << endl;
         cout << "2. Menghapus data Mahasiswa" << endl;
         cout << "3. Mencari data Nim Mahasiswa" << endl;
@@ -178,7 +178,7 @@ int main()
         switch (choice_147)
         {
         case 1:
-            cout << "\n ============== TAMBAHKAN DATA MAHASISWA ==============" << endl;
+            cout << "\n ==============2147 TAMBAHKAN DATA MAHASISWA 2147==============" << endl;
             cout << "Masukkan nama: ";
             cin >> name_147;
             cout << "Masukkan NIM: ";
@@ -188,19 +188,19 @@ int main()
             map.insert(name_147, nim_147, nilai_147);
             break;
         case 2:
-            cout << "\n =========== MENGHAPUS DATA MAHASISWA ===========" << endl;
+            cout << "\n ===========2147 MENGHAPUS DATA MAHASISWA 2147===========" << endl;
             cout << "Masukkan nama: ";
             cin >> name_147;
             map.remove(name_147);
             break;
         case 3:
-            cout << "\n ============ MENCARI DATA NIM MAHASISWA ============" << endl;
+            cout << "\n ============2147 MENCARI DATA NIM MAHASISWA 2147============" << endl;
             cout << "Masukkan NIM: ";
             cin >> nim_147;
             map.searchByNIM(nim_147);
             break;
         case 4:
-            cout << "\n ======= MENCARI DATA RENTANG NILAI MAHASISWA =======" << endl;
+            cout << "\n =======2147 MENCARI DATA RENTANG NILAI MAHASISWA 2147=======" << endl;
             cout << "Masukkan nilai minimum: ";
             cin >> search1_147;
             cout << "Masukkan nilai maksimum: ";
