@@ -16,8 +16,7 @@ Open Addressing dan Closed Addressing. Dalam Open Addressing, saat terjadi kolis
     
 - Kekurangan menggunakan Hash table memiliki kekurangan seperti kemungkinan collision yang memperlambat pencarian dan memakan lebih banyak memori, serta penggunaan memori yang lebih besar karena menggunakan array. Proses hashing dan pengelolaannya mengonsumsi lebih banyak prosesor, waktu, dan kompleksitas algoritma dibandingkan dengan data biasa, termasuk saat operasi penambahan, penghapusan, dan pengujian data.
 ![Screenshot Soal Unguided 1](ssdasarteori(2).png)
-=======
->>>>>>> ee6e38d040d5b225b5b2888fb944b38c0017fde7
+
 
 Hash table bekerja dengan memetakan kunci ke indeks array melalui fungsi hash, menyimpan data sesuai indeks tersebut. Saat mencari data, kunci diinput ke fungsi hash untuk menemukan posisi indeks data. Dalam hash collision, data disimpan dalam chaining, yaitu linked list di slot yang sama. 
 
