@@ -3,6 +3,7 @@
 
 ## Dasar Teori
 Hashing dalam C++ adalah cara untuk mengubah kunci atau string menjadi angka. Dalam dunia pemrograman, pengguna sering menggunakan teknik hashing ini untuk membuat struktur data bernama hash table. Hash table dapat dibayangkan seperti sebuah daftar di mana kita dapat menyimpan informasi yang berpasangan  dengan kunci dan nilai yang terkait. Kunci ini berperan penting karena dapat membantu user menemukan nilai yang sesuai di dalam daftar. Untuk menentukan di mana tepatnya kunci tersebut disimpan, user menggunakan fungsi hash. Dengan bantuan fungsi hash ini, kita bisa dengan cepat menemukan dan mengakses informasi dalam hash table hanya dengan melihat indeks yang telah ditentukan sebelumnya.
+<<<<<<< HEAD
 
 Hash table bekerja dengan memetakan kunci ke indeks array melalui fungsi hash, menyimpan data sesuai indeks tersebut. Saat mencari data, kunci diinput ke fungsi hash untuk menemukan posisi indeks data. Dalam hash collision, data disimpan dalam chaining, yaitu linked list di slot yang sama. 
 
@@ -18,7 +19,23 @@ Open Addressing dan Closed Addressing. Dalam Open Addressing, saat terjadi kolis
     
 - Kekurangan menggunakan Hash table memiliki kekurangan seperti kemungkinan collision yang memperlambat pencarian dan memakan lebih banyak memori, serta penggunaan memori yang lebih besar karena menggunakan array. Proses hashing dan pengelolaannya mengonsumsi lebih banyak prosesor, waktu, dan kompleksitas algoritma dibandingkan dengan data biasa, termasuk saat operasi penambahan, penghapusan, dan pengujian data.
 ![Screenshot Soal Unguided 1](ssdasarteori(2).png)
+=======
+>>>>>>> ee6e38d040d5b225b5b2888fb944b38c0017fde7
 
+Hash table bekerja dengan memetakan kunci ke indeks array melalui fungsi hash, menyimpan data sesuai indeks tersebut. Saat mencari data, kunci diinput ke fungsi hash untuk menemukan posisi indeks data. Dalam hash collision, data disimpan dalam chaining, yaitu linked list di slot yang sama. 
+
+#### Ada dua teknik utama yang sering digunakan untuk menangani masalah kolisi dalam hash table: 
+
+Open Addressing dan Closed Addressing. Dalam Open Addressing, saat terjadi kolisi, sistem akan mencari lokasi alternatif untuk menyimpan data yang bertabrakan, dengan cara seperti Linear Probing, Quadratic Probing, atau Double Hashing. Sementara itu, Closed Addressing mengatasi kolisi dengan cara menempatkan data tambahan yang bertabrakan pada alamat yang sama, menggunakan pendekatan seperti Separate Chaining atau Cuckoo Hashing.
+
+#### Kelebihan dan kekurangan dalam menggunakan Hash Table:
+    
+    -Hash table adalah struktur data yang memungkinkan penyimpanan dan akses data dengan efisiensi tinggi. Kelebihannya meliputi efisiensi waktu operasi seperti insert, delete, dan search yang cepat dengan waktu rata-rata O(1). Selain itu, hash table ideal untuk data dengan frekuensi operasi yang tinggi dan menggunakan algoritma hashing untuk mempercepat pencarian data. Selain efisien dalam penggunaan memori, hash table juga memiliki teknik-teknik seperti open hashing, separate chaining, dan closed hashing untuk mengurangi kemungkinan collision dalam penyimpanan data.
+![Screenshot Soal Unguided 1](ssdasarteori.png)
+
+    
+    -Kekurangan menggunakan Hash table memiliki kekurangan seperti kemungkinan collision yang memperlambat pencarian dan memakan lebih banyak memori, serta penggunaan memori yang lebih besar karena menggunakan array. Proses hashing dan pengelolaannya mengonsumsi lebih banyak prosesor, waktu, dan kompleksitas algoritma dibandingkan dengan data biasa, termasuk saat operasi penambahan, penghapusan, dan pengujian data.
+![Screenshot Soal Unguided 1](dasarteori.png)
 
 ## Guided 
 
