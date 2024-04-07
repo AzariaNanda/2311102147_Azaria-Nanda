@@ -275,7 +275,7 @@ Kode diatas adalah program C++ yang merupakan implementasi sederhana hash map un
 
 ## Unguided 
 
-##Soal Hash Table
+## Soal Hash Table
 Implementasikan hash table untuk menyimpan data mahasiswa. Setiap mahasiswa memiliki NIM dan nilai. Implementasikan fungsi untuk menambahkan data baru, menghapus data, mencari data berdasarkan NIM, dan mencari data berdasarkan nilai. Dengan ketentuan :
 1. Setiap mahasiswa memiliki NIM dan nilai.
 2. Program memiliki tampilan pilihan menu berisi poin C.
@@ -283,49 +283,41 @@ Implementasikan hash table untuk menyimpan data mahasiswa. Setiap mahasiswa memi
 (80 – 90).
 
 ```C++
-#include <iostream> //deklarasi library iostream
-#include <string>   //deklarasi library string
-#include <vector>   //deklarasi library vector
-#include <iomanip>  //deklarasi library iomanip
+#include <iostream> 
+#include <string>   
+#include <vector>   
+#include <iomanip>  
 
-using namespace std; // menggunakan namespace std
+using namespace std; 
 
-const int TABLE_SIZE = 100; // deklarasi variabel TABLE_SIZE dengan nilai 100
+const int TABLE_SIZE = 100; 
 
-// Struktur data mahasiswa
 struct Mahasiswa
 {
     string nama;
     string nim;
     int nilai;
 };
-
-// Struktur data untuk setiap node
 class HashNode
 {
-    // deklarasi variabel name, nim, dan nilai
 public:
-    string name;
-    string nim;
-    int nilai;
+    string name_147;
+    string nim_147;
+    int nilai_147;
 
     HashNode(string name, string nim, int nilai)
     {
-        this->name = name;
-        this->nim = nim;
-        this->nilai = nilai;
+        this->name_147 = name;
+        this->nim_147 = nim;
+        this->nilai_147 = nilai;
     }
 };
-
-// Class HashMap
 class HashMap
 {
 private:
-    // deklarasi vector table dengan ukuran TABLE_SIZE
     vector<HashNode *> table[TABLE_SIZE];
 
 public:
-    // Fungsi Hash Sederhana
     int hashFunc(string key)
     {
         int hash_val = 0;
@@ -335,31 +327,27 @@ public:
         }
         return hash_val % TABLE_SIZE;
     }
-
-    // Tambah data
     void insert(string name, string nim, int nilai)
     {
         int hash_val = hashFunc(name);
         for (auto node : table[hash_val])
         {
-            if (node->name == name)
+            if (node->name_147 == name)
             {
-                node->nim = nim;
-                node->nilai = nilai;
+                node->nim_147 = nim;
+                node->nilai_147 = nilai;
                 cout << "Data Mahasiswa dengan Nama " << name << " berhasil ditambahkan." << endl;
                 return;
             }
         }
         table[hash_val].push_back(new HashNode(name, nim, nilai));
     }
-
-    // Hapus data
     void remove(string name)
     {
         int hash_val = hashFunc(name);
         for (auto it = table[hash_val].begin(); it != table[hash_val].end(); ++it)
         {
-            if ((*it)->name == name)
+            if ((*it)->name_147 == name)
             {
                 delete *it;
                 table[hash_val].erase(it);
@@ -368,8 +356,6 @@ public:
             }
         }
     }
-
-    // Cari data berdasarkan NIM
     void searchByNIM(string nim)
     {
         bool found = false;
@@ -377,19 +363,19 @@ public:
         {
             for (auto node : table[i])
             {
-                if (node->nim == nim)
+                if (node->nim_147 == nim)
                 {
                     // Menampilkan data mahasiswa pakai setw agar rapi
-                    cout << "\n ============ CARI DATA MAHASISWA (NIM) ============" << endl;
+                    cout << "\n ============2147 MENCARI DATA NIM MAHASISWA 2147============" << endl;
                     cout << " ---------------------------------------------------" << endl;
                     cout << left << "| " << setw(15) << "Nama"
                          << "| " << setw(20) << "NIM"
                          << "| " << setw(10) << "Nilai"
                          << " |" << endl;
                     cout << " ---------------------------------------------------" << endl;
-                    cout << "| " << left << setw(15) << node->name
-                         << "| " << left << setw(20) << node->nim
-                         << "| " << left << setw(10) << node->nilai << " |" << endl;
+                    cout << "| " << left << setw(15) << node->name_147
+                         << "| " << left << setw(20) << node->nim_147
+                         << "| " << left << setw(10) << node->nilai_147 << " |" << endl;
                     cout << " ---------------------------------------------------" << endl;
                     found = true;
                     return;
@@ -402,13 +388,10 @@ public:
         }
     }
 
-    // Cari data berdasarkan rentang nilai
     void CariRentangNilai(int NilaiMin, int NilaiMax)
     {
         bool found = false;
-
-        // Menampilkan data mahasiswa pakai setw agar rapi
-        cout << "\n ======= CARI DATA MAHASISWA (RENTANG NILAI) =======" << endl;
+        cout << "\n =======2147 MENCARI DATA RENTANG NILAI MAHASISWA 2147=======" << endl;
         cout << " ---------------------------------------------------" << endl;
         cout << left << "| " << setw(15) << "Nama"
              << "| " << setw(20) << "NIM"
@@ -419,11 +402,11 @@ public:
         {
             for (auto node : table[i])
             {
-                if (node->nilai >= NilaiMin && node->nilai <= NilaiMax)
+                if (node->nilai_147 >= NilaiMin && node->nilai_147 <= NilaiMax)
                 {
-                    cout << "| " << left << setw(15) << node->name
-                         << "| " << left << setw(20) << node->nim
-                         << "| " << left << setw(10) << node->nilai << " |" << endl;
+                    cout << "| " << left << setw(15) << node->name_147
+                         << "| " << left << setw(20) << node->nim_147
+                         << "| " << left << setw(10) << node->nilai_147 << " |" << endl;
                     found = true;
                 }
             }
@@ -435,11 +418,9 @@ public:
         cout << " ---------------------------------------------------" << endl;
     }
 
-    // Tampilkan data
     void print()
     {
-        // Menampilkan data mahasiswa pakai setw agar rapi
-        cout << "\n ================== DATA MAHASISWA =================" << endl;
+        cout << "\n ==================2147 DATA MAHASISWA 2147=================" << endl;
         cout << " ---------------------------------------------------" << endl;
         cout << left << "| " << setw(15) << "Nama"
              << "| " << setw(20) << "NIM"
@@ -450,9 +431,9 @@ public:
         {
             for (auto pair : table[i])
             {
-                cout << "| " << left << setw(15) << pair->name
-                     << "| " << left << setw(20) << pair->nim
-                     << "| " << left << setw(10) << pair->nilai << " |" << endl;
+                cout << "| " << left << setw(15) << pair->name_147
+                     << "| " << left << setw(20) << pair->nim_147
+                     << "| " << left << setw(10) << pair->nilai_147 << " |" << endl;
             }
         }
         cout << " ---------------------------------------------------" << endl;
@@ -462,62 +443,54 @@ public:
 int main()
 {
     HashMap map;
-    int choice;
-    string name;
-    string nim;
-    int nilai;
-    int search1, search2;
+    int choice_147;
+    string name_147;
+    string nim_147;
+    int nilai_147;
+    int search1_147, search2_147;
     do
     {
         // Menampilkan menu
-        cout << "\n ============ MENU LIST NILAI MAHASISWA ============" << endl;
+        cout << "\n ============ DAFTAR NILAI MAHASISWA ============" << endl;
         cout << "1. Tambah data Mahasiswa" << endl;
-        cout << "2. Hapus data Mahasiswa" << endl;
-        cout << "3. Cari data Mahasiswa (NIM)" << endl;
-        cout << "4. Cari data Mahasiswa (Rentang Nilai)" << endl;
+        cout << "2. Menghapus data Mahasiswa" << endl;
+        cout << "3. Mencari data Nim Mahasiswa" << endl;
+        cout << "4. Mencari data Rentang Nilai Mahasiswa" << endl;
         cout << "5. Tampilkan" << endl;
         cout << "6. Keluar" << endl;
         cout << "Masukkan pilihan: ";
-        cin >> choice;
-        switch (choice)
+        cin >> choice_147;
+        switch (choice_147)
         {
-
-        // Pilihan 1: Tambah data Mahasiswa
         case 1:
-            cout << "\n ============== TAMBAH DATA MAHASISWA ==============" << endl;
+            cout << "\n ============== TAMBAHKAN DATA MAHASISWA ==============" << endl;
             cout << "Masukkan nama: ";
-            cin >> name;
+            cin >> name_147;
             cout << "Masukkan NIM: ";
-            cin >> nim;
+            cin >> nim_147;
             cout << "Masukkan nilai: ";
-            cin >> nilai;
-            map.insert(name, nim, nilai);
+            cin >> nilai_147;
+            map.insert(name_147, nim_147, nilai_147);
             break;
-
-        // Pilihan 2: Hapus data Mahasiswa
         case 2:
-            cout << "\n =========== HAPUS DATA MAHASISWA (nama) ===========" << endl;
+            cout << "\n =========== MENGHAPUS DATA MAHASISWA ===========" << endl;
             cout << "Masukkan nama: ";
-            cin >> name;
-            map.remove(name);
+            cin >> name_147;
+            map.remove(name_147);
             break;
-
-        // Pilihan 3: Cari data Mahasiswa (NIM)
         case 3:
-            cout << "\n ============ CARI DATA MAHASISWA (NIM) ============" << endl;
+            cout << "\n ============ MENCARI DATA NIM MAHASISWA ============" << endl;
             cout << "Masukkan NIM: ";
-            cin >> nim;
-            map.searchByNIM(nim);
+            cin >> nim_147;
+            map.searchByNIM(nim_147);
             break;
-
-        // Pilihan 4: Cari data Mahasiswa (Rentang Nilai)
         case 4:
-            cout << "\n ======= CARI DATA MAHASISWA (RENTANG NILAI) =======" << endl;
+            cout << "\n ======= MENCARI DATA RENTANG NILAI MAHASISWA =======" << endl;
             cout << "Masukkan nilai minimum: ";
-            cin >> search1;
+            cin >> search1_147;
             cout << "Masukkan nilai maksimum: ";
-            cin >> search2;
-            map.CariRentangNilai(search1, search2);
+            cin >> search2_147;
+            map.CariRentangNilai(search1_147, search2_147);
             break;
 
         // Pilihan 5: Tampilkan data
@@ -533,7 +506,7 @@ int main()
         default:
             cout << "Pilihan tidak tersedia!" << endl;
         }
-    } while (choice != 6);
+    } while (choice_147 != 6);
 
     return 0;
 }
@@ -551,7 +524,7 @@ int main()
 Kode di atas adalah implementasi program dengan menggunakan single linked list non-circular. Program ini memungkinkan pengguna untuk melakukan operasi seperti menambah, mengubah, dan menghapus data dalam linked list serta melihat seluruh data yang ada. Struct Node digunakan untuk menyimpan informasi data dengan atribut Nama_147 dan NIM_147, serta pointer next untuk menunjuk ke node berikutnya. Program memiliki berbagai fungsi dasar seperti Inisialisasi_147() untuk inisialisasi, isEmpty_147() untuk memeriksa kekosongan linked list, dan fungsi lainnya untuk operasi tambah, hapus, ubah, dan tampil data. Di dalam fungsi main(), program menyediakan menu pilihan operasi untuk pengguna. Setelah memilih, program akan menjalankan fungsi yang sesuai dengan pilihan pengguna dan memberikan informasi hasil operasi melalui pesan pada layar.
 
 Di dalam main program terdapat beberapa pilihan menu yang bisa dipilih oleh user, yaitu:
-1. Tambah Depan <br/>
+1.  <br/>
 2. Tambah Belakang <br/>
 3. Tambah Tengah <br/>
 4. Ubah Depan <br/>
