@@ -10,24 +10,11 @@ Open Addressing dan Closed Addressing. Dalam Open Addressing, saat terjadi kolis
 
 #### Kelebihan dan kekurangan dalam menggunakan Hash Table:
     
-- Hash table adalah struktur data yang memungkinkan penyimpanan dan akses data dengan efisiensi tinggi. Kelebihannya meliputi efisiensi waktu operasi seperti insert, delete, dan search yang cepat dengan waktu rata-rata O(1). Selain itu, hash table ideal untuk data dengan frekuensi operasi yang tinggi dan menggunakan algoritma hashing untuk mempercepat pencarian data. Selain efisien dalam penggunaan memori, hash table juga memiliki teknik-teknik seperti open hashing, separate chaining, dan closed hashing untuk mengurangi kemungkinan collision dalam penyimpanan data.
+- Kelebihan Hash table meliputi efisiensi waktu operasi seperti insert, delete, dan search yang cepat dengan waktu rata-rata O(1). Selain itu, hash table ideal untuk data dengan frekuensi operasi yang tinggi dan menggunakan algoritma hashing untuk mempercepat pencarian data. Selain efisien dalam penggunaan memori dengan efisiensi tinggi, hash table juga memiliki teknik-teknik seperti open hashing, separate chaining, dan closed hashing untuk mengurangi kemungkinan collision dalam penyimpanan data.
 ![Screenshot Soal Unguided 1](ssdasarteori(1).png)
 
 - Kekurangan menggunakan Hash table memiliki kekurangan seperti kemungkinan collision yang memperlambat pencarian dan memakan lebih banyak memori, serta penggunaan memori yang lebih besar karena menggunakan array. Proses hashing dan pengelolaannya mengonsumsi lebih banyak prosesor, waktu, dan kompleksitas algoritma dibandingkan dengan data biasa, termasuk saat operasi penambahan, penghapusan, dan pengujian data.
 ![Screenshot Soal Unguided 1](ssdasarteori(2).png) 
-
-#### Ada dua teknik utama yang sering digunakan untuk menangani masalah kolisi dalam hash table: 
-
-Open Addressing dan Closed Addressing. Dalam Open Addressing, saat terjadi kolisi, sistem akan mencari lokasi alternatif untuk menyimpan data yang bertabrakan, dengan cara seperti Linear Probing, Quadratic Probing, atau Double Hashing. Sementara itu, Closed Addressing mengatasi kolisi dengan cara menempatkan data tambahan yang bertabrakan pada alamat yang sama, menggunakan pendekatan seperti Separate Chaining atau Cuckoo Hashing.
-
-#### Kelebihan dan kekurangan dalam menggunakan Hash Table:
-    
-    -Hash table adalah struktur data yang memungkinkan penyimpanan dan akses data dengan efisiensi tinggi. Kelebihannya meliputi efisiensi waktu operasi seperti insert, delete, dan search yang cepat dengan waktu rata-rata O(1). Selain itu, hash table ideal untuk data dengan frekuensi operasi yang tinggi dan menggunakan algoritma hashing untuk mempercepat pencarian data. Selain efisien dalam penggunaan memori, hash table juga memiliki teknik-teknik seperti open hashing, separate chaining, dan closed hashing untuk mengurangi kemungkinan collision dalam penyimpanan data.
-![Screenshot Soal Unguided 1](ssdasarteori.png)
-
-    
-    -Kekurangan menggunakan Hash table memiliki kekurangan seperti kemungkinan collision yang memperlambat pencarian dan memakan lebih banyak memori, serta penggunaan memori yang lebih besar karena menggunakan array. Proses hashing dan pengelolaannya mengonsumsi lebih banyak prosesor, waktu, dan kompleksitas algoritma dibandingkan dengan data biasa, termasuk saat operasi penambahan, penghapusan, dan pengujian data.
-![Screenshot Soal Unguided 1](dasarteori.png)
 
 ## Guided 
 
