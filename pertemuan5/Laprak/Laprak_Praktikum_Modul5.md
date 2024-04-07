@@ -287,7 +287,7 @@ Kode diatas adalah program C++ yang merupakan implementasi sederhana hash map un
 
 ## Unguided 
 
-## 1. Soal Hash Table
+### 1. Soal Hash Table
 Implementasikan hash table untuk menyimpan data mahasiswa. Setiap mahasiswa memiliki NIM dan nilai. Implementasikan fungsi untuk menambahkan data baru, menghapus data, mencari data berdasarkan NIM, dan mencari data berdasarkan nilai. Dengan ketentuan :
 1. Setiap mahasiswa memiliki NIM dan nilai.
 2. Program memiliki tampilan pilihan menu berisi poin C.
