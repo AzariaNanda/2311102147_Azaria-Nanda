@@ -2,8 +2,22 @@
 <p align="center">Azaria Nanda Putri - 2311102147</p>
 
 ## Dasar Teori
--
-- 
+Hashing dalam C++ adalah cara untuk mengubah kunci atau string menjadi angka. Dalam dunia pemrograman, pengguna sering menggunakan teknik hashing ini untuk membuat struktur data bernama hash table. Hash table dapat dibayangkan seperti sebuah daftar di mana kita dapat menyimpan informasi yang berpasangan  dengan kunci dan nilai yang terkait. Kunci ini berperan penting karena dapat membantu user menemukan nilai yang sesuai di dalam daftar. Untuk menentukan di mana tepatnya kunci tersebut disimpan, user menggunakan fungsi hash. Dengan bantuan fungsi hash ini, kita bisa dengan cepat menemukan dan mengakses informasi dalam hash table hanya dengan melihat indeks yang telah ditentukan sebelumnya.
+
+Hash table bekerja dengan memetakan kunci ke indeks array melalui fungsi hash, menyimpan data sesuai indeks tersebut. Saat mencari data, kunci diinput ke fungsi hash untuk menemukan posisi indeks data. Dalam hash collision, data disimpan dalam chaining, yaitu linked list di slot yang sama. 
+
+#### Ada dua teknik utama yang sering digunakan untuk menangani masalah kolisi dalam hash table: 
+
+Open Addressing dan Closed Addressing. Dalam Open Addressing, saat terjadi kolisi, sistem akan mencari lokasi alternatif untuk menyimpan data yang bertabrakan, dengan cara seperti Linear Probing, Quadratic Probing, atau Double Hashing. Sementara itu, Closed Addressing mengatasi kolisi dengan cara menempatkan data tambahan yang bertabrakan pada alamat yang sama, menggunakan pendekatan seperti Separate Chaining atau Cuckoo Hashing.
+
+#### Kelebihan dan kekurangan dalam menggunakan Hash Table:
+    
+- Hash table adalah struktur data yang memungkinkan penyimpanan dan akses data dengan efisiensi tinggi. Kelebihannya meliputi efisiensi waktu operasi seperti insert, delete, dan search yang cepat dengan waktu rata-rata O(1). Selain itu, hash table ideal untuk data dengan frekuensi operasi yang tinggi dan menggunakan algoritma hashing untuk mempercepat pencarian data. Selain efisien dalam penggunaan memori, hash table juga memiliki teknik-teknik seperti open hashing, separate chaining, dan closed hashing untuk mengurangi kemungkinan collision dalam penyimpanan data.
+![Screenshot Soal Unguided 1](ssdasarteori(1).png)
+
+    
+- Kekurangan menggunakan Hash table memiliki kekurangan seperti kemungkinan collision yang memperlambat pencarian dan memakan lebih banyak memori, serta penggunaan memori yang lebih besar karena menggunakan array. Proses hashing dan pengelolaannya mengonsumsi lebih banyak prosesor, waktu, dan kompleksitas algoritma dibandingkan dengan data biasa, termasuk saat operasi penambahan, penghapusan, dan pengujian data.
+![Screenshot Soal Unguided 1](ssdasarteori(2).png)
 
 
 ## Guided 
@@ -522,30 +536,10 @@ int main()
 ### Menghapus Data Mahasiswa, Menampilkan Data Mahasiswa, dan Keluar dari program.
 ![Screenshot Soal Unguided 1](Unguided1(5).png)
 
-
-Kode di atas adalah implementasi program dengan menggunakan single linked list non-circular. Program ini memungkinkan pengguna untuk melakukan operasi seperti menambah, mengubah, dan menghapus data dalam linked list serta melihat seluruh data yang ada. Struct Node digunakan untuk menyimpan informasi data dengan atribut Nama_147 dan NIM_147, serta pointer next untuk menunjuk ke node berikutnya. Program memiliki berbagai fungsi dasar seperti Inisialisasi_147() untuk inisialisasi, isEmpty_147() untuk memeriksa kekosongan linked list, dan fungsi lainnya untuk operasi tambah, hapus, ubah, dan tampil data. Di dalam fungsi main(), program menyediakan menu pilihan operasi untuk pengguna. Setelah memilih, program akan menjalankan fungsi yang sesuai dengan pilihan pengguna dan memberikan informasi hasil operasi melalui pesan pada layar.
-
-Di dalam main program terdapat beberapa pilihan menu yang bisa dipilih oleh user, yaitu:
-1.  <br/>
-2. Tambah Belakang <br/>
-3. Tambah Tengah <br/>
-4. Ubah Depan <br/>
-5. Ubah Belakang <br/>
-6. Ubah Tengah <br/>
-7. Hapus Depan <br/>
-8. Hapus Belakang <br/>
-9. Hapus Tengah <br/>
-10. Hapus List <br/>
-11. Tampilkan <br/>
-0. Keluar<br/>
-
-User dapat memilih menu yang diinginkan dengan memasukkan angka yang sesuai dengan menu yang diinginkan. User dapat memilih 0 apabila ingin keluar dari program.
-
+Program ini adalah implementasi hash table untuk manajemen data mahasiswa dengan kapasitas hingga 100 mahasiswa. Fitur utamanya mencakup penambahan, penghapusan, dan pencarian data berdasarkan NIM atau rentang nilai. Program ini menggunakan struktur data hash table yang terdiri dari kelas Mahasiswa, HashNode, dan HashMap, yang dilengkapi dengan berbagai metode seperti insert, remove, searchByNIM, CariRentangNilai, dan print. Pengguna dapat interaktif memilih operasi yang diinginkan melalui menu yang disediakan hingga memilih untuk keluar.
 
 ## Kesimpulan
-Linked list adalah kumpulan elemen yang saling terhubung melalui pointer, di mana setiap elemen terhubung dengan elemen lainnya melalui sebuah pointer. Pointer adalah variabel yang menyimpan alamat memori dari variabel lain, yang bisa berupa data atau pointer lainnya. Oleh karena itu, setiap elemen dalam linked list selalu mengandung pointer. Secara umum, linked list terdiri dari beberapa elemen, di mana salah satu elemen pertama memiliki karakteristik khusus dan tidak digunakan untuk menyimpan data. Elemen ini dikenal dengan sebutan elemen kepala atau Head. Berikut adalah contoh sederhana dari linked list dengan satu elemen kepala dan beberapa elemen lainnya.
 
-linked list terbagi menjadi dua: single linked list dan double linked list. Dalam single linked list, operasi umum meliputi penambahan dan penghapusan simpul di awal atau akhir, serta pencarian dan pengambilan nilai pada simpul tertentu. Karena hanya memerlukan satu pointer per simpul, single linked list lebih efisien dalam penggunaan memori dibandingkan double linked list dan circular linked list. Circular linked list memiliki penunjuk next pada node terakhir yang selalu merujuk ke node pertama. Sementara dalam double linked list, struktur data ini memiliki tambahan pointer prev pada setiap simpul, yang menunjuk ke simpul sebelumnya. Dengan fitur ini, operasi penghapusan dan penambahan pada simpul dapat dilakukan secara efisien. Namun, double linked list menggunakan lebih banyak memori dan memerlukan waktu eksekusi lebih lama dibandingkan single linked list dalam operasi penambahan dan penghapusan. 
 
 
 ## Referensi
@@ -554,4 +548,4 @@ linked list terbagi menjadi dua: single linked list dan double linked list. Dala
 [3] Rafsanjani, Malik Akbar Hashemi. "Implementasi Algoritma Pengurutan General Purpose dan Berbasis Komparasi untuk Data Berkategori dalam Waktu Linier Tanpa Paralelisasi" (2021).<br/>
 [4] Nugraha, Muhammad. "Dasar Pemrograman Dengan C++, Materi Paling Dasar untuk Menjadi Programmer Berbagai Platform" (2021)<br/>
 [5] Prof. Galih Satria. "Struktur data dan Algoritma pemrograman dalam C++ dan Phyton". Jakarta: Elex media (2019)<br/>
-[6]
+
