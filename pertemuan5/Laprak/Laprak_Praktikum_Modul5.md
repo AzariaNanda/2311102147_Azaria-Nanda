@@ -168,13 +168,12 @@ int main()
 }
 ```
 kode diatas adalah program C++ dengan hash map. Program ini merupakan contoh sederhana dari hash table yang digunakan untuk menyimpan pasangan kunci dan nilainya. Program ini menggunakan library iostream dan memiliki ukuran hash table sebesar 10 dengan MAX_SIZE. Fungsi hash_func bertugas untuk menghasilkan indeks hash dari kunci yang diberikan. Setiap Node dalam hash table dapat menyimpan data dan memiliki pointer yang menunjukkan ke node berikutnya. Class HashTable menyediakan fungsi-fungsi seperti insert, get, remove, dan traverse untuk mengatur data dalam hash table. Dalam bagian main, program membuat objek ht dari class HashTable untuk melakukan berbagai operasi tersebut.
-
 Berikut merupakan hasil output dari program di atas adalah:</br>
-Get key 1: 10
-Get key 4: -1
-3 : 30
-2 : 20
-1 : 10
+Get key 1: 10 </br>
+Get key 4: -1 </br>
+3 : 30 </br>
+2 : 20 </br>
+1 : 10 </br>
 
 ### 2. Latihan Hash Table dengan Node
 ```c++
