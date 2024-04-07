@@ -511,10 +511,14 @@ int main()
 }
 ```
 #### Output:
+## Menambah Data Mahasiswa
 ![Screenshot Soal Unguided 1](Unguided1(1).png)
 ![Screenshot Soal Unguided 1](Unguided1(2).png)
+## Mencari Data Nim Mahasiswa
 ![Screenshot Soal Unguided 1](Unguided1(3).png)
+## Mencari Data Rentang Nilai Mahasiswa
 ![Screenshot Soal Unguided 1](Unguided1(4).png)
+## Menghapus Data Mahasiswa, Menampilkan Data Mahasiswa, dan Keluar dari program.
 ![Screenshot Soal Unguided 1](Unguided1(5).png)
 
 
