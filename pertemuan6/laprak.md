@@ -137,7 +137,8 @@ Program juga mengimplementasikan beberapa prosedur. pushArrayBuku() menambahkan 
 
 ## Unguided 
 
-### 1. Soal Stack
+## 1. Soal Stack
+
  Buatlah program untuk menentukan apakah kalimat tersebut yang diinputkan dalam program stack adalah palindrom/tidak. Palindrom kalimat yang dibaca dari depan dan belakang sama. Jelaskan bagaimana cara kerja programnya!
  ![Screenshot Soal Unguided 1](ssunguided(1).png)
 
@@ -151,7 +152,8 @@ Program juga mengimplementasikan beberapa prosedur. pushArrayBuku() menambahkan 
 ![Screenshot Soal Unguided 1](Unguided1(1).png)
 
 
-### 2.Soal Stack
+## 2.Soal Stack
+
  Buatlah program untuk melakukan pembalikan terhadap kalimat menggunakan stack dengan minimal 3 kata. Jelaskan output program dan source codenya beserta operasi/fungsi yang dibuat?
  
  ![Screenshot Soal Unguided 1](ssunguided(2).png)
