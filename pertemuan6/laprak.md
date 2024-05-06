@@ -46,7 +46,7 @@ Get key 4: -1 </br>
 
 ### 2.Soal Stack
  Buatlah program untuk melakukan pembalikan terhadap kalimat menggunakan stack dengan minimal 3 kata. Jelaskan output program dan source codenya beserta operasi/fungsi yang dibuat?
- ![Screenshot Soal Unguided 1](ssunguided(2).png)
+  ![Screenshot Soal Unguided 1](ssunguided(2).png)
 
 ```C++
 
