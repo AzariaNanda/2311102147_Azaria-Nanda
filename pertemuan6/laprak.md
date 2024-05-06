@@ -42,9 +42,7 @@ Get key 4: -1 </br>
 
 ### Menambah Data Mahasiswa
 ![Screenshot Soal Unguided 1](Unguided1(1).png)
-![Screenshot Soal Unguided 1](Unguided1(2).png)
-### Mencari Data Nim Mahasiswa
-![Screenshot Soal Unguided 1](Unguided1(3).png)
+
 
 ### 2.Soal Stack
  Buatlah program untuk melakukan pembalikan terhadap kalimat menggunakan stack dengan minimal 3 kata. Jelaskan output program dan source codenya beserta operasi/fungsi yang dibuat?
@@ -57,9 +55,6 @@ Get key 4: -1 </br>
 
 ### Menambah Data Mahasiswa
 ![Screenshot Soal Unguided 1](Unguided1(1).png)
-![Screenshot Soal Unguided 1](Unguided1(2).png)
-### Mencari Data Nim Mahasiswa
-![Screenshot Soal Unguided 1](Unguided1(3).png)
 
 
 ## Kesimpulan
