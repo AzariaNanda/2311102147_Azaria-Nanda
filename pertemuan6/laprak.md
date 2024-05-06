@@ -18,15 +18,122 @@
 ### 1. Latihan Stack
 
 ```C++
+#include<iostream>
 
+using namespace std;
+
+string arrayBuku[5];
+int maksimal = 5, top = 0;
+
+bool isFull(){
+    return (top == maksimal);
+}
+
+bool isEmpty(){
+    return (top == 0);
+}
+
+void pushArrayBuku(string data){
+    if(isFull()){
+        cout << "Data telah penuh" << endl;
+    } else {
+        arrayBuku[top] = data;
+        top++;
+    }
+}
+
+void popArrayBuku(){
+    if(isEmpty()){
+        cout << "tidak ada data yang dihapus" << endl;
+    } else {
+        arrayBuku[top - 1] = "";
+        top--;
+    }
+}
+
+void peekArrayBuku(int posisi){
+    if(isEmpty()){
+        cout << "tidak ada data yang bisa dilihat" << endl;
+    } else {
+        int index = top;
+        for(int i = 1; i <= posisi; i++){
+            index--;
+        }
+        cout << "Posisi ke-" << posisi << " adalah " << arrayBuku[index] << endl;
+    }
+}
+
+int countStack(){
+    return top;
+}
+
+void changeArrayBuku(int posisi, string data){
+    if(posisi > top){
+        cout << "Posisi melebihi data yang ada" << endl;
+    } else {
+        int index = top;
+        for(int i = 1; i <= posisi; i++){
+            index--;
+        }
+        arrayBuku[index] = data;
+    }
+}
+
+void destroyArrayBuku(){
+    for(int i = top; i >= 0; i--){
+        arrayBuku[i] = "";
+    }
+    top = 0;
+}
+
+void cetakArrayBuku(){
+    if(isEmpty()){
+        cout << "tidak ada data yang bisa dicetak" << endl;
+    } else {
+        for (int i = top - 1; i >= 0; i--){
+            cout << arrayBuku[i] << endl;
+        }
+    }
+}
+
+int main(){
+    pushArrayBuku("Kalkulus");
+    pushArrayBuku("Struktur Data");
+    pushArrayBuku("Matematika Diskrit");
+    pushArrayBuku("Dasar Multimedia");
+    pushArrayBuku("Inggris");
+
+    cetakArrayBuku();
+    cout << "\n";
+
+    cout << "Apakah data stack penuh? " << isFull() << endl;
+
+    cout << "Apakah data stack kosong? " << isEmpty() << endl;
+    cout << "\n";
+
+    peekArrayBuku(2);
+
+    popArrayBuku();
+    cout << "\n";
+
+    cout << "Banyaknya data = " << countStack() << endl;
+
+    changeArrayBuku(2, "Bahasa Jerman");
+
+    cetakArrayBuku();
+    cout << "\n";
+
+    destroyArrayBuku();
+
+    cout << "Jumlah data setelah dihapus = " << countStack() << endl;
+
+    cetakArrayBuku();
+
+    return 0;
+}
 ```
-kode diatas adalah program C++ dengan hash map. Program ini merupakan contoh sederhana dari hash table yang digunakan untuk menyimpan pasangan kunci dan nilainya. Program ini menggunakan library iostream dan memiliki ukuran hash table sebesar 10 dengan MAX_SIZE. Fungsi hash_func bertugas untuk menghasilkan indeks hash dari kunci yang diberikan. Setiap Node dalam hash table dapat menyimpan data dan memiliki pointer yang menunjukkan ke node berikutnya. Class HashTable menyediakan fungsi-fungsi seperti insert, get, remove, dan traverse untuk mengatur data dalam hash table. Dalam bagian main, program membuat objek ht dari class HashTable untuk melakukan berbagai operasi tersebut.
-Berikut merupakan hasil output dari program di atas adalah:</br>
-Get key 1: 10 </br>
-Get key 4: -1 </br>
-3 : 30 </br>
-2 : 20 </br>
-1 : 10 </br>
+Program tersebut merupakan implementasi stack menggunakan array dalam C++. Array arrayBuku dengan ukuran 5 dan variabel maksimal serta top dideklarasikan di awal. Fungsi isFull() digunakan untuk memeriksa keadaan penuhnya stack, sedangkan isEmpty() untuk mengecek apakah stack kosong.
+Program juga mengimplementasikan beberapa prosedur. pushArrayBuku() menambahkan elemen ke stack, popArrayBuku() menghapus elemen, dan peekArrayBuku() melihat elemen pada posisi tertentu. Fungsi countStack() menghitung jumlah elemen, dan changeArrayBuku() mengubah elemen pada posisi tertentu. Terakhir, destroyArrayBuku() menghapus semua elemen dari stack. Di dalam fungsi main(), program melakukan operasi-operasi pada stack seperti menambahkan, mencetak, memeriksa keadaan stack, melihat elemen, mengubah elemen, dan menghapus elemen.
 
 ## Unguided 
 
