@@ -287,7 +287,7 @@ Program ini bertujuan untuk membalikkan urutan setiap kata dalam sebuah kalimat 
 
 ## Output:
 
-![Screenshot Soal Unguided 1](Unguided1(1).png)
+![Screenshot Soal Unguided 1](Unguided(4).png)
 
 
 ## Kesimpulan
