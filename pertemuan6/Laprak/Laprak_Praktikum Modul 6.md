@@ -32,19 +32,15 @@ Operasi pada stack melibatkan serangkaian fungsi yang memberikan kita kemampuan 
 #### Kelebihan dan kekurangan dalam menggunakan Stack:
 
 ##### 1. Kelebihan
-- membantu mengelola data dengan metode LIFO
-- secara otomatis membersihkan objek
-- tidak mudah rusak
-- ukuran variabel tidak dapat diubah
-- mengontrol memori secara mandiri
+- Menggunakan metode LIFO untuk membantu mengelola data dengan mudah dan efektif.
+- secara otomatis membersihkan objek  yang tidak lagi diperlukan.
+- tidak mudah rusak karena ukuran variabel yang tetap.
+- ukuran variabel tidak dapat diubah.
+- mengontrol memori secara mandiri.
 ##### 2. Kekurangan
-- memori stack sangat terbatas
-- ada kemungkinan stack akan meluap atau overflow jika terlalu banyak objek
-- tidak memungkinkan akses acak, karena harus mengeluarkan tumpukan paling atas terlebih dahulu untuk mengakses tumpukan paling bawah
-
-![Screenshot Soal Unguided 1](ssunguided(6).png)
-
-
+- memori stack cenderung terbatas.
+- ada kemungkinan stack akan meluap atau overflow jika objek terlalu banyak dimasukan.
+- tidak dapat mengakses data secara acak, karena harus mengeluarkan tumpukan paling atas terlebih dahulu untuk sehingga membuat proses pencarian menjadi lebih terstruktur dan berurutan.
 
 
 ## Guided 
