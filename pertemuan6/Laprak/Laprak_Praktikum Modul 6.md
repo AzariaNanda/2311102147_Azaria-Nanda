@@ -15,7 +15,7 @@ Penerapan stack dalam pemrograman sangat beragam, mulai dari penyelesaian masala
 ![Screenshot Soal Unguided 1](ssunguided(5).png)
 
 
-#### Operasi dasar pada Stack:
+#### Jenis- jenis operasi pada Stack:
 
 Operasi pada stack melibatkan serangkaian fungsi yang memberikan kita kemampuan untuk berinteraksi dengan struktur data ini. Mari kita jabarkan beberapa operasi dasar yang dapat kita lakukan pada stack:
 
@@ -30,6 +30,17 @@ Operasi pada stack melibatkan serangkaian fungsi yang memberikan kita kemampuan 
  - i. *Search (Cari)*: Dan terakhir, jika Anda ingin menemukan apakah buku tertentu ada di dalam tumpukan, Anda bisa mencari dengan cepat.
 
 #### Kelebihan dan kekurangan dalam menggunakan Stack:
+
+##### 1. Kelebihan
+- membantu mengelola data dengan metode LIFO
+- secara otomatis membersihkan objek
+- tidak mudah rusak
+- ukuran variabel tidak dapat diubah
+- mengontrol memori secara mandiri
+##### 2. Kekurangan
+- memori stack sangat terbatas
+- ada kemungkinan stack akan meluap atau overflow jika terlalu banyak objek
+- tidak memungkinkan akses acak, karena harus mengeluarkan tumpukan paling atas terlebih dahulu untuk mengakses tumpukan paling bawah
 
 ![Screenshot Soal Unguided 1](ssunguided(6).png)
 
