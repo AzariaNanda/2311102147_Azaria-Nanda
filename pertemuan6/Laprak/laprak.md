@@ -22,7 +22,6 @@ Penerapan stack dalam pemrograman sangat beragam, mulai dari penyelesaian masala
 
 
 
-![Screenshot Soal Unguided 1](ssdasarteori(2).png) 
 
 ## Guided 
 
