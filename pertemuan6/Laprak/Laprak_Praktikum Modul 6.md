@@ -23,7 +23,7 @@ Operasi pada stack melibatkan serangkaian fungsi yang memberikan kita kemampuan 
  -b. *Pop (Keluarkan)*: Sekarang, bayangkan mengambil buku dari atas tumpukan yang telah Anda susun. Ketika Anda mengambil buku, yang Anda ambil adalah buku paling atas, yang paling terlihat.
  -c. *Top (Atas)*: Ketika Anda ingin melihat judul buku teratas di tumpukan tanpa mengganggu susunannya.
  -d. *IsEmpty (Kosong)*: Anda mungkin ingin memeriksa apakah tumpukan buku kosong atau masih ada buku yang tersisa di dalamnya.
- -e. *IsFull (Penuh)*: Namun, jika Anda hanya memiliki sedikit ruang untuk menambahkan buku baru, Anda perlu memeriksa apakah tumpukan sudah penuh atau masih ada ruang kosong.
+ -e. *IsFull (Penuh)*: Namun, jika Anda hanya memiliki sedikit ruang untuk menambahkan buku baru, Anda perlu memeriksa apakah tumpukan sudah penuh atau masih ada ruang kosong
  -f. *Size (Ukuran)*: Ketika Anda ingin tahu berapa banyak buku yang telah Anda susun di tumpukan tersebut.
  -g. *Peek (Lihat)*: Jika Anda ingin melihat buku tertentu di dalam tumpukan tanpa harus mengambilnya dari susunannya.
  -h. *Clear (Hapus Semua)*: Ketika tiba saatnya untuk membersihkan tumpukan, Anda ingin mengosongkan semua buku dari tumpukan.
