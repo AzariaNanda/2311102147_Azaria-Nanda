@@ -2,8 +2,6 @@
 <p align="center">Azaria Nanda Putri - 2311102147</p>
 
 ## Dasar Teori
-
-#### Kelebihan dan kekurangan dalam menggunakan Stack:
     
 Stack adalah seperti tumpukan piring di kafetaria; bayangkan saat Anda menumpuk piring bersih satu per satu. Yang Anda letakkan pertama kali akan berada di dasar, dan yang terakhir akan berada di atas. Ketika seseorang mengambil piring, yang diambil adalah yang teratas, bukan yang ada di bawahnya. Konsep ini, di mana elemen terakhir yang dimasukkan adalah yang pertama dikeluarkan, menjadi dasar dari tumpukan. Jadi, secara sederhana, stack adalah cara penyimpanan data di mana yang terakhir datang adalah yang pertama dilayani, mirip dengan saat Anda menumpuk piring; piring teratas adalah yang akan Anda ambil terlebih dahulu.
 
@@ -13,6 +11,12 @@ Penerapan stack dalam pemrograman sangat beragam, mulai dari penyelesaian masala
 
 - Stack underflow terjadi saat kita mencoba mengambil buku dari tumpukan yang kosong, seperti mencoba mengambil buku dari tumpukan yang tidak memiliki buku sama sekali.
 - Stack overflow terjadi saat tumpukan sudah penuh dengan buku namun kita masih mencoba menambahkan buku baru ke dalamnya, seperti mencoba menambahkan buku baru ke tumpukan yang sudah terlalu tinggi untuk menampungnya.
+  
+![Screenshot Soal Unguided 1](ssunguided(5).png)
+
+
+#### Kelebihan dan kekurangan dalam menggunakan Stack:
+
 
 ![Screenshot Soal Unguided 1](ssunguided(5).png)
 
