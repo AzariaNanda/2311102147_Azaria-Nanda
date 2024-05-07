@@ -40,7 +40,7 @@ Operasi pada stack melibatkan serangkaian fungsi yang memberikan kita kemampuan 
 ##### 2. Kekurangan
 - memori stack cenderung terbatas.
 - ada kemungkinan stack akan meluap atau overflow jika objek terlalu banyak dimasukan.
-- tidak dapat mengakses data secara acak, karena harus mengeluarkan tumpukan paling atas terlebih dahulu untuk sehingga membuat proses pencarian menjadi lebih terstruktur dan berurutan.
+- tidak dapat mengakses data secara acak, karena harus mengeluarkan tumpukan paling atas terlebih dahulu untuk membuat proses pencarian menjadi lebih terstruktur dan berurutan.
 
 
 ## Guided 
