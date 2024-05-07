@@ -326,12 +326,9 @@ Dalam fungsi main, pengguna diminta untuk memasukkan sebuah kalimat dengan minim
 
 ## Kesimpulan
 
-Hash table adalah struktur data yang memungkinkan penyimpanan dan akses data dengan efisiensi tinggi. Kelebihannya meliputi efisiensi waktu operasi seperti insert, delete, dan search yang cepat dengan waktu rata-rata O(1). Selain itu, hash table ideal untuk data dengan frekuensi operasi yang tinggi dan menggunakan algoritma hashing untuk mempercepat pencarian data. Selain efisien dalam penggunaan memori, hash table juga memiliki teknik-teknik seperti open hashing, separate chaining, dan closed hashing untuk mengurangi kemungkinan collision dalam penyimpanan data.
+Stack adalah struktur data yang mirip dengan menumpuk piring di kafetaria, di mana elemen terakhir yang ditambahkan menjadi yang pertama dikeluarkan, mengikuti konsep LIFO (Last In, First Out). Dalam implementasi C++, stack sering digunakan untuk menyimpan dan mengelola data dengan operasi dasar seperti push untuk menambahkan data, pop untuk mengeluarkan data, dan peek untuk melihat data teratas tanpa mengeluarkannya. Meskipun memiliki kelebihan seperti kemudahan penggunaan dan otomatisasi dalam penghapusan objek yang tidak diperlukan, stack juga memiliki keterbatasan, seperti kapasitas memori yang terbatas dan ketidakmampuan untuk mengakses data secara acak. Namun, dengan pemahaman yang baik tentang konsep dan penggunaannya, stack tetap menjadi alat yang sangat berguna dalam pengembangan perangkat lunak.
 
 ## Referensi
-[1] Hussain Anwar," Cara Jitu Mahir C++ untuk Pemula". Jakarta: Elex media, 2020.<br/>
-[2] Mulyana, A. (2023). E-Books Cara Mudah Mempelajari Algoritma dan Struktur Data.
-[3] Rafsanjani, Malik Akbar Hashemi. "Implementasi Algoritma Pengurutan General Purpose dan Berbasis Komparasi untuk Data Berkategori dalam Waktu Linier Tanpa Paralelisasi" (2021).<br/>
-[4] Nugraha, Muhammad. "Dasar Pemrograman Dengan C++, Materi Paling Dasar untuk Menjadi Programmer Berbagai Platform" (2021)<br/>
-[5] Prof. Galih Satria. "Struktur data dan Algoritma pemrograman dalam C++ dan Phyton". Jakarta: Elex media (2019)<br/>
+[1] Rafsanjani, Malik Akbar Hashemi. "Implementasi Algoritma Pengurutan General Purpose dan Berbasis Komparasi untuk Data Berkategori dalam Waktu Linier Tanpa Paralelisasi" (2021).<br/>
+[2] Muhammad Nugraha, Dasar Pemrograman Dengan C++, Materi Paling Dasar untuk Menjadi Programmer Berbagai Platform. Yogyakarta: Deepublish, 2021.<br/>
 
