@@ -15,7 +15,7 @@ Penerapan stack dalam pemrograman sangat beragam, mulai dari penyelesaian masala
 ![Screenshot Soal Unguided 1](ssunguided(5).png)
 
 
-##### Operasi dasar pada Stack:
+#### Operasi dasar pada Stack:
 
 Operasi pada stack melibatkan serangkaian fungsi yang memberikan kita kemampuan untuk berinteraksi dengan struktur data ini. Mari kita jabarkan beberapa operasi dasar yang dapat kita lakukan pada stack:
 
