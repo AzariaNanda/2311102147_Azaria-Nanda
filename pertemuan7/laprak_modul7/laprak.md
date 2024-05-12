@@ -354,7 +354,9 @@ Kelas Queue memiliki beberapa fungsi untuk operasi dasar pada code antrian diata
 - Fungsi displayQueue_2147(): Digunakan untuk menampilkan seluruh elemen dalam antrian. Fungsi ini mengiterasi melalui setiap node dalam antrian, mulai dari node pertama hingga terakhir, dan menampilkan nilai data dari setiap node.
 - Fungsi isEmpty_2147(): Digunakan untuk memeriksa apakah antrian kosong. Fungsi ini mengembalikan nilai true jika front menunjuk ke nullptr, yang menandakan bahwa antrian kosong.
 - Fungsi countQueue_2147(): Digunakan untuk mengembalikan jumlah elemen dalam antrian. Fungsi ini menghitung jumlah node dalam antrian dengan mengiterasi melalui setiap node dan menghitungnya.
-- Fungsi clearQueue(): Digunakan untuk menghapus semua elemen dari antrian. Fungsi ini menghapus satu per satu elemen dari antrian sampai antrian menjadi kosong. Di dalam fungsi main(), terdapat contoh penggunaan objek dari kelas Queue. Beberapa data ditambahkan ke dalam antrian menggunakan fungsi enqueue_2147(), kemudian antrian ditampilkan menggunakan fungsi displayQueue_2147(). Setelah itu, elemen pertama dari antrian dihapus menggunakan fungsi dequeue_2147(), dan kemudian antrian ditampilkan kembali. Proses ini diulang untuk menghapus elemen kedua dari antrian, dan kemudian menampilkan hasilnya.
+- Fungsi clearQueue(): Digunakan untuk menghapus semua elemen dari antrian. Fungsi ini menghapus satu per satu elemen dari antrian sampai antrian menjadi kosong. Di dalam fungsi main(), terdapat contoh penggunaan objek dari kelas Queue. 
+
+Beberapa data ditambahkan ke dalam antrian menggunakan fungsi enqueue_2147(), kemudian antrian ditampilkan menggunakan fungsi displayQueue_2147(). Setelah itu, elemen pertama dari antrian dihapus menggunakan fungsi dequeue_2147(), dan kemudian antrian ditampilkan kembali. Proses ini diulang untuk menghapus elemen kedua dari antrian, dan kemudian menampilkan hasilnya.
 
 ## Output:
 ![Screenshot Soal Unguided 1](ssunguided(1).png)
@@ -487,7 +489,7 @@ int main() {
     return 0;
 }
 ```
-Program di atas adalah implementasi dari sebuah antrian (queue) menggunakan linked list dalam bahasa C++. Antrian ini dirancang untuk menyimpan data mahasiswa beserta NIM mereka. Struktur data Node digunakan untuk menyimpan informasi tentang setiap mahasiswa, yaitu nama dan NIM, serta pointer ke node berikutnya dalam antrian. Kelas Queue memiliki fungsi-fungsi untuk operasi dasar pada antrian sepert:
+Program di atas adalah implementasi dari sebuah antrian (queue) menggunakan linked list dalam bahasa C++. Antrian ini dirancang untuk menyimpan data mahasiswa beserta NIM mereka. Struktur data Node digunakan untuk menyimpan informasi tentang setiap mahasiswa, yaitu nama dan NIM, serta pointer ke node berikutnya dalam antrian. Kelas Queue memiliki fungsi-fungsi untuk operasi dasar pada antrian seperti:
  - menambahkan data ke antrian (enqueue_2147())
  - menghapus data dari antrian (dequeue_2147())
  - menampilkan seluruh antrian (displayQueue_2147())
