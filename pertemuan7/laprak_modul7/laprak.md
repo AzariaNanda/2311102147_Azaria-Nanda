@@ -16,7 +16,7 @@ Perbedaan mendasar antara queue dan struktur data lainnya seperti stack terletak
 
 Operasi pada Queue melibatkan serangkaian fungsi yang memberikan kita kemampuan untuk berinteraksi dengan struktur data ini. Mari kita jabarkan beberapa operasi dasar yang dapat kita lakukan pada Queue:
 1. Berdasarkan Implementasinya
-    - ##### Linear/Simple Queue: Elemen-elemen data disusun dalam barisan linear dan penambahan serta penghapusan elemen hanya terjadi pada dua ujung barisan. Contoh Linear Queue:
+    - Linear/Simple Queue: Elemen-elemen data disusun dalam barisan linear dan penambahan serta penghapusan elemen hanya terjadi pada dua ujung barisan. Contoh Linear Queue:
         ##### Enqueue (Tambahkan Elemen):
         Elemen pertama: 1
         Elemen kedua: 2
