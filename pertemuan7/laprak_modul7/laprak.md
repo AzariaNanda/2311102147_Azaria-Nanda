@@ -7,7 +7,7 @@ Queue adalah struktur data yang memungkinkan penyimpanan dan pengambilan data de
 
 Perbedaan mendasar antara queue dan struktur data lainnya seperti stack terletak pada aturan penambahan dan penghapusan elemen. Pada stack, penambahan dan penghapusan elemen dilakukan di satu ujung saja. Namun, pada queue, operasi tersebut dilakukan pada ujung yang berbeda karena perubahan data selalu mengacu pada head. Oleh karena itu, hanya terdapat satu jenis operasi untuk menambah atau menghapus elemen, yaitu Enqueue dan Dequeue. Saat Enqueue, elemen ditambahkan setelah elemen terakhir dalam queue. Sedangkan saat Dequeue, head digeser untuk menunjuk pada elemen selanjutnya dalam antrian.
 
-![Screenshot Soal Unguided 1](ssunguided(5).png)
+![Screenshot Soal Unguided 1](ssunguided(4).png)
 
 
 #### Jenis- jenis operasi pada Queue:
@@ -100,7 +100,7 @@ Operasi pada Queue melibatkan serangkaian fungsi yang memberikan kita kemampuan 
  - isFull()  :mengecek apakah queue penuh atau tidak.
  - size()    :menghitung jumlah elemen dalam queue.
 
-![Screenshot Soal Unguided 1](ssunguided(4).png)
+![Screenshot Soal Unguided 1](ssunguided(3).png)
 
 Berikut penjelasan prosedur penggunaan Queue dari contoh gambar di atas:
 - Antrian datang secara berurutan A, B dan C yang kemudian dimasukan ke dalam baris antrian. Urutan data masuk melalui bagian rear antrian.
@@ -222,71 +222,10 @@ Program ini merupakan implementasi antrian menggunakan array dalam bahasa pemrog
 
 ## Unguided 
 
-## 1. Buatlah program untuk menentukan apakah kalimat tersebut yang diinputkan dalam program stack adalah palindrom/tidak. Palindrom kalimat yang dibaca dari depan dan belakang sama. Jelaskan bagaimana cara kerja programnya!
- ![Screenshot Soal Unguided 1](ssunguided(1).png)
-
+## 1. Ubahlah penerapan konsep queue pada bagian guided dari array menjadi linked list.
 
 ```C++
-#include <iostream>
-#include <string>
-#include <stack>
 
-using namespace std;
-
-string bersihkan_dan_ubah_ke_huruf_kecil_2147(string str) {
-    string cleanStr;
-    for (char &c : str) {
-        if (isalpha(c)) {
-            cleanStr += tolower(c);
-        }
-    }
-    return cleanStr;
-}
-
-bool Palindrom_2147(string str) {
-    stack<char> charStack;
-    int length = str.length();
-
-    for (int i = 0; i < length / 2; i++) {
-        charStack.push(str[i]);
-    }
-
-    int start = length / 2;
-    if (length % 2 != 0) {
-        start++;
-    }
-    for (int i = start; i < length; i++) {
-        if (charStack.empty() || str[i] != charStack.top()) {
-            return false;
-        }
-        charStack.pop();
-    }
-
-    return true;
-}
-
-int main() {
-    char lanjutkan_2147;
-    do {
-        string input;
-        cout << "\nMasukkan kata atau kalimat: ";
-        getline(cin, input);
-
-        string membersihkan_input_2147 = bersihkan_dan_ubah_ke_huruf_kecil_2147(input);
-
-        if (Palindrom_2147(membersihkan_input_2147)) {
-            cout << "Kata atau kalimat tersebut adalah : Palindrom" << endl;
-        } else {
-            cout << "Kata atau kalimat tersebut adalah : Bukan Palindrom" << endl;
-        }
-
-        cout << "Ingin memasukkan kata atau kalimat lain? (y/n): ";
-        cin >> lanjutkan_2147;
-        cin.ignore();
-    } while (lanjutkan_2147 == 'y' || lanjutkan_2147 == 'Y');
-
-    return 0;
-}
 ```
 
 Program ini berfungsi untuk memeriksa apakah suatu teks merupakan palindrom, yaitu jika urutan hurufnya sama baik dari depan maupun belakang, seperti "level" atau "radar".
@@ -294,81 +233,12 @@ Menggunakan dua fungsi utama: bersihkan_dan_ubah_ke_huruf_kecil_2147 membersihka
 Palindrom_2147 menggunakan stack untuk membandingkan setengah pertama teks dengan setengah kedua secara terbalik. Dalam main, pengguna diminta input, program membersihkannya, lalu memeriksa apakah palindrom. Hasilnya ditampilkan, dan pengguna diberi opsi untuk input baru atau keluar.
 
 ## Output:
-![Screenshot Soal Unguided 1](ssunguided(3).png)
+![Screenshot Soal Unguided 1](ssunguided(1).png)
 
-## 2. Buatlah program untuk melakukan pembalikan terhadap kalimat menggunakan stack dengan minimal 3 kata. Jelaskan output program dan source codenya beserta operasi/fungsi yang dibuat?
- 
- ![Screenshot Soal Unguided 1](ssunguided(2).png)
+## 2. Dari nomor 1 buatlah konsep antri dengan atribut Nama mahasiswa dan NIM Mahasiswa.
 
 ```C++
-#include <iostream>
-#include <string>
-#include <stack>
-#include <algorithm>
 
-using namespace std;
-
-string bersihkan_Dan_Kecilkan_Hurufnya_2147(string str) {
-    string cleanStr;
-    for (char &c : str) {
-        if (isalpha(c)) {
-            cleanStr += tolower(c);
-        }
-    }
-    return cleanStr;
-}
-
-string balik_Kalimat_2147(string kalimat) {
-    stack<char> tumpukanKarakter;
-    string kalimat_Terbalik_2147;
-
-    kalimat = bersihkan_Dan_Kecilkan_Hurufnya_2147(kalimat);
-
-    for (char c : kalimat) {
-        if (c != ' ') {
-            tumpukanKarakter.push(c);
-        } else {
-            while (!tumpukanKarakter.empty()) {
-                kalimat_Terbalik_2147 += tumpukanKarakter.top();
-                tumpukanKarakter.pop();
-            }
-            kalimat_Terbalik_2147 += ' ';
-        }
-    }
-
-    while (!tumpukanKarakter.empty()) {
-        kalimat_Terbalik_2147 += tumpukanKarakter.top();
-        tumpukanKarakter.pop();
-    }
-
-    return kalimat_Terbalik_2147;
-}
-
-int main() {
-    string kalimat_2147;
-    char lanjutkan_2147;
-
-    do {
-        cout << "\nMasukkan kata atau kalimat (minimal 3 kata): ";
-        getline(cin, kalimat_2147);
-
-        int jumlah_Spasi_2147 = count(kalimat_2147.begin(), kalimat_2147.end(), ' ');
-        int jumlah_Kata_2147 = jumlah_Spasi_2147 + 1;
-
-        if (jumlah_Kata_2147 < 3) {
-            cout << "Masukkan minimal 3 kata!" << endl;
-        } else {
-            string kalimatTerbalik = balik_Kalimat_2147(kalimat_2147);
-            cout << "Kalimat Terbalik: " << kalimatTerbalik << endl; 
-        }
-
-        cout << "Apakah ingin memasukkan kata atau kalimat lagi? (y/n): ";
-        cin >> lanjutkan_2147;
-        cin.ignore();
-    } while (lanjutkan_2147 == 'y' || lanjutkan_2147 == 'Y');
-
-    return 0;
-}
 ```
 Program ini bertujuan untuk membalikkan urutan setiap kata dalam sebuah kalimat yang dimasukkan oleh pengguna. Menggunakan dua fungsi utama: 
 -bersihkan_Dan_Kecilkan_Hurufnya_2147 membersihkan kalimat dari karakter non-alfabet dan mengonversinya menjadi huruf kecil untuk memastikan konsistensi dalam pemrosesan
@@ -376,7 +246,7 @@ Program ini bertujuan untuk membalikkan urutan setiap kata dalam sebuah kalimat 
 Dalam fungsi main, pengguna diminta untuk memasukkan sebuah kalimat dengan minimal tiga kata. Program akan memeriksa jumlah kata dalam kalimat dan melakukan pembalikan jika syarat terpenuhi. Hasilnya akan ditampilkan, dan pengguna diberi opsi untuk memasukkan kalimat baru atau keluar dari program.
 
 ## Output:
-![Screenshot Soal Unguided 1](ssunguided(4).png)
+![Screenshot Soal Unguided 1](ssunguided(2).png)
 
 
 ## Kesimpulan
