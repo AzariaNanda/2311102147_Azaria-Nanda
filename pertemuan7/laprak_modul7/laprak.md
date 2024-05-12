@@ -13,7 +13,7 @@ Perbedaan mendasar antara queue dan struktur data lainnya seperti stack terletak
 #### Jenis- jenis operasi pada Queue:
 
 Operasi pada Queue melibatkan serangkaian fungsi yang memberikan kita kemampuan untuk berinteraksi dengan struktur data ini. Mari kita jabarkan beberapa operasi dasar yang dapat kita lakukan pada Queue:
-1. Berdasarkan Implementasinya
+#### 1. Berdasarkan Implementasinya
     - Linear/Simple Queue: Elemen-elemen data disusun dalam barisan linear dan penambahan serta penghapusan elemen hanya terjadi pada dua ujung barisan. Contoh Linear Queue:
         ##### Enqueue (Tambahkan Elemen):
         - Elemen pertama: 1
@@ -64,7 +64,7 @@ Operasi pada Queue melibatkan serangkaian fungsi yang memberikan kita kemampuan 
         - Elemen pertama: 3 (dihapus)
         - Elemen yang tersisa: 4, 5, 6, 7, 8, 9, 10, 11, 12, 13
 
-2. Berdasarkan Penggunaan
+#### 2. Berdasarkan Penggunaan
     - Priority Queue: Setiap elemen memiliki prioritas tertentu. Elemen dengan prioritas tertinggi akan diambil terlebih dahulu.Elemen dengan prioritas rendah akan dihapus setelah elemen dengan prioritas tinggi.
     Contoh Priority Queue:
         ##### Enqueue (Tambahkan Elemen):
