@@ -212,7 +212,8 @@ Deskripsi singkat fungsi utama:
 - dequeueAntrian(): Menghapus elemen dari antrian.
 - countQueue(): Menghitung jumlah elemen dalam antrian.
 - clearQueue(): Menghapus semua elemen dari antrian.
-- viewQueue(): Menampilkan elemen-elemen dalam antrian.
+- viewQueue(): Menampilkan elemen-elemen dalam antrian. 
+
 Fungsi-fungsi ini digunakan dalam fungsi main() untuk melakukan operasi-operasi pada antrian, seperti menambahkan elemen, menampilkan antrian, menghitung jumlah elemen, menghapus elemen, dan menghapus semua elemen dari antrian.
 
 ## Unguided 
