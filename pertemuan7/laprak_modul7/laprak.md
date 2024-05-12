@@ -12,12 +12,11 @@ Perbedaan mendasar antara queue dan struktur data lainnya seperti stack terletak
 ![Screenshot Soal Unguided 1](ssunguided(5).png)
 
 
-#### Jenis- jenis operasi pada Stack:
+#### Jenis- jenis operasi pada Queue:
 
-Operasi pada stack melibatkan serangkaian fungsi yang memberikan kita kemampuan untuk berinteraksi dengan struktur data ini. Mari kita jabarkan beberapa operasi dasar yang dapat kita lakukan pada stack:
-Jenis-jenis Queue
+Operasi pada Queue melibatkan serangkaian fungsi yang memberikan kita kemampuan untuk berinteraksi dengan struktur data ini. Mari kita jabarkan beberapa operasi dasar yang dapat kita lakukan pada Queue:
 1. Berdasarkan Implementasinya
-    - Linear/Simple Queue: Elemen-elemen data disusun dalam barisan linear dan penambahan serta penghapusan elemen hanya terjadi pada dua ujung barisan. Contoh Linear Queue:
+    - ##### Linear/Simple Queue: Elemen-elemen data disusun dalam barisan linear dan penambahan serta penghapusan elemen hanya terjadi pada dua ujung barisan. Contoh Linear Queue:
         ##### Enqueue (Tambahkan Elemen):
         Elemen pertama: 1
         Elemen kedua: 2
@@ -36,7 +35,7 @@ Jenis-jenis Queue
         ##### Dequeue (Hapus Elemen):
         Elemen pertama: 2 (dihapus)
         Elemen yang tersisa: 3, 4, 5, 6, 7, 8, 9
-        
+
     - Circular Queue: Mirip dengan jenis linear, tetapi ujung-ujung barisan terhubung satu sama lain, menciptakan struktur antrean yang berputar.
 
 2. Berdasarkan Penggunaan
