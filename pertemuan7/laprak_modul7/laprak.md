@@ -206,13 +206,13 @@ int main() {
 ```
 Program ini adalah implementasi sederhana dari struktur data queue menggunakan array dalam bahasa C++. Program ini memungkinkan penambahan dan penghapusan elemen dari antrian serta operasi lainnya seperti melihat jumlah elemen dan menghapus semua elemen dalam antrian.
 Deskripsi singkat fungsi utama:
-    - isFull(): Memeriksa apakah antrian penuh atau tidak.
-    - isEmpty(): Memeriksa apakah antrian kosong atau tidak.
-    - enqueueAntrian(string data): Menambahkan elemen ke dalam antrian.
-    - dequeueAntrian(): Menghapus elemen dari antrian.
-    - countQueue(): Menghitung jumlah elemen dalam antrian.
-    - clearQueue(): Menghapus semua elemen dari antrian.
-    - viewQueue(): Menampilkan elemen-elemen dalam antrian.
+- isFull(): Memeriksa apakah antrian penuh atau tidak.
+- isEmpty(): Memeriksa apakah antrian kosong atau tidak.
+- enqueueAntrian(string data): Menambahkan elemen ke dalam antrian.
+- dequeueAntrian(): Menghapus elemen dari antrian.
+- countQueue(): Menghitung jumlah elemen dalam antrian.
+- clearQueue(): Menghapus semua elemen dari antrian.
+- viewQueue(): Menampilkan elemen-elemen dalam antrian.
 Fungsi-fungsi ini digunakan dalam fungsi main() untuk melakukan operasi-operasi pada antrian, seperti menambahkan elemen, menampilkan antrian, menghitung jumlah elemen, menghapus elemen, dan menghapus semua elemen dari antrian.
 
 ## Unguided 
