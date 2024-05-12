@@ -1,4 +1,4 @@
-# <h1 align="center">Laporan Praktikum Modul Stack</h1>
+# <h1 align="center">Laporan Praktikum Modul Queue</h1>
 <p align="center">Azaria Nanda Putri - 2311102147</p>
 
 ## Dasar Teori
@@ -45,7 +45,7 @@ Operasi pada stack melibatkan serangkaian fungsi yang memberikan kita kemampuan 
 
 ## Guided 
 
-### 1. Latihan Stack
+### 1. Latihan Queue
 
 ```C++
 #include <iostream>
