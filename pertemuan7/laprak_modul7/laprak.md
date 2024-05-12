@@ -3,9 +3,7 @@
 
 ## Dasar Teori
     
-Queue adalah struktur data yang memungkinkan penyimpanan dan pengambilan data dengan prinsip FIFO (First-In First-Out). Artinya, data yang pertama dimasukkan ke dalam queue akan menjadi data yang pertama pula untuk dikeluarkan. Konsep ini serupa dengan antrian pada kehidupan sehari-hari di mana orang yang datang lebih dulu akan dilayani terlebih dahulu.
-
-Dalam implementasinya, queue dapat dibangun menggunakan array atau linked list. Struktur data queue memiliki dua pointer utama, yaitu front dan rear. Front mengarah ke elemen pertama dalam queue, sementara rear mengarah ke elemen terakhir.
+Queue adalah struktur data yang memungkinkan penyimpanan dan pengambilan data dengan prinsip FIFO (First-In First-Out). Artinya, data yang pertama dimasukkan ke dalam queue akan menjadi data yang pertama pula untuk dikeluarkan. Konsep ini serupa dengan antrian pada kehidupan sehari-hari di mana orang yang datang lebih dulu akan dilayani terlebih dahulu. Dalam implementasinya, queue dapat dibangun menggunakan array atau linked list. Struktur data queue memiliki dua pointer utama, yaitu front dan rear. Front mengarah ke elemen pertama dalam queue, sementara rear mengarah ke elemen terakhir.
 
 Perbedaan mendasar antara queue dan struktur data lainnya seperti stack terletak pada aturan penambahan dan penghapusan elemen. Pada stack, penambahan dan penghapusan elemen dilakukan di satu ujung saja. Namun, pada queue, operasi tersebut dilakukan pada ujung yang berbeda karena perubahan data selalu mengacu pada head. Oleh karena itu, hanya terdapat satu jenis operasi untuk menambah atau menghapus elemen, yaitu Enqueue dan Dequeue. Saat Enqueue, elemen ditambahkan setelah elemen terakhir dalam queue. Sedangkan saat Dequeue, head digeser untuk menunjuk pada elemen selanjutnya dalam antrian.
 
@@ -18,23 +16,23 @@ Operasi pada Queue melibatkan serangkaian fungsi yang memberikan kita kemampuan 
 1. Berdasarkan Implementasinya
     - Linear/Simple Queue: Elemen-elemen data disusun dalam barisan linear dan penambahan serta penghapusan elemen hanya terjadi pada dua ujung barisan. Contoh Linear Queue:
         ##### Enqueue (Tambahkan Elemen):
-        Elemen pertama: 1
-        Elemen kedua: 2
-        Elemen ketiga: 3
-        Elemen keempat: 4
-        Elemen kelima: 5
+        - Elemen pertama: 1
+        - Elemen kedua: 2
+        - Elemen ketiga: 3
+        - Elemen keempat: 4
+        - Elemen kelima: 5
         ##### Dequeue (Hapus Elemen):
-        Elemen pertama: 1 (dihapus)
-        Elemen yang tersisa: 2, 3, 4, 5
+        - Elemen pertama: 1 (dihapus)
+        - Elemen yang tersisa: 2, 3, 4, 5
         ##### Enqueue (Tambahkan Elemen):
-        Elemen pertama: 2 (sebelumnya)
-        Elemen kedua: 6
-        Elemen ketiga: 7
-        Elemen keempat: 8
-        Elemen kelima: 9
+        - Elemen pertama: 2 (sebelumnya)
+        - Elemen kedua: 6
+        - Elemen ketiga: 7
+        - Elemen keempat: 8
+        - Elemen kelima: 9
         ##### Dequeue (Hapus Elemen):
-        Elemen pertama: 2 (dihapus)
-        Elemen yang tersisa: 3, 4, 5, 6, 7, 8, 9
+        - Elemen pertama: 2 (dihapus)
+        - Elemen yang tersisa: 3, 4, 5, 6, 7, 8, 9
 
     - Circular Queue: Mirip dengan jenis linear, tetapi ujung-ujung barisan terhubung satu sama lain, menciptakan struktur antrean yang berputar.
 
