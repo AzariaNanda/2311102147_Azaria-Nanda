@@ -1,97 +1,91 @@
 #include <iostream>
+
 using namespace std;
 
-const int maksimalAntarian = 5;
-int front = 0;
-int back = 0;
-string queueTeller[5];
+const int maksimalQueue = 5;  // Maksimal antrian
+int front = 0;                // Penanda antrian
+int back = 0;                 // Penanda
+string queueTeller[5];        // Fungsi pengecekan
 
-//mengecek antrian apakah sudah penuh
-bool isFULL() {
-    if(back == maksimalAntarian) {
-        return true;
-    }
-    else {
-        return false;
-    }
+bool isFull() {               // Pengecekan antrian penuh atau tidak
+  if (back == maksimalQueue) {
+    return true;  // =1
+  } else {
+    return false;
+  }
 }
 
-//mengecek antrian apakah masih kosong 
-bool isEmpty() {
-    if(back == 0) {
-        return true;
-    }
-    else {
-        return false;
-    }
+bool isEmpty() {  // Antriannya kosong atau tidak
+  if (back == 0) {
+    return true;
+  } else {
+    return false;
+  }
 }
 
-//menambah antrian
-void tambahData(string nama) {
-    if(isFULL()) {
-        cout << "Antrian sudah penuh." << endl;
+void enqueueAntrian(string data) {  // Fungsi menambahkan antrian
+  if (isFull()) {
+    cout << "Antrian penuh" << endl;
+  } else {
+    if (isEmpty()) {  // Kondisi ketika queue kosong
+      queueTeller[0] = data;
+      front++;
+      back++;
+    } else {  // Antrianya ada isi
+      queueTeller[back] = data;
+      back++;
     }
-    else {
-        if(isEmpty()) {
-            queueTeller[0] = nama;
-            front++;
-            back++;
-        }
-        else {
-            queueTeller[back] = nama;
-            back++;
-
-        }
-    }
+  }
 }
 
-//mengurangi antrian
-void kurangAntrian() {
-    if(isEmpty()) {
-        cout << "Antrian kosong" << endl;
+void dequeueAntrian() {  // Fungsi mengurangi antrian
+  if (isEmpty()) {
+    cout << "Antrian kosong" << endl;
+  } else {
+    for (int i = 0; i < back; i++) {
+      queueTeller[i] = queueTeller[i + 1];
     }
-    else {
-        for(int i = 0; i < back; i++) {
-            queueTeller[i] =queueTeller[i+1];
-        }
-        back--;
-    }
+    back--;
+  }
 }
 
-//menghintung banyak antrian
-int count() {
-    return back;
+int countQueue() {  // Fungsi menghitung banyak antrian
+  return back;
 }
 
-//menghapus seluruh antrian
-void clearQueue() {
-    if(isEmpty()) {
-        cout << "Antrian kosong" << endl;
+void clearQueue() {  // Fungsi menghapus semua antrian
+  if (isEmpty()) {
+    cout << "Antrian kosong" << endl;
+  } else {
+    for (int i = 0; i < back; i++) {
+      queueTeller[i] = "";
     }
-    else {
-        for(int i = 0; i < back; i++) {
-            queueTeller[i] = "";
-        }
-        back = 0;
-        front = 0;
-    }
+    back = 0;
+    front = 0;
+  }
 }
 
-//melihat antrian
-void viewQueue() {
-    cout << "Data antrian: " << endl;
-    for(int i = 0; i < maksimalAntarian; i++) {
-        if(queueTeller[i] != "") {
-            cout << i+1 << ". " << queueTeller[i] << endl;
-        }
-        else {
-            cout << i+1 << ". " << "(kosong)" << endl;
-        }
+void viewQueue() {  // Fungsi melihat antrian
+  cout << "Data antrian teller:" << endl;
+  for (int i = 0; i < maksimalQueue; i++) {
+    if (queueTeller[i] != "") {
+      cout << i + 1 << ". " << queueTeller[i] << endl;
+    } else {
+      cout << i + 1 << ". (kosong)" << endl;
     }
+  }
 }
 
-//main
 int main() {
-    tambahData("anjing");
-    viewQueue();
+  enqueueAntrian("Andi");
+  enqueueAntrian("Maya");
+  viewQueue();
+  cout << "Jumlah antrian = " << countQueue() << endl;
+  dequeueAntrian();
+  viewQueue();
+  cout << "Jumlah antrian = " << countQueue() << endl;
+  clearQueue();
+  viewQueue();
+  cout << "Jumlah antrian = " << countQueue() << endl;
+  return 0;
 }
