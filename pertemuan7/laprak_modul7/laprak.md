@@ -487,7 +487,15 @@ int main() {
     return 0;
 }
 ```
-Program di atas adalah implementasi dari sebuah antrian (queue) menggunakan linked list dalam bahasa C++. Antrian ini dirancang untuk menyimpan data mahasiswa beserta NIM mereka. Struktur data Node digunakan untuk menyimpan informasi tentang setiap mahasiswa, yaitu nama dan NIM, serta pointer ke node berikutnya dalam antrian. Kelas Queue memiliki fungsi-fungsi untuk operasi dasar pada antrian seperti menambahkan data ke antrian (enqueue_2147()), menghapus data dari antrian (dequeue_2147()), menampilkan seluruh antrian (displayQueue_2147()), memeriksa apakah antrian kosong (isEmpty_2147()), menghitung jumlah elemen dalam antrian (countQueue_2147()), dan membersihkan semua elemen dalam antrian (clearQueue()). Di dalam fungsi main(), program membuat objek dari kelas Queue dan menambahkan dua mahasiswa ke dalam antrian dengan menggunakan fungsi enqueue_2147() dengan menyertakan nama dan NIM mereka. Kemudian, program menampilkan seluruh antrian dan jumlah elemen dalam antrian. Setelah itu, program menghapus satu mahasiswa dari antrian dengan menggunakan fungsi dequeue_2147() dan menampilkan kembali antrian beserta jumlah elemennya. Langkah ini diulang untuk menghapus mahasiswa kedua dari antrian.
+Program di atas adalah implementasi dari sebuah antrian (queue) menggunakan linked list dalam bahasa C++. Antrian ini dirancang untuk menyimpan data mahasiswa beserta NIM mereka. Struktur data Node digunakan untuk menyimpan informasi tentang setiap mahasiswa, yaitu nama dan NIM, serta pointer ke node berikutnya dalam antrian. Kelas Queue memiliki fungsi-fungsi untuk operasi dasar pada antrian sepert:
+ - menambahkan data ke antrian (enqueue_2147())
+ - menghapus data dari antrian (dequeue_2147())
+ - menampilkan seluruh antrian (displayQueue_2147())
+ - memeriksa apakah antrian kosong (isEmpty_2147())
+ - menghitung jumlah elemen dalam antrian (countQueue_2147())
+ - membersihkan semua elemen dalam antrian (clearQueue())
+ 
+  Di dalam fungsi main(), program membuat objek dari kelas Queue dan menambahkan dua mahasiswa ke dalam antrian dengan menggunakan fungsi enqueue_2147() dengan menyertakan nama dan NIM mereka. Kemudian, program menampilkan seluruh antrian dan jumlah elemen dalam antrian. Setelah itu, program menghapus satu mahasiswa dari antrian dengan menggunakan fungsi dequeue_2147() dan menampilkan kembali antrian beserta jumlah elemennya. Langkah ini diulang untuk menghapus mahasiswa kedua dari antrian.
 
 ## Output:
 ![Screenshot Soal Unguided 1](ssunguided(2).png)
