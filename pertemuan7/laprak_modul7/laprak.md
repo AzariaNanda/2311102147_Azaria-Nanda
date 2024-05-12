@@ -35,6 +35,34 @@ Operasi pada Queue melibatkan serangkaian fungsi yang memberikan kita kemampuan 
         - Elemen yang tersisa: 3, 4, 5, 6, 7, 8, 9
 
     - Circular Queue: Mirip dengan jenis linear, tetapi ujung-ujung barisan terhubung satu sama lain, menciptakan struktur antrean yang berputar.
+    Contoh Circular Queue:
+        ##### Enqueue (Tambahkan Elemen):
+        - Elemen pertama: 1
+        - Elemen kedua: 2
+        - Elemen ketiga: 3
+        - Elemen keempat: 4
+        - Elemen kelima: 5
+        ##### Dequeue (Hapus Elemen):
+        - Elemen pertama: 1 (dihapus)
+        - Elemen yang tersisa: 2, 3, 4, 5
+        ##### Enqueue (Tambahkan Elemen):
+        - Elemen pertama: 2 (sebelumnya)
+        - Elemen kedua: 6
+        - Elemen ketiga: 7
+        - Elemen keempat: 8
+        - Elemen kelima: 9
+        ##### Dequeue (Hapus Elemen):
+        - Elemen pertama: 2 (dihapus)
+        - Elemen yang tersisa: 3, 4, 5, 6, 7, 8, 9
+        ##### Enqueue (Tambahkan Elemen):
+        - Elemen pertama: 3 (sebelumnya)
+        - Elemen kedua: 10
+        - Elemen ketiga: 11
+        - Elemen keempat: 12
+        - Elemen kelima: 13
+        ##### Dequeue (Hapus Elemen):
+        - Elemen pertama: 3 (dihapus)
+        - Elemen yang tersisa: 4, 5, 6, 7, 8, 9, 10, 11, 12, 13
 
 2. Berdasarkan Penggunaan
     - Priority Queue: Setiap elemen memiliki prioritas tertentu. Elemen dengan prioritas tertinggi akan diambil terlebih dahulu.
