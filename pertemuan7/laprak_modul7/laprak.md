@@ -225,12 +225,136 @@ Program ini merupakan implementasi antrian menggunakan array dalam bahasa pemrog
 ## 1. Ubahlah penerapan konsep queue pada bagian guided dari array menjadi linked list.
 
 ```C++
+#include <iostream>
 
+using namespace std;
+
+const int maksimalQueue = 5;  // Maksimal antrian adalah 5
+
+// Node untuk menyimpan data dan pointer ke node berikutnya
+struct Node {
+    string data;
+    Node* next;
+};
+
+class Queue {
+private:
+    Node* front; // Node depan dari antrian
+    Node* rear;  // Node belakang dari antrian
+
+public: 
+    Queue() { // Konstruktor untuk menginisialisasi antrian kosong
+        front = nullptr;
+        rear = nullptr;
+    }
+
+    // Fungsi untuk menambahkan data ke antrian
+    void enqueue_2147(const string& data) {
+        Node* newNode = new Node;
+        newNode->data = data;
+        newNode->next = nullptr;
+        
+        // Jika antrian kosong
+        if (isEmpty_2147()) { // Jika antrian kosong maka front dan rear menunjuk ke newNode yang baru dibuat 
+            front = rear = newNode;
+        } else { // Jika antrian tidak kosong maka rear menunjuk ke newNode yang baru dibuat
+            rear->next = newNode;
+            rear = newNode;
+        }
+        
+        cout << data << " ditambahkan ke dalam antrian." << endl;
+    }
+
+    // Fungsi untuk menghapus data dari antrian
+    void dequeue_2147() {
+        if (isEmpty_2147()) { // Jika antrian kosong maka tampilkan pesan "Antrian kosong" dan kembalikan nilai void
+            cout << "Antrian kosong." << endl;
+            return;
+        }
+
+        Node* temp = front; // Simpan node front ke dalam variabel temp untuk dihapus nantinya 
+        front = front->next; // Geser front ke node selanjutnya 
+
+        cout << temp->data << " dihapus dari antrian." << endl; // Tampilkan data yang dihapus dari antrian 
+        delete temp; // Hapus node yang disimpan di variabel temp
+
+        // Jika setelah penghapusan antrian menjadi kosong
+        if (front == nullptr) {
+            rear = nullptr;
+        }
+    }
+
+    // Fungsi untuk menampilkan seluruh antrian
+    void displayQueue_2147() {
+        if (isEmpty_2147()) { // Jika antrian kosong maka tampilkan pesan "Data antrian:" dan tampilkan pesan "(kosong)"
+            cout << "2147-Data antrian-2147:" << endl;
+            for (int i = 0; i < maksimalQueue; i++) {
+                cout << i + 1 << ". (kosong)" << endl;
+            }
+        } else { // Jika antrian tidak kosong maka tampilkan data antrian yang ada
+            cout << "2147-Data antrian-2147:" << endl;
+            Node* current = front;
+            int i = 1;
+            while (current != nullptr) { // Selama current tidak menunjuk ke nullptr maka tampilkan data antrian yang ada 
+                cout << i << ". " << current->data << endl;
+                current = current->next;
+                i++;
+            }
+            for (; i <= maksimalQueue; i++) { // Tampilkan pesan "(kosong)" untuk antrian yang kosong 
+                cout << i << ". (kosong)" << endl;
+            }
+        }
+    }
+
+    // Fungsi untuk memeriksa apakah antrian kosong
+    bool isEmpty_2147() {
+        return front == nullptr;
+    }
+
+    // Fungsi untuk mengembalikan jumlah elemen dalam antrian
+    int countQueue_2147() {
+        int count = 0;
+        Node* current = front;
+        while (current != nullptr) { // Selama current tidak menunjuk ke nullptr maka hitung jumlah elemen dalam antrian
+            count++;
+            current = current->next;
+        }
+        return count; // Kembalikan jumlah elemen dalam antrian
+    }
+
+    // Fungsi untuk menghapus semua elemen dalam antrian
+    void clearQueue() {
+        while (!isEmpty_2147()) { // Selama antrian tidak kosong maka hapus elemen dalam antrian
+            dequeue_2147(); // Hapus elemen dalam antrian 
+        } 
+        cout << "Antrian telah dibersihkan." << endl;
+    }
+};
+
+int main() {
+    Queue queue; // Buat objek queue dari class Queue
+    queue.enqueue_2147("Andi");
+    queue.enqueue_2147("Maya");
+    queue.displayQueue_2147();
+    cout << "Jumlah antrian = " << queue.countQueue_2147() << endl;
+    queue.dequeue_2147();
+    queue.displayQueue_2147();
+    cout << "Jumlah antrian = " << queue.countQueue_2147() << endl;
+    queue.dequeue_2147();
+    queue.displayQueue_2147();
+    cout << "Jumlah antrian = " << queue.countQueue_2147() << endl;
+
+    return 0;
+}
 ```
-
-Program ini berfungsi untuk memeriksa apakah suatu teks merupakan palindrom, yaitu jika urutan hurufnya sama baik dari depan maupun belakang, seperti "level" atau "radar".
-Menggunakan dua fungsi utama: bersihkan_dan_ubah_ke_huruf_kecil_2147 membersihkan input dari karakter non-alfabet dan mengubah huruf menjadi kecil, memastikan pemrosesan yang akurat. 
-Palindrom_2147 menggunakan stack untuk membandingkan setengah pertama teks dengan setengah kedua secara terbalik. Dalam main, pengguna diminta input, program membersihkannya, lalu memeriksa apakah palindrom. Hasilnya ditampilkan, dan pengguna diberi opsi untuk input baru atau keluar.
+Program di atas adalah implementasi dari struktur data antrian (queue) menggunakan linked list dalam bahasa pemrograman C++. Dalam program tersebut, digunakan struktur data linked list untuk menyimpan elemen-elemen antrian, di mana setiap elemen direpresentasikan oleh sebuah node yang memiliki dua atribut: data untuk menyimpan nilai data dan next untuk menunjukkan ke node berikutnya dalam antrian.
+Kelas Queue memiliki beberapa fungsi untuk operasi dasar pada code antrian diatas:
+- Fungsi enqueue_2147(const string& data): Digunakan untuk menambahkan data baru ke dalam antrian. Fungsi ini membuat sebuah node baru, menginisialisasi nilai datanya dengan data yang diberikan, dan menambahkan node tersebut ke belakang antrian. Jika antrian kosong, node tersebut akan menjadi elemen pertama dalam antrian.
+- Fungsi dequeue_2147(): Digunakan untuk menghapus elemen pertama dari antrian. Fungsi ini menghapus node pertama dari antrian, mengubah pointer front untuk menunjuk ke node berikutnya (jika ada), dan menghapus node yang dihapus dari memori.
+- Fungsi displayQueue_2147(): Digunakan untuk menampilkan seluruh elemen dalam antrian. Fungsi ini mengiterasi melalui setiap node dalam antrian, mulai dari node pertama hingga terakhir, dan menampilkan nilai data dari setiap node.
+- Fungsi isEmpty_2147(): Digunakan untuk memeriksa apakah antrian kosong. Fungsi ini mengembalikan nilai true jika front menunjuk ke nullptr, yang menandakan bahwa antrian kosong.
+- Fungsi countQueue_2147(): Digunakan untuk mengembalikan jumlah elemen dalam antrian. Fungsi ini menghitung jumlah node dalam antrian dengan mengiterasi melalui setiap node dan menghitungnya.
+- Fungsi clearQueue(): Digunakan untuk menghapus semua elemen dari antrian. Fungsi ini menghapus satu per satu elemen dari antrian sampai antrian menjadi kosong. Di dalam fungsi main(), terdapat contoh penggunaan objek dari kelas Queue. Beberapa data ditambahkan ke dalam antrian menggunakan fungsi enqueue_2147(), kemudian antrian ditampilkan menggunakan fungsi displayQueue_2147(). Setelah itu, elemen pertama dari antrian dihapus menggunakan fungsi dequeue_2147(), dan kemudian antrian ditampilkan kembali. Proses ini diulang untuk menghapus elemen kedua dari antrian, dan kemudian menampilkan hasilnya.
 
 ## Output:
 ![Screenshot Soal Unguided 1](ssunguided(1).png)
@@ -238,22 +362,142 @@ Palindrom_2147 menggunakan stack untuk membandingkan setengah pertama teks denga
 ## 2. Dari nomor 1 buatlah konsep antri dengan atribut Nama mahasiswa dan NIM Mahasiswa.
 
 ```C++
+#include <iostream>
+#include <string>
 
+using namespace std;
+
+const int maksimalQueue = 5;  // Maksimal antrian adalah 5
+
+// Node untuk menyimpan data dan pointer ke node berikutnya
+struct Node {
+    string nama;
+    string nim;
+    Node* next;
+};
+
+class Queue {
+private:
+    Node* front; // Node depan dari antrian
+    Node* rear;  // Node belakang dari antrian
+
+public: 
+    Queue() { // Konstruktor untuk menginisialisasi antrian kosong
+        front = nullptr;
+        rear = nullptr;
+    }
+
+    // Fungsi untuk menambahkan data ke antrian
+    void enqueue_2147(const string& nama, const string& nim) {
+        Node* newNode = new Node;
+        newNode->nama = nama;
+        newNode->nim = nim;
+        newNode->next = nullptr;
+        
+        // Jika antrian kosong
+        if (isEmpty_2147()) { // Jika antrian kosong maka front dan rear menunjuk ke newNode yang baru dibuat 
+            front = rear = newNode;
+        } else { // Jika antrian tidak kosong maka rear menunjuk ke newNode yang baru dibuat
+            rear->next = newNode;
+            rear = newNode;
+        }
+        
+        cout << "Mahasiswa dengan Nama: " << newNode->nama << " dan NIM: " << newNode->nim << " ditambahkan ke dalam antrian." << endl;
+    }
+
+    // Fungsi untuk menghapus data dari antrian
+    void dequeue_2147() {
+        if (isEmpty_2147()) { // Jika antrian kosong maka tampilkan pesan "Antrian kosong" dan kembalikan nilai void
+            cout << "Antrian kosong." << endl;
+            return;
+        }
+
+        Node* temp = front; // Simpan node front ke dalam variabel temp untuk dihapus nantinya 
+        front = front->next; // Geser front ke node selanjutnya 
+
+        cout << "Mahasiswa dengan Nama: " << temp->nama << " dan NIM: " << temp->nim << " dihapus dari antrian." << endl; // Tampilkan data mahasiswa yang dihapus dari antrian 
+        delete temp; // Hapus node yang disimpan di variabel temp
+
+        // Jika setelah penghapusan antrian menjadi kosong
+        if (front == nullptr) {
+            rear = nullptr;
+        }
+    }
+
+    // Fungsi untuk menampilkan seluruh antrian
+    void displayQueue_2147() {
+        if (isEmpty_2147()) { // Jika antrian kosong maka tampilkan pesan "Data antrian:" dan tampilkan pesan "(kosong)"
+            cout << "Data antrian:" << endl;
+            for (int i = 0; i < maksimalQueue; i++) {
+                cout << i + 1 << ". (kosong)" << endl;
+            }
+        } else { // Jika antrian tidak kosong maka tampilkan data antrian yang ada
+            cout << "Data antrian:" << endl;
+            Node* current = front;
+            int i = 1;
+            while (current != nullptr) { // Selama current tidak menunjuk ke nullptr maka tampilkan data antrian yang ada 
+                cout << i << ". " << "Nama: " << current->nama << ", NIM: " << current->nim << endl;
+                current = current->next;
+                i++;
+            }
+            for (; i <= maksimalQueue; i++) { // Tampilkan pesan "(kosong)" untuk antrian yang kosong 
+                cout << i << ". (kosong)" << endl;
+            }
+        }
+    }
+
+    // Fungsi untuk memeriksa apakah antrian kosong
+    bool isEmpty_2147() {
+        return front == nullptr;
+    }
+
+    // Fungsi untuk mengembalikan jumlah elemen dalam antrian
+    int countQueue_2147() {
+        int count = 0;
+        Node* current = front;
+        while (current != nullptr) { 
+            count++;
+            current = current->next;
+        }
+        return count; // Kembalikan jumlah elemen dalam antrian
+    }
+
+    // Fungsi untuk menghapus semua elemen dalam antrian
+    void clearQueue() {
+        while (!isEmpty_2147()) { // Selama antrian tidak kosong maka hapus elemen dalam antrian
+            dequeue_2147(); // Hapus elemen dalam antrian 
+        } 
+        cout << "Antrian telah dibersihkan." << endl;
+    }
+};
+
+int main() {
+    Queue queue; // Buat objek queue dari class Queue
+    queue.enqueue_2147("Albert", "2311102147");
+    queue.enqueue_2147("Nanda", "2311102101");
+    queue.displayQueue_2147();
+    cout << "Jumlah antrian = " << queue.countQueue_2147() << endl;
+    queue.dequeue_2147();
+    queue.displayQueue_2147();
+    cout << "Jumlah antrian = " << queue.countQueue_2147() << endl;
+    queue.dequeue_2147();
+    queue.displayQueue_2147();
+    cout << "Jumlah antrian = " << queue.countQueue_2147() << endl;
+
+    return 0;
+}
 ```
-Program ini bertujuan untuk membalikkan urutan setiap kata dalam sebuah kalimat yang dimasukkan oleh pengguna. Menggunakan dua fungsi utama: 
--bersihkan_Dan_Kecilkan_Hurufnya_2147 membersihkan kalimat dari karakter non-alfabet dan mengonversinya menjadi huruf kecil untuk memastikan konsistensi dalam pemrosesan
--balik_Kalimat_2147 menggunakan struktur data stack untuk membalikkan urutan setiap kata dalam kalimat, menghasilkan kalimat yang terbalik. 
-Dalam fungsi main, pengguna diminta untuk memasukkan sebuah kalimat dengan minimal tiga kata. Program akan memeriksa jumlah kata dalam kalimat dan melakukan pembalikan jika syarat terpenuhi. Hasilnya akan ditampilkan, dan pengguna diberi opsi untuk memasukkan kalimat baru atau keluar dari program.
+Program di atas adalah implementasi dari sebuah antrian (queue) menggunakan linked list dalam bahasa C++. Antrian ini dirancang untuk menyimpan data mahasiswa beserta NIM mereka. Struktur data Node digunakan untuk menyimpan informasi tentang setiap mahasiswa, yaitu nama dan NIM, serta pointer ke node berikutnya dalam antrian. Kelas Queue memiliki fungsi-fungsi untuk operasi dasar pada antrian seperti menambahkan data ke antrian (enqueue_2147()), menghapus data dari antrian (dequeue_2147()), menampilkan seluruh antrian (displayQueue_2147()), memeriksa apakah antrian kosong (isEmpty_2147()), menghitung jumlah elemen dalam antrian (countQueue_2147()), dan membersihkan semua elemen dalam antrian (clearQueue()). Di dalam fungsi main(), program membuat objek dari kelas Queue dan menambahkan dua mahasiswa ke dalam antrian dengan menggunakan fungsi enqueue_2147() dengan menyertakan nama dan NIM mereka. Kemudian, program menampilkan seluruh antrian dan jumlah elemen dalam antrian. Setelah itu, program menghapus satu mahasiswa dari antrian dengan menggunakan fungsi dequeue_2147() dan menampilkan kembali antrian beserta jumlah elemennya. Langkah ini diulang untuk menghapus mahasiswa kedua dari antrian.
 
 ## Output:
 ![Screenshot Soal Unguided 1](ssunguided(2).png)
 
-
 ## Kesimpulan
 
-Stack adalah struktur data yang mirip dengan menumpuk piring di kafetaria, di mana elemen terakhir yang ditambahkan menjadi yang pertama dikeluarkan, mengikuti konsep LIFO (Last In, First Out). Dalam implementasi C++, stack sering digunakan untuk menyimpan dan mengelola data dengan operasi dasar seperti push untuk menambahkan data, pop untuk mengeluarkan data, dan peek untuk melihat data teratas tanpa mengeluarkannya. Meskipun memiliki kelebihan seperti kemudahan penggunaan dan otomatisasi dalam penghapusan objek yang tidak diperlukan, stack juga memiliki keterbatasan, seperti kapasitas memori yang terbatas dan ketidakmampuan untuk mengakses data secara acak. Namun, dengan pemahaman yang baik tentang konsep dan penggunaannya, stack tetap menjadi alat yang sangat berguna dalam pengembangan perangkat lunak.
+Queue adalah struktur data yang mengatur penyimpanan dan pengambilan data dengan prinsip FIFO (First-In First-Out), yang berarti data yang pertama dimasukkan akan menjadi yang pertama dikeluarkan. Implementasinya dapat menggunakan array atau linked list, dengan dua pointer utama, yaitu front dan rear. Berbeda dengan struktur data lain seperti stack, penambahan dan penghapusan elemen dalam queue terjadi pada ujung yang berbeda, yaitu front untuk Dequeue dan rear untuk Enqueue. Ada beberapa jenis operasi queue, termasuk Simple Queue dan Circular Queue, serta jenis penggunaan seperti Priority Queue dan Double-ended Queue (Dequeue). Prosedur operasi dasar pada queue meliputi enqueue untuk menambahkan data, dequeue untuk mengeluarkan data, peek untuk melihat data tanpa menghapusnya, serta isEmpty, isFull, dan size untuk memeriksa status dan ukuran queue.
 
 ## Referensi
 [1] Rafsanjani, Malik Akbar Hashemi. "Implementasi Algoritma Pengurutan General Purpose dan Berbasis Komparasi untuk Data Berkategori dalam Waktu Linier Tanpa Paralelisasi", 2021.<br/>
 [2] Muhammad Nugraha, Dasar Pemrograman Dengan C++, Materi Paling Dasar untuk Menjadi Programmer Berbagai Platform. Yogyakarta: Deepublish, 2021.<br/>
+[3] Meidyan Permata Putri, et al., Algoritma dan Struktur Data. Bandung: Widina Bhakti Persada Bandung, 2022.<br/>
 
