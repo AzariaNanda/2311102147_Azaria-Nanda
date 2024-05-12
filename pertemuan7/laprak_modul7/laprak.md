@@ -494,7 +494,9 @@ Program di atas adalah implementasi dari sebuah antrian (queue) menggunakan link
 
 ## Kesimpulan
 
-Queue adalah struktur data yang mengatur penyimpanan dan pengambilan data dengan prinsip FIFO (First-In First-Out), yang berarti data yang pertama dimasukkan akan menjadi yang pertama dikeluarkan. Implementasinya dapat menggunakan array atau linked list, dengan dua pointer utama, yaitu front dan rear. Berbeda dengan struktur data lain seperti stack, penambahan dan penghapusan elemen dalam queue terjadi pada ujung yang berbeda, yaitu front untuk Dequeue dan rear untuk Enqueue. Ada beberapa jenis operasi queue, termasuk Simple Queue dan Circular Queue, serta jenis penggunaan seperti Priority Queue dan Double-ended Queue (Dequeue). Prosedur operasi dasar pada queue meliputi enqueue untuk menambahkan data, dequeue untuk mengeluarkan data, peek untuk melihat data tanpa menghapusnya, serta isEmpty, isFull, dan size untuk memeriksa status dan ukuran queue.
+Queue adalah struktur data yang mengatur penyimpanan dan pengambilan data dengan prinsip FIFO (First-In First-Out), yang berarti data yang pertama dimasukkan akan menjadi yang pertama dikeluarkan. Implementasinya dapat menggunakan array atau linked list, dengan dua pointer utama, yaitu front dan rear. Berbeda dengan struktur data lain seperti stack, penambahan dan penghapusan elemen dalam queue terjadi pada ujung yang berbeda, yaitu front untuk Dequeue dan rear untuk Enqueue. 
+
+Ada beberapa jenis operasi queue, termasuk Simple Queue dan Circular Queue, serta jenis penggunaan seperti Priority Queue dan Double-ended Queue (Dequeue). Prosedur operasi dasar pada queue meliputi enqueue untuk menambahkan data, dequeue untuk mengeluarkan data, peek untuk melihat data tanpa menghapusnya, serta isEmpty, isFull, dan size untuk memeriksa status dan ukuran queue.
 
 ## Referensi
 [1] Rafsanjani, Malik Akbar Hashemi. "Implementasi Algoritma Pengurutan General Purpose dan Berbasis Komparasi untuk Data Berkategori dalam Waktu Linier Tanpa Paralelisasi", 2021.<br/>
