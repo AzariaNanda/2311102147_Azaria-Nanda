@@ -3,31 +3,46 @@
 
 ## Dasar Teori
     
-Stack adalah seperti tumpukan piring di kafetaria; bayangkan saat Anda menumpuk piring bersih satu per satu. Yang Anda letakkan pertama kali akan berada di dasar, dan yang terakhir akan berada di atas. Ketika seseorang mengambil piring, yang diambil adalah yang teratas, bukan yang ada di bawahnya. Konsep ini, di mana elemen terakhir yang dimasukkan adalah yang pertama dikeluarkan, menjadi dasar dari tumpukan. Jadi, secara sederhana, stack adalah cara penyimpanan data di mana yang terakhir datang adalah yang pertama dilayani, mirip dengan saat Anda menumpuk piring; piring teratas adalah yang akan Anda ambil terlebih dahulu.
+Queue adalah struktur data yang memungkinkan penyimpanan dan pengambilan data dengan prinsip FIFO (First-In First-Out). Artinya, data yang pertama dimasukkan ke dalam queue akan menjadi data yang pertama pula untuk dikeluarkan. Konsep ini serupa dengan antrian pada kehidupan sehari-hari di mana orang yang datang lebih dulu akan dilayani terlebih dahulu.
 
-Dalam pemrograman C++, stack merupakan salah satu struktur data yang sangat berguna dan seringkali diimplementasikan menggunakan array atau linked list. Bayangkan stack seperti tumpukan buku di meja; setiap kali Anda menambahkan buku baru, itu diletakkan di atas buku-buku yang sudah ada. Operasi utama dalam stack adalah push untuk menambahkan buku baru ke tumpukan dan pop untuk mengambil buku paling atas dari tumpukan. Ada juga operasi lain seperti peek untuk sekadar melihat buku paling atas tanpa mengambilnya, dan isEmpty untuk memeriksa apakah tumpukan kosong atau tidak.
+Dalam implementasinya, queue dapat dibangun menggunakan array atau linked list. Struktur data queue memiliki dua pointer utama, yaitu front dan rear. Front mengarah ke elemen pertama dalam queue, sementara rear mengarah ke elemen terakhir.
 
-Penerapan stack dalam pemrograman sangat beragam, mulai dari penyelesaian masalah matematika hingga manajemen memori dalam sistem komputer. Karakteristik LIFO (Last In, First Out) membuat stack sangat berguna untuk mempertahankan urutan operasi atau data yang penting dan memudahkan akses ke data terbaru yang dimasukkan. Namun, ada juga dua kondisi yang perlu diwaspadai dalam struktur data stack, yaitu underflow dan overflow, berikut penjelasannya:
+Perbedaan mendasar antara queue dan struktur data lainnya seperti stack terletak pada aturan penambahan dan penghapusan elemen. Pada stack, penambahan dan penghapusan elemen dilakukan di satu ujung saja. Namun, pada queue, operasi tersebut dilakukan pada ujung yang berbeda karena perubahan data selalu mengacu pada head. Oleh karena itu, hanya terdapat satu jenis operasi untuk menambah atau menghapus elemen, yaitu Enqueue dan Dequeue. Saat Enqueue, elemen ditambahkan setelah elemen terakhir dalam queue. Sedangkan saat Dequeue, head digeser untuk menunjuk pada elemen selanjutnya dalam antrian.
 
-- Stack underflow terjadi saat kita mencoba mengambil buku dari tumpukan yang kosong, seperti mencoba mengambil buku dari tumpukan yang tidak memiliki buku sama sekali.
-- Stack overflow terjadi saat tumpukan sudah penuh dengan buku namun kita masih mencoba menambahkan buku baru ke dalamnya, seperti mencoba menambahkan buku baru ke tumpukan yang sudah terlalu tinggi untuk menampungnya.
-  
 ![Screenshot Soal Unguided 1](ssunguided(5).png)
 
 
 #### Jenis- jenis operasi pada Stack:
 
 Operasi pada stack melibatkan serangkaian fungsi yang memberikan kita kemampuan untuk berinteraksi dengan struktur data ini. Mari kita jabarkan beberapa operasi dasar yang dapat kita lakukan pada stack:
+Jenis-jenis Queue
+1. Berdasarkan Implementasinya
+    - Linear/Simple Queue: Elemen-elemen data disusun dalam barisan linear dan penambahan serta penghapusan elemen hanya terjadi pada dua ujung barisan. Contoh Linear Queue:
+        ##### Enqueue (Tambahkan Elemen):
+        Elemen pertama: 1
+        Elemen kedua: 2
+        Elemen ketiga: 3
+        Elemen keempat: 4
+        Elemen kelima: 5
+        ##### Dequeue (Hapus Elemen):
+        Elemen pertama: 1 (dihapus)
+        Elemen yang tersisa: 2, 3, 4, 5
+        ##### Enqueue (Tambahkan Elemen):
+        Elemen pertama: 2 (sebelumnya)
+        Elemen kedua: 6
+        Elemen ketiga: 7
+        Elemen keempat: 8
+        Elemen kelima: 9
+        ##### Dequeue (Hapus Elemen):
+        Elemen pertama: 2 (dihapus)
+        Elemen yang tersisa: 3, 4, 5, 6, 7, 8, 9
+        
+    - Circular Queue: Mirip dengan jenis linear, tetapi ujung-ujung barisan terhubung satu sama lain, menciptakan struktur antrean yang berputar.
 
- - a. *Push (Masukkan)*: Bayangkan menambahkan satu per satu buku ke tumpukan yang sudah Anda susun. Setiap buku yang Anda tambahkan diletakkan di atas tumpukan, sehingga semakin tinggi tumpukan tersebut.
- - b. *Pop (Keluarkan)*: Sekarang, bayangkan mengambil buku dari atas tumpukan yang telah Anda susun. Ketika Anda mengambil buku, yang Anda ambil adalah buku paling atas, yang paling terlihat.
- - c. *Top (Atas)*: Ketika Anda ingin melihat judul buku teratas di tumpukan tanpa mengganggu susunannya.
- - d. *IsEmpty (Kosong)*: Anda mungkin ingin memeriksa apakah tumpukan buku kosong atau masih ada buku yang tersisa di dalamnya.
- - e. *IsFull (Penuh)*: Namun, jika Anda hanya memiliki sedikit ruang untuk menambahkan buku baru, Anda perlu memeriksa apakah tumpukan sudah penuh atau masih ada ruang kosong
- - f. *Size (Ukuran)*: Ketika Anda ingin tahu berapa banyak buku yang telah Anda susun di tumpukan tersebut.
- - g. *Peek (Lihat)*: Jika Anda ingin melihat buku tertentu di dalam tumpukan tanpa harus mengambilnya dari susunannya.
- - h. *Clear (Hapus Semua)*: Ketika tiba saatnya untuk membersihkan tumpukan, Anda ingin mengosongkan semua buku dari tumpukan.
- - i. *Search (Cari)*: Dan terakhir, jika Anda ingin menemukan apakah buku tertentu ada di dalam tumpukan, Anda bisa mencari dengan cepat.
+2. Berdasarkan Penggunaan
+    - Priority Queue: Setiap elemen memiliki prioritas tertentu. Elemen dengan prioritas tertinggi akan diambil terlebih dahulu.
+    - Double-ended Queue (Dequeue): Elemen dapat ditambahkan atau dihapus dari kedua ujung antrean
+
 
 #### Kelebihan dan kekurangan dalam menggunakan Stack:
 
