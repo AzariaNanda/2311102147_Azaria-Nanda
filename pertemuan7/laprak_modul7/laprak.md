@@ -102,20 +102,6 @@ Operasi pada Queue melibatkan serangkaian fungsi yang memberikan kita kemampuan 
 
 ![Screenshot Soal Unguided 1](ssunguided(4).png)
 
-#### Kelebihan dan kekurangan dalam menggunakan Stack:
-
-##### 1. Kelebihan
-- Menggunakan metode LIFO untuk membantu mengelola data dengan mudah dan efektif.
-- secara otomatis membersihkan objek  yang tidak lagi diperlukan.
-- tidak mudah rusak karena ukuran variabel yang tetap.
-- ukuran variabel tidak dapat diubah.
-- mengontrol memori secara mandiri.
-##### 2. Kekurangan
-- memori stack cenderung terbatas.
-- ada kemungkinan stack akan meluap atau overflow jika objek terlalu banyak dimasukan.
-- tidak dapat mengakses data secara acak, karena harus mengeluarkan tumpukan paling atas terlebih dahulu untuk membuat proses pencarian menjadi lebih terstruktur dan berurutan.
-
-
 ## Guided 
 
 ### 1. Latihan Queue
