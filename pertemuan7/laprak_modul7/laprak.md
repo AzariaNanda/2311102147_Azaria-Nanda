@@ -65,9 +65,32 @@ Operasi pada Queue melibatkan serangkaian fungsi yang memberikan kita kemampuan 
         - Elemen yang tersisa: 4, 5, 6, 7, 8, 9, 10, 11, 12, 13
 
 2. Berdasarkan Penggunaan
-    - Priority Queue: Setiap elemen memiliki prioritas tertentu. Elemen dengan prioritas tertinggi akan diambil terlebih dahulu.
-    - Double-ended Queue (Dequeue): Elemen dapat ditambahkan atau dihapus dari kedua ujung antrean
+    - Priority Queue: Setiap elemen memiliki prioritas tertentu. Elemen dengan prioritas tertinggi akan diambil terlebih dahulu.Elemen dengan prioritas rendah akan dihapus setelah elemen dengan prioritas tinggi.
+    Contoh Priority Queue:
+        ##### Enqueue (Tambahkan Elemen):
+        - Elemen pertama: 1 (prioritas tinggi)
+        - Elemen kedua: 3 (prioritas sedang)
+        - Elemen ketiga: 2 (prioritas rendah)
+        - Elemen keempat: 4 (prioritas tinggi)
+        - Elemen kelima: 5 (prioritas rendah)
+        ##### Dequeue (Hapus Elemen):
+        - Elemen pertama: 1 (dihapus prioritas tinggi)
+        - Elemen yang tersisa: 3, 2, 4, 5
 
+    - Double-ended Queue (Dequeue): Elemen dapat ditambahkan atau dihapus dari kedua ujung antrean
+    Contoh Double Ended Queue (Dequeue):
+        ##### Enqueue (Tambahkan Elemen):
+        - Elemen pertama: 1
+        - Elemen kedua: 2
+        - Elemen ketiga: 3
+        - Elemen keempat: 4
+        - Elemen kelima: 5
+        ##### Dequeue (Hapus Elemen):
+        - Elemen pertama: 1 (dihapus urutan paling depan)
+        - Elemen yang tersisa: 2, 3, 4, 5
+        ##### Dequeue (Hapus Elemen):
+        - Elemen pertama: 5 (dihapus urutan paling ujung belakang)
+        - Elemen yang tersisa: 2, 3, 4.
 
 #### Kelebihan dan kekurangan dalam menggunakan Stack:
 
