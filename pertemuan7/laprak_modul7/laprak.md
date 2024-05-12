@@ -103,9 +103,9 @@ Operasi pada Queue melibatkan serangkaian fungsi yang memberikan kita kemampuan 
 ![Screenshot Soal Unguided 1](ssunguided(4).png)
 
 Berikut penjelasan prosedur penggunaan Queue dari contoh gambar di atas:
-- 1.	Antrian datang secara berurutan A, B dan C yang kemudian dimasukan ke dalam baris antrian. Urutan data masuk melalui bagian rear antrian.
-- 2.	Setelah A dilayani, maka A akan keluar dari bagian Front baris antrian.
-- 3.	Kemudian ada antrian baru yang masuk yaitu D dan E secara berurutan masuk melalui bagian rear lagi. Dan seterusnya
+- Antrian datang secara berurutan A, B dan C yang kemudian dimasukan ke dalam baris antrian. Urutan data masuk melalui bagian rear antrian.
+- Setelah A dilayani, maka A akan keluar dari bagian Front baris antrian.
+- Kemudian ada antrian baru yang masuk yaitu D dan E secara berurutan masuk melalui bagian rear lagi. Dan seterusnya
 
 ## Guided 
 
