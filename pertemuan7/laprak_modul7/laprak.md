@@ -92,6 +92,16 @@ Operasi pada Queue melibatkan serangkaian fungsi yang memberikan kita kemampuan 
         - Elemen pertama: 5 (dihapus urutan paling ujung belakang)
         - Elemen yang tersisa: 2, 3, 4.
 
+#### Prosedur Operasi pada Queue:
+ - enqueue() :menambahkan data kedalam queue.
+ - dequeue() :mengeluarkan data dari queue.
+ - peek()    :mengambil data dari queue tanpa menghapusnya.
+ - isEmpty() :mengecek apakah queue kosong atau tidak.
+ - isFull()  :mengecek apakah queue penuh atau tidak.
+ - size()    :menghitung jumlah elemen dalam queue.
+
+![Screenshot Soal Unguided 1](ssunguided(4).png)
+
 #### Kelebihan dan kekurangan dalam menggunakan Stack:
 
 ##### 1. Kelebihan
