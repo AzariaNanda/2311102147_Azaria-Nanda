@@ -103,8 +103,7 @@ Operasi pada Queue melibatkan serangkaian fungsi yang memberikan kita kemampuan 
 ![Screenshot Soal Unguided 1](ssunguided(4).png)
 
 Berikut penjelasan prosedur penggunaan Queue dari contoh gambar di atas:
-- Antrian datang secara berurutan A, B dan C yang kemudian dimasukan ke dalam baris antrian.
-Urutan data masuk melalui bagian rear antrian.
+- Antrian datang secara berurutan A, B dan C yang kemudian dimasukan ke dalam baris antrian. Urutan data masuk melalui bagian rear antrian.
 - Setelah A dilayani, maka A akan keluar dari bagian Front baris antrian.
 - Kemudian ada antrian baru yang masuk yaitu D dan E secara berurutan masuk melalui bagian rear lagi. Dan seterusnya
 
@@ -211,8 +210,15 @@ int main() {
     viewQueue();
 }
 ```
-Program tersebut merupakan implementasi stack menggunakan array dalam C++. Array arrayBuku dengan ukuran 5 dan variabel maksimal serta top dideklarasikan di awal. Fungsi isFull() digunakan untuk memeriksa keadaan penuhnya stack, sedangkan isEmpty() untuk mengecek apakah stack kosong.
-Program juga mengimplementasikan beberapa prosedur. pushArrayBuku() menambahkan elemen ke stack, popArrayBuku() menghapus elemen, dan peekArrayBuku() melihat elemen pada posisi tertentu. Fungsi countStack() menghitung jumlah elemen, dan changeArrayBuku() mengubah elemen pada posisi tertentu. Terakhir, destroyArrayBuku() menghapus semua elemen dari stack. Di dalam fungsi main(), program melakukan operasi-operasi pada stack seperti menambahkan, mencetak, memeriksa keadaan stack, melihat elemen, mengubah elemen, dan menghapus elemen.
+Program ini merupakan implementasi antrian menggunakan array dalam bahasa pemrograman C++. Array queueTeller dengan ukuran 5, serta variabel front dan back, digunakan untuk menyimpan data antrian. 
+- Fungsi isFULL() digunakan untuk memeriksa apakah antrian sudah penuh, dengan cara mengecek apakah back sudah mencapai batas maksimum antrian.
+- Fungsi isEmpty() digunakan untuk mengecek apakah antrian masih kosong, dengan cara mengecek apakah back bernilai 0.
+- Prosedur tambahData(string nama) digunakan untuk menambahkan data ke dalam antrian. Jika antrian sudah penuh, program akan menampilkan pesan bahwa antrian sudah penuh. Jika antrian masih kosong, data akan ditambahkan di posisi awal antrian dan nilai front dan back akan diubah. Jika antrian tidak kosong, data akan ditambahkan di posisi belakang antrian.
+- Prosedur kurangAntrian() digunakan untuk mengurangi data dari antrian. Jika antrian kosong, program akan menampilkan pesan bahwa antrian kosong. Jika tidak, data akan digeser ke atas untuk mengisi posisi yang dihapus.
+- Fungsi count() digunakan untuk menghitung jumlah data dalam antrian.
+- Prosedur clearQueue() digunakan untuk menghapus seluruh data dalam antrian dengan mengosongkan array dan mengembalikan nilai front dan back ke nilai awal.
+- Prosedur viewQueue() digunakan untuk menampilkan data dalam antrian beserta nomor antriannya.
+- Di dalam fungsi main(), terdapat contoh penggunaan dengan menambahkan data "anjing" ke dalam antrian dan menampilkan data antrian menggunakan fungsi viewQueue().
 
 ## Unguided 
 
