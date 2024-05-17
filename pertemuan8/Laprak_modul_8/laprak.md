@@ -21,9 +21,9 @@ Algoritma Sequential Search adalah sebagai berikut:
 -  Jika (Data[i] = x) maka ketemu ← true, jika tidak, i ← i + 1
 -  Jika (ketemu) maka i adalah indeks data yang dicari, jika tidak, data tidak ditemukan.
 
-Berikut adalah fungsi untuk pencarian sekuensial beserta contih soalnya:
-Int A[6] = {13, 87, 14, 21, 75, 53}
+Berikut adalah fungsi untuk pencarian sekuensial beserta contoh soalnya:
 
+Int A[6] = {13, 87, 14, 21, 75, 53}
 ![Screenshot Soal Unguided 1](ssunguided(4).png)
 
 - Misal nilai yang dicari adalah X = 21, maka elemen yang diperiksa adalah 13, 87, 14, 21. (ditemukan)
