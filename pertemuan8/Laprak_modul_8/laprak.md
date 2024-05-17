@@ -106,6 +106,92 @@ Program menggunakan loop for untuk memeriksa setiap elemen dalam array data. Jik
 - Jika nilai cari ditemukan (ketemu bernilai true), program mencetak indeks di mana nilai tersebut ditemukan.
 - Jika nilai cari tidak ditemukan, program mencetak pesan bahwa data tidak ditemukan
 
+### 2. Latihan Binary Search
+
+```C++
+#include<iostream>
+#include<conio.h>
+#include<iomanip>
+
+using namespace std;
+
+int dataArray[7] = {1, 8, 2, 5, 4, 9, 7};
+int cari;
+
+void Selection_Sort(){
+    int temp, min, i, j;
+    for(i = 0; i < 7; i++){
+        min = i;
+        for(j = i + 1; j < 7; j++){
+            if(dataArray[j] < dataArray[min]){
+                min = j;
+            }
+        }
+        temp = dataArray[i];
+        dataArray[i] = dataArray[min];
+        dataArray[min] = temp;
+    }
+}
+
+void BinarySearch(){
+    int awal, akhir, tengah;
+    bool b_flag = false;
+    awal = 0;
+    akhir = 6;
+    while(!b_flag && awal <= akhir){
+        tengah = (awal + akhir)/2;
+        if(dataArray[tengah] == cari){
+            b_flag = true;
+        } else if(dataArray[tengah] < cari){
+            awal = tengah + 1;
+        } else {
+            akhir = tengah - 1;
+        }
+    }
+    if(b_flag){
+        cout << "\nData ditemukan pada index ke-" << tengah << endl;
+    } else {
+        cout << "\nData tidak ditemukan" << endl;
+    }
+}
+
+int main(){
+    cout << "BINARY SEARCH" << endl;
+    cout << "\nData : ";
+    for(int x = 0; x < 7; x++){
+        cout << setw(3) << dataArray[x];
+    }
+    cout << endl;
+
+    cout << "Masukkan data yang ingin dicari : ";
+    cin >> cari;
+    
+    cout << "\nData diurutkan : ";
+    Selection_Sort();
+
+    for(int x = 0; x < 7; x++){
+        cout << setw(3) << dataArray[x];
+    }
+    cout << endl;
+    BinarySearch();
+    _getche();
+    return 0;
+}
+```
+Program ini adalah implementasi dari algoritma Binary Search untuk mencari sebuah nilai dalam array yang telah diurutkan menggunakan algoritma Selection Sort.
+- Array pada 'dataArray' berisi data yang akan dicari, data ini akan diurutkan menggunakan algoritma Selection Sort sebelum dilakukan pencarian.
+- Mengurutkan array dataArray menggunakan algoritma Selection_Sort().
+- Melakukan pencarian nilai cari dalam array yang telah diurutkan menggunakan algoritma Binary Search.
+- Jika nilai ditemukan, akan menampilkan indeks tempat nilai ditemukan.
+- Jika nilai tidak ditemukan, akan menampilkan pesan bahwa nilai tidak ditemukan.
+- Menampilkan data awal yang belum diurutkan.
+- Meminta input dari pengguna untuk nilai yang dicari.
+- Mengurutkan data menggunakan Selection_Sort().
+- Menampilkan data yang telah diurutkan.
+- Melakukan pencarian menggunakan BinarySearch().
+- Menahan tampilan layar dengan _getche() sebelum program selesai.
+Program ini memanfaatkan dua algoritma yang berbeda: Selection Sort untuk mengurutkan data dan Binary Search untuk mencari data. Ini adalah contoh yang baik tentang bagaimana algoritma berbeda dapat digabungkan untuk menyelesaikan masalah tertentu.
+
 ## Unguided 
 
 ## 1. Ubahlah penerapan konsep queue pada bagian guided dari array menjadi linked list.
