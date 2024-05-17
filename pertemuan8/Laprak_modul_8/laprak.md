@@ -7,7 +7,7 @@ Algortima sequential searching adalah pencarian data semantik menggunakan teknol
 satu dimensi untuk melakukan proses pencarian tanpa melalui semua elemen array secara berurutan, sehingga
 tidak perlu dilakukan pengurutan data terlebih dahulu. Singkatnya Searching adalah proses mencari data dalam sebuah array dengan memeriksa setiap indeks menggunakan teknik perulangan. Ada dua metode dalam algoritma pencarian, yaitu:
 
-##### a. Sequential Search
+### a. Sequential Search
 Sequential Search adalah algoritma pencarian untuk data yang acak atau tidak terurut. Ini adalah teknik paling sederhana, di mana setiap elemen array dibaca satu per satu dari indeks terkecil hingga terbesar, atau sebaliknya. Konsepnya adalah:
 - Membandingkan setiap elemen array satu per satu.
 - Pencarian dimulai dari indeks pertama hingga terakhir.
@@ -30,6 +30,17 @@ Jadi indeks larik yang dikembalikan : I = 3
 - Misal nilai yang dicari adalah X = 15, maka elemen yang diperiksa adalah 13, 87, 14, 21, 75, 53. (tidak ditemukan)
 Jadi indeks larik yang dikembalikan : I = 0
 
+### b. Binary Search
+Binary Search adalah algoritma pencarian pada array/list dengan elemen terurut. Algoritma ini sering digabungkan dengan algoritma sorting karena data harus diurutkan terlebih dahulu. 
+
+Konsep Binary Search:
+- Data diambil dari posisi 1 sampai akhir (N).
+- Data dibagi menjadi dua untuk mendapatkan posisi tengah.
+- Data yang dicari dibandingkan dengan data di posisi tengah.
+  - Jika data yang dicari lebih besar dari data tengah, pencarian dilanjutkan di bagian kanan.
+  - Jika data yang dicari lebih kecil, pencarian dilanjutkan di bagian kiri.
+- Proses pembagian terus berlanjut hingga data ditemukan atau tidak ada lagi data yang bisa dibagi.
+- Jika data sama dengan data tengah, pencarian berhenti karena data ditemukan.
 
 #### Jenis- jenis operasi pada Queue:
 
