@@ -25,12 +25,10 @@ Berikut adalah contoh soal untuk pencarian sekuensial beserta penjelasannya:
 #### Int A[6] = {13, 87, 14, 21, 75, 53}
 ![Screenshot Soal Unguided 1](ssunguided(4).png)
 
-- Misal nilai yang dicari adalah X = 21, maka elemen yang diperiksa adalah 13, 87, 14, 21. (ditemukan).
-Jadi indeks larik yang dikembalikan : 
-I = 3
+- Misal nilai yang dicari adalah X = 21, maka elemen yang diperiksa adalah 13, 87, 14, 21. (ditemukan)
+Jadi indeks larik yang dikembalikan : I = 3
 - Misal nilai yang dicari adalah X = 15, maka elemen yang diperiksa adalah 13, 87, 14, 21, 75, 53. (tidak ditemukan)
-Jadi indeks larik yang dikembalikan : 
-I = 0
+Jadi indeks larik yang dikembalikan : I = 0
 
 ### b. Binary Search
 Binary search adalah algoritma pencarian untuk data terurut. Pencarian dilakukan dengan membandingkan data yang dicari dengan data di tengah. Jika sama, data ditemukan. Jika tidak, pencarian dilanjutkan pada bagian kiri atau kanan dari data tengah, tergantung pada perbandingan antara data yang dicari dengan data tengah. Proses ini diulang hingga data ditemukan atau tidak ada lagi yang bisa diperiksa. Singkatnya Binary Search adalah algoritma pencarian pada array/list dengan elemen terurut. Algoritma ini sering digabungkan dengan algoritma sorting karena data harus diurutkan terlebih dahulu. 
