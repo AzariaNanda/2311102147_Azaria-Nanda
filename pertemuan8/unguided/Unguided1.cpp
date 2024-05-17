@@ -5,7 +5,7 @@
 using namespace std;
 
 // Fungsi untuk melakukan pencarian binary pada array karakter
-int binarySearch(char arr[], int indices[], int size, char target) {
+int binarySearch_2147(char arr[], int indices[], int size, char target) {
     int left = 0;
     int right = size - 1;
 
@@ -29,9 +29,8 @@ int binarySearch(char arr[], int indices[], int size, char target) {
     // Jika huruf target tidak ditemukan
     return -1;
 }
-
 // Fungsi untuk melakukan selection sort pada array karakter
-void selectionSort(char arr[], int indices[], int size) {
+void selectionSort_2147(char arr[], int indices[], int size) {
     for (int i = 0; i < size - 1; ++i) {
         int minIdx = i;
         for (int j = i + 1; j < size; ++j) {
@@ -67,13 +66,13 @@ int main() {
     }
 
     // Mengurutkan array karakter menggunakan selection sort
-    selectionSort(charArray, indices, size);
+    selectionSort_2147(charArray, indices, size);
 
     cout << "Masukkan huruf yang ingin dicari: ";
     cin >> target;
 
     // Mencari huruf dalam array yang telah diurutkan
-    int index = binarySearch(charArray, indices, size, target);
+    int index = binarySearch_2147(charArray, indices, size, target);
 
     if (index != -1) {
         cout << "Huruf '" << target << "' ditemukan pada indeks ke-" << index << " dalam kalimat." << endl;

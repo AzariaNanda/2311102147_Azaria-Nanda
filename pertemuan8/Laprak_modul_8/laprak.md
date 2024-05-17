@@ -101,7 +101,6 @@ Berikut adalah penjelasan langkah-langkah dalam program:
 - cari: nilai yang ingin dicari dalam array, yaitu 10.
 - ketemu: variabel boolean yang digunakan untuk menandakan apakah nilai yang dicari ditemukan atau tidak, diinisialisasi dengan false.
 - i: variabel untuk iterasi.
-
 Program menggunakan loop for untuk memeriksa setiap elemen dalam array data. Jika elemen pada indeks i sama dengan nilai cari, maka ketemu diubah menjadi true dan loop dihentikan menggunakan break.setelah itu Program akan mencetak pesan "Program Sequential Search" dan isi array.
 - Jika nilai cari ditemukan (ketemu bernilai true), program mencetak indeks di mana nilai tersebut ditemukan.
 - Jika nilai cari tidak ditemukan, program mencetak pesan bahwa data tidak ditemukan
@@ -190,7 +189,6 @@ Program ini adalah implementasi dari algoritma Binary Search untuk mencari sebua
 - Menampilkan data yang telah diurutkan.
 - Melakukan pencarian menggunakan BinarySearch().
 - Menahan tampilan layar dengan _getche() sebelum program selesai.
-
 Program ini memanfaatkan dua algoritma yang berbeda: Selection Sort untuk mengurutkan data dan Binary Search untuk mencari data. Ini adalah contoh yang baik tentang bagaimana algoritma berbeda dapat digabungkan untuk menyelesaikan masalah tertentu.
 
 ## Unguided 
@@ -198,171 +196,194 @@ Program ini memanfaatkan dua algoritma yang berbeda: Selection Sort untuk mengur
 ## 1. Buatlah sebuah program untuk mencari sebuah huruf pada sebuah kalimat yang sudah di input dengan menggunakan Binary Search!
 
 ```C++
+#include <iostream>
+#include <conio.h>  // Jika menggunakan Windows. Untuk sistem operasi lain, perlu mencari pengganti dari _getche()
+#include <cstring>
 
+using namespace std;
+
+// Fungsi untuk melakukan pencarian binary pada array karakter
+int binarySearch_2147(char arr[], int indices[], int size, char target) {
+    int left = 0;
+    int right = size - 1;
+
+    // Melakukan binary search selama left tidak melebihi right
+    while (left <= right) {
+        int mid = left + (right - left) / 2;
+
+        // Jika huruf target berada di tengah array
+        if (arr[mid] == target)
+            return indices[mid];
+
+        // Jika huruf target berada di sebelah kiri tengah array
+        if (arr[mid] > target)
+            right = mid - 1;
+
+        // Jika huruf target berada di sebelah kanan tengah array
+        else
+            left = mid + 1;
+    }
+
+    // Jika huruf target tidak ditemukan
+    return -1;
+}
+// Fungsi untuk melakukan selection sort pada array karakter
+void selectionSort_2147(char arr[], int indices[], int size) {
+    for (int i = 0; i < size - 1; ++i) {
+        int minIdx = i;
+        for (int j = i + 1; j < size; ++j) {
+            if (arr[j] < arr[minIdx]) {
+                minIdx = j;
+            }
+        }
+        // Menukar elemen minimum dengan elemen pertama
+        swap(arr[i], arr[minIdx]);
+        swap(indices[i], indices[minIdx]);
+    }
+}
+
+int main() {
+    string sentence;
+    char target;
+    cout << "147--Azaria Nanda Binary Search--147" << endl;
+    cout << "Masukkan kalimat: ";
+    getline(cin, sentence);
+
+    // Membuat array untuk menyimpan karakter dan indeks asli mereka
+    int len = sentence.size();
+    char charArray[100];
+    int indices[100];
+    int size = 0;
+
+    for (int i = 0; i < len; ++i) {
+        if (sentence[i] != ' ') {  // Mengabaikan spasi
+            charArray[size] = sentence[i];
+            indices[size] = i;
+            ++size;
+        }
+    }
+
+    // Mengurutkan array karakter menggunakan selection sort
+    selectionSort_2147(charArray, indices, size);
+
+    cout << "Masukkan huruf yang ingin dicari: ";
+    cin >> target;
+
+    // Mencari huruf dalam array yang telah diurutkan
+    int index = binarySearch_2147(charArray, indices, size, target);
+
+    if (index != -1) {
+        cout << "Huruf '" << target << "' ditemukan pada indeks ke-" << index << " dalam kalimat." << endl;
+    } else {
+        cout << "Huruf '" << target << "' tidak ditemukan dalam kalimat." << endl;
+    }
+
+    _getche();  // Hanya untuk Windows. Jika menggunakan OS lain, gunakan pengganti sesuai kebutuhan
+    return 0;
+}
 ```
-Program di atas adalah implementasi dari struktur data antrian (queue) menggunakan linked list dalam bahasa pemrograman C++. Dalam program tersebut, digunakan struktur data linked list untuk menyimpan elemen-elemen antrian, di mana setiap elemen direpresentasikan oleh sebuah node yang memiliki dua atribut: data untuk menyimpan nilai data dan next untuk menunjukkan ke node berikutnya dalam antrian.
-Kelas Queue memiliki beberapa fungsi untuk operasi dasar pada code antrian diatas:
-- Fungsi enqueue_2147(const string& data): Digunakan untuk menambahkan data baru ke dalam antrian. Fungsi ini membuat sebuah node baru, menginisialisasi nilai datanya dengan data yang diberikan, dan menambahkan node tersebut ke belakang antrian. Jika antrian kosong, node tersebut akan menjadi elemen pertama dalam antrian.
-- Fungsi dequeue_2147(): Digunakan untuk menghapus elemen pertama dari antrian. Fungsi ini menghapus node pertama dari antrian, mengubah pointer front untuk menunjuk ke node berikutnya (jika ada), dan menghapus node yang dihapus dari memori.
-- Fungsi displayQueue_2147(): Digunakan untuk menampilkan seluruh elemen dalam antrian. Fungsi ini mengiterasi melalui setiap node dalam antrian, mulai dari node pertama hingga terakhir, dan menampilkan nilai data dari setiap node.
-- Fungsi isEmpty_2147(): Digunakan untuk memeriksa apakah antrian kosong. Fungsi ini mengembalikan nilai true jika front menunjuk ke nullptr, yang menandakan bahwa antrian kosong.
-- Fungsi countQueue_2147(): Digunakan untuk mengembalikan jumlah elemen dalam antrian. Fungsi ini menghitung jumlah node dalam antrian dengan mengiterasi melalui setiap node dan menghitungnya.
-- Fungsi clearQueue(): Digunakan untuk menghapus semua elemen dari antrian. Fungsi ini menghapus satu per satu elemen dari antrian sampai antrian menjadi kosong. Di dalam fungsi main(), terdapat contoh penggunaan objek dari kelas Queue. 
+Program ini ditulis dalam bahasa C++ dan bertujuan untuk mencari posisi suatu huruf dalam sebuah kalimat yang diinput oleh pengguna. Program ini menggunakan metode pencarian biner (binary search) setelah terlebih dahulu mengurutkan karakter dalam kalimat menggunakan metode selection sort. Berikut adalah deskripsi rinci dari setiap bagian program:
 
-Beberapa data ditambahkan ke dalam antrian menggunakan fungsi enqueue_2147(), kemudian antrian ditampilkan menggunakan fungsi displayQueue_2147(). Setelah itu, elemen pertama dari antrian dihapus menggunakan fungsi dequeue_2147(), dan kemudian antrian ditampilkan kembali. Proses ini diulang untuk menghapus elemen kedua dari antrian, dan kemudian menampilkan hasilnya.
+Fungsi Utama pada program yaitu binarySearch_2147 untuk melakukan pencarian biner pada array karakter yang sudah diurutkan, pada binarySearch_2147 juga terdapat fungsi utama yang tidak kalah penting, yaitu:
+- arr[]: Array karakter yang akan dicari.
+- indices[]: Array yang menyimpan indeks asli dari setiap karakter sebelum diurutkan.
+- size: Ukuran dari array arr[].
+- target: Karakter yang akan dicari.
+- Fungsi ini mengembalikan indeks asli dari target jika ditemukan dalam kalimat. Jika tidak ditemukan, fungsi mengembalikan -1.
+
+Fungsi selectionSort_2147 ini melakukan pengurutan array karakter menggunakan metode selection sort.
+- arr[]: Array karakter yang akan diurutkan.
+- indices[]: Array yang menyimpan indeks asli dari setiap karakter.
+- size: Ukuran dari array arr[]. 
+Setelah itu program meminta pengguna memasukkan kalimat, dan program mencetak posisi asli huruf jika ditemukan atau pesan jika tidak ditemukan, serta menunggu input pengguna sebelum berakhir dengan `_getche()`. Jika huruf ditemukan, program mencetak posisi asli dari huruf tersebut dalam kalimat. Jika tidak ditemukan, program mencetak pesan bahwa huruf tidak ditemukan. 
 
 ## Output:
 ![Screenshot Soal Unguided 1](ssunguided(1).png)
 
-## 2. Dari nomor 1 buatlah konsep antri dengan atribut Nama mahasiswa dan NIM Mahasiswa.
+## 2. Buatlah sebuah program yang dapat menghitung banyaknya huruf vocal dalam sebuah kalimat!
 
 ```C++
 #include <iostream>
 #include <string>
-
 using namespace std;
 
-const int maksimalQueue = 5;  // Maksimal antrian adalah 5
+// Fungsi untuk memeriksa apakah sebuah karakter adalah vokal
+bool isVowel_2147(char ch) {
+    // Konversi karakter menjadi huruf kecil
+    ch = tolower(ch);
+    // Periksa apakah karakter adalah salah satu dari 'a', 'e', 'i', 'o', 'u'
+    return (ch == 'a' || ch == 'e' || ch == 'i' || ch == 'o' || ch == 'u');
+}
 
-// Node untuk menyimpan data dan pointer ke node berikutnya
-struct Node {
-    string nama;
-    string nim;
-    Node* next;
-};
-
-class Queue {
-private:
-    Node* front; // Node depan dari antrian
-    Node* rear;  // Node belakang dari antrian
-
-public: 
-    Queue() { // Konstruktor untuk menginisialisasi antrian kosong
-        front = nullptr;
-        rear = nullptr;
-    }
-
-    // Fungsi untuk menambahkan data ke antrian
-    void enqueue_2147(const string& nama, const string& nim) {
-        Node* newNode = new Node;
-        newNode->nama = nama;
-        newNode->nim = nim;
-        newNode->next = nullptr;
-        
-        // Jika antrian kosong
-        if (isEmpty_2147()) { // Jika antrian kosong maka front dan rear menunjuk ke newNode yang baru dibuat 
-            front = rear = newNode;
-        } else { // Jika antrian tidak kosong maka rear menunjuk ke newNode yang baru dibuat
-            rear->next = newNode;
-            rear = newNode;
-        }
-        
-        cout << "Mahasiswa dengan Nama: " << newNode->nama << " dan NIM: " << newNode->nim << " ditambahkan ke dalam antrian." << endl;
-    }
-
-    // Fungsi untuk menghapus data dari antrian
-    void dequeue_2147() {
-        if (isEmpty_2147()) { // Jika antrian kosong maka tampilkan pesan "Antrian kosong" dan kembalikan nilai void
-            cout << "Antrian kosong." << endl;
-            return;
-        }
-
-        Node* temp = front; // Simpan node front ke dalam variabel temp untuk dihapus nantinya 
-        front = front->next; // Geser front ke node selanjutnya 
-
-        cout << "Mahasiswa dengan Nama: " << temp->nama << " dan NIM: " << temp->nim << " dihapus dari antrian." << endl; // Tampilkan data mahasiswa yang dihapus dari antrian 
-        delete temp; // Hapus node yang disimpan di variabel temp
-
-        // Jika setelah penghapusan antrian menjadi kosong
-        if (front == nullptr) {
-            rear = nullptr;
-        }
-    }
-
-    // Fungsi untuk menampilkan seluruh antrian
-    void displayQueue_2147() {
-        if (isEmpty_2147()) { // Jika antrian kosong maka tampilkan pesan "Data antrian:" dan tampilkan pesan "(kosong)"
-            cout << "Data antrian:" << endl;
-            for (int i = 0; i < maksimalQueue; i++) {
-                cout << i + 1 << ". (kosong)" << endl;
-            }
-        } else { // Jika antrian tidak kosong maka tampilkan data antrian yang ada
-            cout << "Data antrian:" << endl;
-            Node* current = front;
-            int i = 1;
-            while (current != nullptr) { // Selama current tidak menunjuk ke nullptr maka tampilkan data antrian yang ada 
-                cout << i << ". " << "Nama: " << current->nama << ", NIM: " << current->nim << endl;
-                current = current->next;
-                i++;
-            }
-            for (; i <= maksimalQueue; i++) { // Tampilkan pesan "(kosong)" untuk antrian yang kosong 
-                cout << i << ". (kosong)" << endl;
-            }
-        }
-    }
-
-    // Fungsi untuk memeriksa apakah antrian kosong
-    bool isEmpty_2147() {
-        return front == nullptr;
-    }
-
-    // Fungsi untuk mengembalikan jumlah elemen dalam antrian
-    int countQueue_2147() {
-        int count = 0;
-        Node* current = front;
-        while (current != nullptr) { 
+// Fungsi untuk menghitung banyaknya huruf vokal dalam sebuah kalimat
+int countVowels_2147(const string &sentence) {
+    int count = 0;
+    for (char ch : sentence) {
+        if (isVowel_2147(ch)) {
             count++;
-            current = current->next;
         }
-        return count; // Kembalikan jumlah elemen dalam antrian
     }
-
-    // Fungsi untuk menghapus semua elemen dalam antrian
-    void clearQueue() {
-        while (!isEmpty_2147()) { // Selama antrian tidak kosong maka hapus elemen dalam antrian
-            dequeue_2147(); // Hapus elemen dalam antrian 
-        } 
-        cout << "Antrian telah dibersihkan." << endl;
-    }
-};
-
+    return count;
+}
 int main() {
-    Queue queue; // Buat objek queue dari class Queue
-    queue.enqueue_2147("Albert", "2311102147");
-    queue.enqueue_2147("Nanda", "2311102101");
-    queue.displayQueue_2147();
-    cout << "Jumlah antrian = " << queue.countQueue_2147() << endl;
-    queue.dequeue_2147();
-    queue.displayQueue_2147();
-    cout << "Jumlah antrian = " << queue.countQueue_2147() << endl;
-    queue.dequeue_2147();
-    queue.displayQueue_2147();
-    cout << "Jumlah antrian = " << queue.countQueue_2147() << endl;
+    string sentence;
+    cout << "Masukkan sebuah kalimat: ";
+    getline(cin, sentence); // Membaca input kalimat dari pengguna
+
+    int vowelCount = countVowels_2147(sentence);
+    cout << "Banyaknya huruf vokal dalam kalimat adalah: " << vowelCount << endl;
 
     return 0;
 }
 ```
-Program di atas adalah implementasi dari sebuah antrian (queue) menggunakan linked list dalam bahasa C++. Antrian ini dirancang untuk menyimpan data mahasiswa beserta NIM mereka. Struktur data Node digunakan untuk menyimpan informasi tentang setiap mahasiswa, yaitu nama dan NIM, serta pointer ke node berikutnya dalam antrian. Kelas Queue memiliki fungsi-fungsi untuk operasi dasar pada antrian seperti:
- - menambahkan data ke antrian (enqueue_2147())
- - menghapus data dari antrian (dequeue_2147())
- - menampilkan seluruh antrian (displayQueue_2147())
- - memeriksa apakah antrian kosong (isEmpty_2147())
- - menghitung jumlah elemen dalam antrian (countQueue_2147())
- - membersihkan semua elemen dalam antrian (clearQueue())
- 
-  Di dalam fungsi main(), program membuat objek dari kelas Queue dan menambahkan dua mahasiswa ke dalam antrian dengan menggunakan fungsi enqueue_2147() dengan menyertakan nama dan NIM mereka. Kemudian, program menampilkan seluruh antrian dan jumlah elemen dalam antrian. Setelah itu, program menghapus satu mahasiswa dari antrian dengan menggunakan fungsi dequeue_2147() dan menampilkan kembali antrian beserta jumlah elemennya. Langkah ini diulang untuk menghapus mahasiswa kedua dari antrian.
+Program ini ditulis dalam bahasa C++ untuk menghitung jumlah huruf vokal dalam sebuah kalimat yang diinput oleh pengguna. Program menggunakan
+- fungsi `isVowel_2147` untuk memeriksa apakah sebuah karakter adalah vokal dengan mengonversinya menjadi huruf kecil dan memeriksa apakah karakter tersebut termasuk dalam 'a', 'e', 'i', 'o', atau 'u'.
+- Fungsi `countVowels_2147` iterasi melalui setiap karakter dalam kalimat, menggunakan `isVowel_2147` untuk menghitung jumlah vokal. 
+Setelah itu program meminta pengguna memasukkan kalimat, kemudian menghitung dan menampilkan jumlah huruf vokal dalam kalimat tersebut.
 
 ## Output:
 ![Screenshot Soal Unguided 1](ssunguided(2).png)
 
+##  3. Diketahui data = 9, 4, 1, 4, 7, 10, 5, 4, 12, 4. Hitunglah berapa banyak angka 4 dengan menggunakan algoritma Sequential Search!
+
+```C++
+#include <iostream>
+
+using namespace std;
+
+int main(){
+    int n = 10;
+    int data[n] = {9, 4, 1, 4, 7, 10, 5, 4, 12, 4};
+    int target = 4;
+    int count = 0;
+
+    // Melakukan pencarian sequential untuk menghitung banyaknya angka 4
+    for (int i = 0; i < n; i++) {
+        if (data[i] == target) {
+            count++;
+        }
+    }
+    cout << "--Program Sequential Search Azaria Nanda Putri--" << endl;
+    cout << "data : {9, 4, 1, 4, 7, 10, 5, 4, 12, 4}" << endl;
+    cout << "Angka " << target << " ditemukan sebanyak " << count << " kali." << endl;
+
+return 0;
+}
+```
+Program diatas adalah program sederhana yang ditulis dalam bahasa C++ dan bertujuan untuk menghitung berapa kali angka 4 muncul dalam array data yang telah ditentukan sebelumnya. Dengan menggunakan sequential search, program iterasi melalui seluruh elemen dalam array dan menghitung setiap kemunculan angka 4. Hasilnya kemudian dicetak sebagai output bersama dengan pesan yang menjelaskan berapa kali angka 4 muncul dalam array.
+
+## Ouput
+![Screenshot Soal Unguided 1](ssunguided(5).png)
+
 ## Kesimpulan
+- Algortima Sequential Search adalah metode pencarian data semantik yang menggunakan teknologi array satu dimensi untuk melakukan proses pencarian tanpa perlu melakukan pengurutan data terlebih dahulu. Dalam pencarian ini, setiap elemen array dibaca satu per satu dari indeks terkecil hingga terbesar, atau sebaliknya. Proses berhenti saat data ditemukan atau mencapai akhir array. Algoritma ini sederhana dan cocok untuk data yang acak atau tidak terurut. 
 
-Queue adalah struktur data yang mengatur penyimpanan dan pengambilan data dengan prinsip FIFO (First-In First-Out), yang berarti data yang pertama dimasukkan akan menjadi yang pertama dikeluarkan. Implementasinya dapat menggunakan array atau linked list, dengan dua pointer utama, yaitu front dan rear. Berbeda dengan struktur data lain seperti stack, penambahan dan penghapusan elemen dalam queue terjadi pada ujung yang berbeda, yaitu front untuk Dequeue dan rear untuk Enqueue. 
-
-Ada beberapa jenis operasi queue, termasuk Simple Queue dan Circular Queue, serta jenis penggunaan seperti Priority Queue dan Double-ended Queue (Dequeue). Prosedur operasi dasar pada queue meliputi enqueue untuk menambahkan data, dequeue untuk mengeluarkan data, peek untuk melihat data tanpa menghapusnya, serta isEmpty, isFull, dan size untuk memeriksa status dan ukuran queue.
+- Sedangkan Binary Search adalah algoritma pencarian yang cocok untuk data terurut. Pencarian dilakukan dengan membandingkan data yang dicari dengan data di tengah, dan prosesnya berlanjut pada bagian kiri atau kanan dari data tengah tergantung pada hasil perbandingan. Binary Search efisien karena membagi data menjadi dua setiap iterasi, namun memerlukan data terurut sebelumnya.
 
 ## Referensi
-[1] Rafsanjani, Malik Akbar Hashemi. "Implementasi Algoritma Pengurutan General Purpose dan Berbasis Komparasi untuk Data Berkategori dalam Waktu Linier Tanpa Paralelisasi", 2021.<br/>
-[2] Muhammad Nugraha, Dasar Pemrograman Dengan C++, Materi Paling Dasar untuk Menjadi Programmer Berbagai Platform. Yogyakarta: Deepublish, 2021.<br/>
+[1] Kartiko Ardi Widodo, Suryo Adi Wibowo, dan Nurlaily Vendyansyah. "PENERAPAN SEQUENTIAL SEARCH UNTUK 
+PENGELOLAAN DATA BARANG", Vol. 15 No. 1 Mei 2021, <br/>
+[2] Wafiqah Setyawati Wahyuni, Septi Andryana, Ben Rahman. "PENGGUNAAN ALGORITMA SEQUENTIAL SEARCHING PADA 
+APLIKASI PERPUSTAKAAN BERBASIS WEB ", JIPI (Jurnal Ilmiah Penelitian dan Pembelajaran Informatika) Volume 07, Nomor 02, Juni 2022.<br/>
 [3] Meidyan Permata Putri, et al., Algoritma dan Struktur Data. Bandung: Widina Bhakti Persada Bandung, 2022.<br/>
 
