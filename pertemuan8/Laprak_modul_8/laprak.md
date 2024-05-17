@@ -21,7 +21,7 @@ Algoritma Sequential Search adalah sebagai berikut:
 -  Jika (Data[i] = x) maka ketemu ← true, jika tidak, i ← i + 1
 -  Jika (ketemu) maka i adalah indeks data yang dicari, jika tidak, data tidak ditemukan.
 
-Berikut adalah fungsi untuk pencarian sekuensial beserta contoh soalnya:
+Berikut adalah contoh soal untuk pencarian sekuensial beserta penjelasannya:
 #### Int A[6] = {13, 87, 14, 21, 75, 53}
 ![Screenshot Soal Unguided 1](ssunguided(4).png)
 
@@ -42,87 +42,11 @@ Konsep Binary Search:
 - Proses pembagian terus berlanjut hingga data ditemukan atau tidak ada lagi data yang bisa dibagi.
 - Jika data sama dengan data tengah, pencarian berhenti karena data ditemukan.
 
-#### Jenis- jenis operasi pada Queue:
+Berikut adalah contoh soal untuk pencarian sekuensial beserta penjelasannya:
+#### Int A[6] = {13, 87, 14, 21, 75, 53}
+![Screenshot Soal Unguided 1](ssunguided(4).png)
 
-Operasi pada Queue melibatkan serangkaian fungsi yang memberikan kita kemampuan untuk berinteraksi dengan struktur data ini. Mari kita jabarkan beberapa operasi dasar yang dapat kita lakukan pada Queue:
-1. Berdasarkan Implementasinya
-    - Linear/Simple Queue: Elemen-elemen data disusun dalam barisan linear dan penambahan serta penghapusan elemen hanya terjadi pada dua ujung barisan. Contoh Linear Queue:
-        ##### Enqueue (Tambahkan Elemen):
-        - Elemen pertama: 1
-        - Elemen kedua: 2
-        - Elemen ketiga: 3
-        - Elemen keempat: 4
-        - Elemen kelima: 5
-        ##### Dequeue (Hapus Elemen):
-        - Elemen pertama: 1 (dihapus)
-        - Elemen yang tersisa: 2, 3, 4, 5
-        ##### Enqueue (Tambahkan Elemen):
-        - Elemen pertama: 2 (sebelumnya)
-        - Elemen kedua: 6
-        - Elemen ketiga: 7
-        - Elemen keempat: 8
-        - Elemen kelima: 9
-        ##### Dequeue (Hapus Elemen):
-        - Elemen pertama: 2 (dihapus)
-        - Elemen yang tersisa: 3, 4, 5, 6, 7, 8, 9
 
-    - Circular Queue: Mirip dengan jenis linear, tetapi ujung-ujung barisan terhubung satu sama lain, menciptakan struktur antrean yang berputar.
-    Contoh Circular Queue:
-        ##### Enqueue (Tambahkan Elemen):
-        - Elemen pertama: 1
-        - Elemen kedua: 2
-        - Elemen ketiga: 3
-        - Elemen keempat: 4
-        - Elemen kelima: 5
-        ##### Dequeue (Hapus Elemen):
-        - Elemen pertama: 1 (dihapus)
-        - Elemen yang tersisa: 2, 3, 4, 5
-        ##### Enqueue (Tambahkan Elemen):
-        - Elemen pertama: 2 (sebelumnya)
-        - Elemen kedua: 6
-        - Elemen ketiga: 7
-        - Elemen keempat: 8
-        - Elemen kelima: 9
-        ##### Dequeue (Hapus Elemen):
-        - Elemen pertama: 2 (dihapus)
-        - Elemen yang tersisa: 3, 4, 5, 6, 7, 8, 9
-        ##### Enqueue (Tambahkan Elemen):
-        - Elemen pertama: 3 (sebelumnya)
-        - Elemen kedua: 10
-        - Elemen ketiga: 11
-        - Elemen keempat: 12
-        - Elemen kelima: 13
-        ##### Dequeue (Hapus Elemen):
-        - Elemen pertama: 3 (dihapus)
-        - Elemen yang tersisa: 4, 5, 6, 7, 8, 9, 10, 11, 12, 13
-
-2. Berdasarkan Penggunaan
-    - Priority Queue: Setiap elemen memiliki prioritas tertentu. Elemen dengan prioritas tertinggi akan diambil terlebih dahulu.Elemen dengan prioritas rendah akan dihapus setelah elemen dengan prioritas tinggi.
-    Contoh Priority Queue:
-        ##### Enqueue (Tambahkan Elemen):
-        - Elemen pertama: 1 (prioritas tinggi)
-        - Elemen kedua: 3 (prioritas sedang)
-        - Elemen ketiga: 2 (prioritas rendah)
-        - Elemen keempat: 4 (prioritas tinggi)
-        - Elemen kelima: 5 (prioritas rendah)
-        ##### Dequeue (Hapus Elemen):
-        - Elemen pertama: 1 (dihapus prioritas tinggi)
-        - Elemen yang tersisa: 3, 2, 4, 5
-
-    - Double-ended Queue (Dequeue): Elemen dapat ditambahkan atau dihapus dari kedua ujung antrean
-    Contoh Double Ended Queue (Dequeue):
-        ##### Enqueue (Tambahkan Elemen):
-        - Elemen pertama: 1
-        - Elemen kedua: 2
-        - Elemen ketiga: 3
-        - Elemen keempat: 4
-        - Elemen kelima: 5
-        ##### Dequeue (Hapus Elemen):
-        - Elemen pertama: 1 (dihapus urutan paling depan)
-        - Elemen yang tersisa: 2, 3, 4, 5
-        ##### Dequeue (Hapus Elemen):
-        - Elemen pertama: 5 (dihapus urutan paling ujung belakang)
-        - Elemen yang tersisa: 2, 3, 4.
 
 #### Prosedur Operasi pada Queue:
  - enqueue() :menambahkan data kedalam queue.
@@ -132,12 +56,6 @@ Operasi pada Queue melibatkan serangkaian fungsi yang memberikan kita kemampuan 
  - isFull()  :mengecek apakah queue penuh atau tidak.
  - size()    :menghitung jumlah elemen dalam queue.
 
-![Screenshot Soal Unguided 1](ssunguided(3).png)
-
-Berikut penjelasan prosedur penggunaan Queue dari contoh gambar di atas:
-- Antrian datang secara berurutan A, B dan C yang kemudian dimasukan ke dalam baris antrian. Urutan data masuk melalui bagian rear antrian.
-- Setelah A dilayani, maka A akan keluar dari bagian Front baris antrian.
-- Kemudian ada antrian baru yang masuk yaitu D dan E secara berurutan masuk melalui bagian rear lagi. Dan seterusnya
 
 ## Guided 
 
