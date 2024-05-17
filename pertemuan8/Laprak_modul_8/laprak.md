@@ -337,8 +337,8 @@ int main() {
 }
 ```
 Program ini ditulis dalam bahasa C++ untuk menghitung jumlah huruf vokal dalam sebuah kalimat yang diinput oleh pengguna. Program menggunakan
-- fungsi `isVowel_2147` untuk memeriksa apakah sebuah karakter adalah vokal dengan mengonversinya menjadi huruf kecil dan memeriksa apakah karakter tersebut termasuk dalam 'a', 'e', 'i', 'o', atau 'u'.
-- Fungsi `countVowels_2147` iterasi melalui setiap karakter dalam kalimat, menggunakan `isVowel_2147` untuk menghitung jumlah vokal. 
+- fungsi isVowel_2147 untuk memeriksa apakah sebuah karakter adalah vokal dengan mengonversinya menjadi huruf kecil dan memeriksa apakah karakter tersebut termasuk dalam 'a', 'e', 'i', 'o', atau 'u'.
+- Fungsi countVowels_2147 iterasi melalui setiap karakter dalam kalimat, menggunakan isVowel_2147 untuk menghitung jumlah vokal. 
 Setelah itu program meminta pengguna memasukkan kalimat, kemudian menghitung dan menampilkan jumlah huruf vokal dalam kalimat tersebut.
 
 ## Output:
