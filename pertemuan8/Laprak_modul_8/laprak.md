@@ -25,7 +25,7 @@ Berikut adalah contoh soal untuk pencarian sekuensial beserta penjelasannya:
 #### Int A[6] = {13, 87, 14, 21, 75, 53}
 ![Screenshot Soal Unguided 1](ssunguided(4).png)
 
-- Misal nilai yang dicari adalah X = 21, maka elemen yang diperiksa adalah 13, 87, 14, 21. (ditemukan)
+- Misal nilai yang dicari adalah X = 21, maka elemen yang diperiksa adalah 13, 87, 14, 21. (ditemukan).
 Jadi indeks larik yang dikembalikan : I = 3
 - Misal nilai yang dicari adalah X = 15, maka elemen yang diperiksa adalah 13, 87, 14, 21, 75, 53. (tidak ditemukan)
 Jadi indeks larik yang dikembalikan : I = 0
