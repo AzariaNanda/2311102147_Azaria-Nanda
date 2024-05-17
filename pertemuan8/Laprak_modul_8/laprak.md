@@ -15,20 +15,19 @@ Sequential Search adalah algoritma pencarian untuk data yang acak atau tidak ter
 - Perulangan terjadi sebanyak jumlah elemen dalam array (N).
 
 Algoritma Sequential Search adalah sebagai berikut:
-1) i ← 0
-2) ketemu ← false
-3) Selama (tidak ketemu) dan (i < N), lakukan:
-4) Jika (Data[i] = x) maka ketemu ← true, jika tidak, i ← i + 1
-5) Jika (ketemu) maka i adalah indeks data yang dicari, jika tidak, data tidak ditemukan.
-
+- i ← 0
+- ketemu ← false
+-  Selama (tidak ketemu) dan (i < N), lakukan:
+-  Jika (Data[i] = x) maka ketemu ← true, jika tidak, i ← i + 1
+-  Jika (ketemu) maka i adalah indeks data yang dicari, jika tidak, data tidak ditemukan.
 Berikut adalah fungsi untuk pencarian sekuensial beserta contih soalnya:
 Int A[6] = {13, 87, 14, 21, 75, 53}
 
 ![Screenshot Soal Unguided 1](ssunguided(4).png)
 
-·         Misal nilai yang dicari adalah X = 21, maka elemen yang diperiksa adalah 13, 87, 14, 21. (ditemukan)
+- Misal nilai yang dicari adalah X = 21, maka elemen yang diperiksa adalah 13, 87, 14, 21. (ditemukan)
 Jadi indeks larik yang dikembalikan : I = 3
-·         Misal nilai yang dicari adalah X = 15, maka elemen yang diperiksa adalah 13, 87, 14, 21, 75, 53. (tidak ditemukan)
+- Misal nilai yang dicari adalah X = 15, maka elemen yang diperiksa adalah 13, 87, 14, 21, 75, 53. (tidak ditemukan)
 Jadi indeks larik yang dikembalikan : I = 0
 
 
