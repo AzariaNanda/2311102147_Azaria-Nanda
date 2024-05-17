@@ -101,7 +101,7 @@ Berikut adalah penjelasan langkah-langkah dalam program:
 - cari: nilai yang ingin dicari dalam array, yaitu 10.
 - ketemu: variabel boolean yang digunakan untuk menandakan apakah nilai yang dicari ditemukan atau tidak, diinisialisasi dengan false.
 - i: variabel untuk iterasi.
-Program menggunakan loop for untuk memeriksa setiap elemen dalam array data. Jika elemen pada indeks i sama dengan nilai cari, maka ketemu diubah menjadi true dan loop dihentikan menggunakan break.setelah itu Program akan mencetak pesan "Program Sequential Search" dan isi array.
+Program menggunakan loop for untuk memeriksa setiap elemen dalam array data. Jika elemen pada indeks i sama dengan nilai cari, maka ketemu diubah menjadi true dan loop dihentikan menggunakan break. Setelah itu Program akan mencetak pesan "Program Sequential Search" dan isi array.
 - Jika nilai cari ditemukan (ketemu bernilai true), program mencetak indeks di mana nilai tersebut ditemukan.
 - Jika nilai cari tidak ditemukan, program mencetak pesan bahwa data tidak ditemukan
 
