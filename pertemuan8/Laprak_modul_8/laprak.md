@@ -46,12 +46,17 @@ Berikut adalah contoh soal untuk pencarian sekuensial beserta penjelasannya:
 #### Int A[6] = {3, 4, 12, 18, 25, 27}
 ![Screenshot Soal Unguided 1](ssunguided(3).png)
 
- - enqueue() :menambahkan data kedalam queue.
- - dequeue() :mengeluarkan data dari queue.
- - peek()    :mengambil data dari queue tanpa menghapusnya.
- - isEmpty() :mengecek apakah queue kosong atau tidak.
- - isFull()  :mengecek apakah queue penuh atau tidak.
- - size()    :menghitung jumlah elemen dalam queue.
+Terdapat sebuah array yang menampung 6 elemen pada gambar di atas. Nilai yang akan dicari pada array tersebut adalah 18.
+- Jadi karena konsep dari binary search ini adalah membagi array menjadi dua bagian, maka pertama-tama kita cari nilai tengahnya dulu. Total elemen dibagi 2 yaitu 6/2 = 3.
+- Maka elemen ketiga pada array adalah nilai tengahnya, yaitu angka 12 pada indeks ke-2.
+- Kemudian kita cek apakah 18 > 12 atau 18 < 12?
+- Karena 18 lebih besar dari 12, maka kemungkinan besar angka 18 berada setelah 12 atau di sebelah kanan. Selanjutnya, kita cari ke kanan dan kita dapat mengabaikan elemen yang ada di kiri.
+- Setelah itu, kita cari lagi nilai tengahnya di bagian kanan array, yang tersisa adalah [18, 25, 27]. Nilai tengah dari bagian ini adalah 25 pada indeks ke-4.
+- Kemudian kita cek apakah 18 > 25 atau 18 < 25?
+- Ternyata 18 lebih kecil dari 25, maka selanjutnya kita cari ke kiri bagian ini, yaitu [18].
+- Karena tersisa hanya satu elemen saja, maka elemen tersebut adalah nilai tengahnya. Setelah dicek ternyata elemen pada indeks ke-3 adalah elemen yang dicari, maka telah selesai proses pencariannya.
+
+Jadi, nilai 18 ditemukan pada indeks ke-3 dari array. Proses ini menunjukkan bagaimana binary search efisien dalam menemukan nilai dalam array yang terurut.
 
 
 ## Guided 
