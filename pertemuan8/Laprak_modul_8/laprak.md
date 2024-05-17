@@ -188,8 +188,8 @@ Program ini adalah implementasi dari algoritma Binary Search untuk mencari sebua
 - Mengurutkan data menggunakan Selection_Sort().
 - Menampilkan data yang telah diurutkan.
 - Melakukan pencarian menggunakan BinarySearch().
-- Menahan tampilan layar dengan _getche() sebelum program selesai.
-Program ini memanfaatkan dua algoritma yang berbeda: Selection Sort untuk mengurutkan data dan Binary Search untuk mencari data. Ini adalah contoh yang baik tentang bagaimana algoritma berbeda dapat digabungkan untuk menyelesaikan masalah tertentu.
+- Menahan tampilan layar dengan _getche() sebelum program selesai. 
+Program ini memanfaatkan dua algoritma yang berbeda: Selection Sort untuk mengurutkan data dan Binary Search untuk mencari data. Ini adalah contoh yang baik tentang bagaimana algoritma berbeda dapat digabungkan untuk menyelesaikan masalah tertentu. <br/>
 
 ## Unguided 
 
