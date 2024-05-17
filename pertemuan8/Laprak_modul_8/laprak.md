@@ -7,7 +7,7 @@ Algortima sequential searching adalah pencarian data semantik menggunakan teknol
 satu dimensi untuk melakukan proses pencarian tanpa melalui semua elemen array secara berurutan, sehingga
 tidak perlu dilakukan pengurutan data terlebih dahulu. Singkatnya Searching adalah proses mencari data dalam sebuah array dengan memeriksa setiap indeks menggunakan teknik perulangan. Ada dua metode dalam algoritma pencarian, yaitu:
 
-### a. Sequential Search
+### Sequential Search
 Sequential Search adalah algoritma pencarian untuk data yang acak atau tidak terurut. Ini adalah teknik paling sederhana, di mana setiap elemen array dibaca satu per satu dari indeks terkecil hingga terbesar, atau sebaliknya. Konsepnya adalah:
 - Membandingkan setiap elemen array satu per satu.
 - Pencarian dimulai dari indeks pertama hingga terakhir.
@@ -30,7 +30,7 @@ Jadi indeks larik yang dikembalikan : I = 3
 - Misal nilai yang dicari adalah X = 15, maka elemen yang diperiksa adalah 13, 87, 14, 21, 75, 53. (tidak ditemukan)
 Jadi indeks larik yang dikembalikan : I = 0
 
-### b. Binary Search
+### Binary Search
 Binary search adalah algoritma pencarian untuk data terurut. Pencarian dilakukan dengan membandingkan data yang dicari dengan data di tengah. Jika sama, data ditemukan. Jika tidak, pencarian dilanjutkan pada bagian kiri atau kanan dari data tengah, tergantung pada perbandingan antara data yang dicari dengan data tengah. Proses ini diulang hingga data ditemukan atau tidak ada lagi yang bisa diperiksa. Singkatnya Binary Search adalah algoritma pencarian pada array/list dengan elemen terurut. Algoritma ini sering digabungkan dengan algoritma sorting karena data harus diurutkan terlebih dahulu. 
 
 Konsep Binary Search:
@@ -195,130 +195,10 @@ Program ini memanfaatkan dua algoritma yang berbeda: Selection Sort untuk mengur
 
 ## Unguided 
 
-## 1. Ubahlah penerapan konsep queue pada bagian guided dari array menjadi linked list.
+## 1. Buatlah sebuah program untuk mencari sebuah huruf pada sebuah kalimat yang sudah di input dengan menggunakan Binary Search!
 
 ```C++
-#include <iostream>
 
-using namespace std;
-
-const int maksimalQueue = 5;  // Maksimal antrian adalah 5
-
-// Node untuk menyimpan data dan pointer ke node berikutnya
-struct Node {
-    string data;
-    Node* next;
-};
-
-class Queue {
-private:
-    Node* front; // Node depan dari antrian
-    Node* rear;  // Node belakang dari antrian
-
-public: 
-    Queue() { // Konstruktor untuk menginisialisasi antrian kosong
-        front = nullptr;
-        rear = nullptr;
-    }
-
-    // Fungsi untuk menambahkan data ke antrian
-    void enqueue_2147(const string& data) {
-        Node* newNode = new Node;
-        newNode->data = data;
-        newNode->next = nullptr;
-        
-        // Jika antrian kosong
-        if (isEmpty_2147()) { // Jika antrian kosong maka front dan rear menunjuk ke newNode yang baru dibuat 
-            front = rear = newNode;
-        } else { // Jika antrian tidak kosong maka rear menunjuk ke newNode yang baru dibuat
-            rear->next = newNode;
-            rear = newNode;
-        }
-        
-        cout << data << " ditambahkan ke dalam antrian." << endl;
-    }
-
-    // Fungsi untuk menghapus data dari antrian
-    void dequeue_2147() {
-        if (isEmpty_2147()) { // Jika antrian kosong maka tampilkan pesan "Antrian kosong" dan kembalikan nilai void
-            cout << "Antrian kosong." << endl;
-            return;
-        }
-
-        Node* temp = front; // Simpan node front ke dalam variabel temp untuk dihapus nantinya 
-        front = front->next; // Geser front ke node selanjutnya 
-
-        cout << temp->data << " dihapus dari antrian." << endl; // Tampilkan data yang dihapus dari antrian 
-        delete temp; // Hapus node yang disimpan di variabel temp
-
-        // Jika setelah penghapusan antrian menjadi kosong
-        if (front == nullptr) {
-            rear = nullptr;
-        }
-    }
-
-    // Fungsi untuk menampilkan seluruh antrian
-    void displayQueue_2147() {
-        if (isEmpty_2147()) { // Jika antrian kosong maka tampilkan pesan "Data antrian:" dan tampilkan pesan "(kosong)"
-            cout << "2147-Data antrian-2147:" << endl;
-            for (int i = 0; i < maksimalQueue; i++) {
-                cout << i + 1 << ". (kosong)" << endl;
-            }
-        } else { // Jika antrian tidak kosong maka tampilkan data antrian yang ada
-            cout << "2147-Data antrian-2147:" << endl;
-            Node* current = front;
-            int i = 1;
-            while (current != nullptr) { // Selama current tidak menunjuk ke nullptr maka tampilkan data antrian yang ada 
-                cout << i << ". " << current->data << endl;
-                current = current->next;
-                i++;
-            }
-            for (; i <= maksimalQueue; i++) { // Tampilkan pesan "(kosong)" untuk antrian yang kosong 
-                cout << i << ". (kosong)" << endl;
-            }
-        }
-    }
-
-    // Fungsi untuk memeriksa apakah antrian kosong
-    bool isEmpty_2147() {
-        return front == nullptr;
-    }
-
-    // Fungsi untuk mengembalikan jumlah elemen dalam antrian
-    int countQueue_2147() {
-        int count = 0;
-        Node* current = front;
-        while (current != nullptr) { // Selama current tidak menunjuk ke nullptr maka hitung jumlah elemen dalam antrian
-            count++;
-            current = current->next;
-        }
-        return count; // Kembalikan jumlah elemen dalam antrian
-    }
-
-    // Fungsi untuk menghapus semua elemen dalam antrian
-    void clearQueue() {
-        while (!isEmpty_2147()) { // Selama antrian tidak kosong maka hapus elemen dalam antrian
-            dequeue_2147(); // Hapus elemen dalam antrian 
-        } 
-        cout << "Antrian telah dibersihkan." << endl;
-    }
-};
-
-int main() {
-    Queue queue; // Buat objek queue dari class Queue
-    queue.enqueue_2147("Andi");
-    queue.enqueue_2147("Maya");
-    queue.displayQueue_2147();
-    cout << "Jumlah antrian = " << queue.countQueue_2147() << endl;
-    queue.dequeue_2147();
-    queue.displayQueue_2147();
-    cout << "Jumlah antrian = " << queue.countQueue_2147() << endl;
-    queue.dequeue_2147();
-    queue.displayQueue_2147();
-    cout << "Jumlah antrian = " << queue.countQueue_2147() << endl;
-
-    return 0;
-}
 ```
 Program di atas adalah implementasi dari struktur data antrian (queue) menggunakan linked list dalam bahasa pemrograman C++. Dalam program tersebut, digunakan struktur data linked list untuk menyimpan elemen-elemen antrian, di mana setiap elemen direpresentasikan oleh sebuah node yang memiliki dua atribut: data untuk menyimpan nilai data dan next untuk menunjukkan ke node berikutnya dalam antrian.
 Kelas Queue memiliki beberapa fungsi untuk operasi dasar pada code antrian diatas:
