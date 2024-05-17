@@ -43,12 +43,9 @@ Konsep Binary Search:
 - Jika data sama dengan data tengah, pencarian berhenti karena data ditemukan.
 
 Berikut adalah contoh soal untuk pencarian sekuensial beserta penjelasannya:
-#### Int A[6] = {13, 87, 14, 21, 75, 53}
-![Screenshot Soal Unguided 1](ssunguided(4).png)
+#### Int A[6] = {3, 4, 12, 18, 25, 27}
+![Screenshot Soal Unguided 1](ssunguided().png)
 
-
-
-#### Prosedur Operasi pada Queue:
  - enqueue() :menambahkan data kedalam queue.
  - dequeue() :mengeluarkan data dari queue.
  - peek()    :mengambil data dari queue tanpa menghapusnya.
