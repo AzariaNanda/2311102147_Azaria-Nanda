@@ -43,28 +43,22 @@ sebagai berikut :
 ![Screenshot Soal Unguided 1](ssunguided(6).png)
 
 Binary tree atau pohon biner merupakan struktur data pohon akan tetapi setiap simpul dalam pohon diprasyaratkan memiliki simpul satu level di bawahnya (child) tidak lebih dari 2 simpul, artinya jumlah child yang diperbolehkan yakni 0, 1, dan 2. 
-a. Create: digunakan untuk membentuk binary tree baru yang masih kosong. 
-b. Clear: digunakan untuk mengosongkan binary tree yang sudah ada atau 
+- Create: digunakan untuk membentuk binary tree baru yang masih kosong. 
+- Clear: digunakan untuk mengosongkan binary tree yang sudah ada atau 
 menghapus semua node pada binary tree. 
-c. isEmpty: digunakan untuk memeriksa apakah binary tree masih kosong atau 
+- isEmpty: digunakan untuk memeriksa apakah binary tree masih kosong atau 
 tidak. 
-d. Insert: digunakan untuk memasukkan sebuah node kedalam tree. 
-e. Find: digunakan untuk mencari root, parent, left child, atau right child dari 
+- Insert: digunakan untuk memasukkan sebuah node kedalam tree. 
+- Find: digunakan untuk mencari root, parent, left child, atau right child dari 
 suatu node dengan syarat tree tidak boleh kosong. 
-f. Update: digunakan untuk mengubah isi dari node yang ditunjuk oleh pointer 
-current dengan syarat tree tidak boleh kosong.
-Modul 10 Graph dan Tree 
-g. Retrive: digunakan untuk mengetahui isi dari node yang ditunjuk pointer 
-current dengan syarat tree tidak boleh kosong. 
-h. Delete Sub: digunakan untuk menghapus sebuah subtree (node beserta seluruh 
-descendant-nya) yang ditunjuk pointer current dengan syarat tree tidak boleh 
-kosong. 
-i. Characteristic: digunakan untuk mengetahui karakteristik dari suatu tree. 
-Yakni size, height, serta average lenght-nya. 
-j. Traverse: digunakan untuk mengunjungi seluruh node-node pada tree dengan 
-cara traversal. Terdapat 3 metode traversal yang dibahas dalam modul ini yakni 
+- Update: digunakan untuk mengubah isi dari node yang ditunjuk oleh pointer current dengan syarat tree tidak boleh kosong.
+- Retrive: digunakan untuk mengetahui isi dari node yang ditunjuk pointer current dengan syarat tree tidak boleh kosong. 
+- Delete Sub: digunakan untuk menghapus sebuah subtree (node beserta seluruh descendant-nya) yang ditunjuk pointer current dengan syarat tree tidak boleh kosong. 
+- Characteristic: digunakan untuk mengetahui karakteristik dari suatu tree. Yakni size, height, serta average lenght-nya. 
+- Traverse: digunakan untuk mengunjungi seluruh node-node pada tree dengan cara traversal. 
+Terdapat 3 metode traversal yang dibahas dalam modul ini yakni 
 Pre-Order, In-Order, dan Post-Order.
-    - 1. Pre-Order 
+    - Pre-Order 
     Penelusuran secara pre-order memiliki alur: 
     a. Cetak data pada simpul root 
     b. Secara rekursif mencetak seluruh data pada subpohon kiri 
