@@ -63,6 +63,17 @@ Penelusuran secara pre-order memiliki alur:
     a. Cetak data pada simpul root<br/>
     b. Secara rekursif mencetak seluruh data pada subpohon kiri<br/>
     c. Secara rekursif mencetak seluruh data pada subpohon kanan<br/>
+##### In-Order 
+Penelusuran secara in-order memiliki alur: 
+    a. Secara rekursif mencetak seluruh data pada subpohon kiri<br/>
+    b. Cetak data pada root<br/>
+    c. Secara rekursif mencetak seluruh data pada subpohon kanan<br/>
+##### Post Order 
+Penelusuran secara in-order memiliki alur: 
+    a. Secara rekursif mencetak seluruh data pada subpohon kiri<br/> 
+    b. Secara rekursif mencetak seluruh data pada subpohon kanan <br/>
+    c. Cetak data pada root<br/>
+
 
 ## Guided 
 
