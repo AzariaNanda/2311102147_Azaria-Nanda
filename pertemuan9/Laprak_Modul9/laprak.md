@@ -59,7 +59,7 @@ suatu node dengan syarat tree tidak boleh kosong.
 
 Terdapat 3 metode traversal yang dibahas dalam modul ini yakni Pre-Order, In-Order, dan Post-Order.
 ##### Pre-Order 
-Penelusuran secara pre-order memiliki alur:<br/>
+Penelusuran secara pre-order memiliki alur:
     a. Cetak data pada simpul root<br/>
     b. Secara rekursif mencetak seluruh data pada subpohon kiri<br/>
     c. Secara rekursif mencetak seluruh data pada subpohon kanan<br/>
