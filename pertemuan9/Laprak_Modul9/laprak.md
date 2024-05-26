@@ -42,7 +42,7 @@ sebagai berikut :
 
 ![Screenshot Soal Unguided 1](ssunguided(6).png)
 
-Binary tree atau pohon biner merupakan struktur data pohon akan tetapi setiap simpul dalam pohon diprasyaratkan memiliki simpul satu level di bawahnya (child) tidak lebih dari 2 simpul, artinya jumlah child yang diperbolehkan yakni 0, 1, dan 2. 
+#### Operasi pada Tree 
 - Create: digunakan untuk membentuk binary tree baru yang masih kosong. 
 - Clear: digunakan untuk mengosongkan binary tree yang sudah ada atau 
 menghapus semua node pada binary tree. 
