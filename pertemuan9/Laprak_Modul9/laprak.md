@@ -1,4 +1,4 @@
-# <h1 align="center">Laporan Praktikum Modul Algoritma Searching</h1>
+# <h1 align="center">Laporan Praktikum Modul Graf dan Pohon</h1>
 <p align="center">Azaria Nanda Putri - 2311102147</p>
 
 ## Dasar Teori
@@ -7,7 +7,7 @@ Graf dan pohon adalah dua konsep dasar dalam teori graf yang digunakan untuk mew
 ### Graf
 Graf atau graph adalah struktur data yang digunakan untuk merepresentasikan hubungan antara objek dalam bentuk node atau vertex dan sambungan antara node tersebut dalam bentuk sisi atau edge. Graph terdiri dari kumpulan simpul untuk menyimpan data, diantara dua buah simpul terdapat hubungan saling keterkaitan yang secara matematis dapat dinyatakan sebagai : G = (V, E) 
 Dimana G adalah Graph, V adalah simpul atau vertex dan E sebagai sisi atau edge. 
-![Screenshot Soal Unguided 1](ssunguided(3).png)
+![Screenshot Soal Unguided 1](ssunguided(1).png)
 
 #### Jenis-jenis Graph
 
