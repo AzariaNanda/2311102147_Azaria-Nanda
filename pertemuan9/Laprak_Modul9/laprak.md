@@ -80,7 +80,6 @@ Penelusuran secara in-order memiliki alur:<br/>
     b. Secara rekursif mencetak seluruh data pada subpohon kanan <br/>
     c. Cetak data pada root<br/>
 
-
 ## Guided 
 
 ### 1. Latihan Graph
@@ -515,20 +514,7 @@ int main()
     characteristic();
 }
 ```
-Program ini adalah implementasi dari algoritma Binary Search untuk mencari sebuah nilai dalam array yang telah diurutkan menggunakan algoritma Selection Sort.
-- Array pada 'dataArray' berisi data yang akan dicari, data ini akan diurutkan menggunakan algoritma Selection Sort sebelum dilakukan pencarian.
-- Mengurutkan array dataArray menggunakan algoritma Selection_Sort().
-- Melakukan pencarian nilai cari dalam array yang telah diurutkan menggunakan algoritma Binary Search.
-- Jika nilai ditemukan, akan menampilkan indeks tempat nilai ditemukan.
-- Jika nilai tidak ditemukan, akan menampilkan pesan bahwa nilai tidak ditemukan.
-- Menampilkan data awal yang belum diurutkan.
-- Meminta input dari pengguna untuk nilai yang dicari.
-- Mengurutkan data menggunakan Selection_Sort().
-- Menampilkan data yang telah diurutkan.
-- Melakukan pencarian menggunakan BinarySearch().
-- Menahan tampilan layar dengan _getche() sebelum program selesai. 
-
-Program ini memanfaatkan dua algoritma yang berbeda: Selection Sort untuk mengurutkan data dan Binary Search untuk mencari data. Ini adalah contoh yang baik tentang bagaimana algoritma berbeda dapat digabungkan untuk menyelesaikan masalah tertentu. 
+Program ini mengimplementasikan struktur data pohon biner dalam C++. Program ini mencakup berbagai fungsi untuk memanipulasi pohon biner, seperti membuat node, menambahkan node ke kiri atau kanan, memperbarui nilai node, menampilkan data node, dan mencari node tertentu. Selain itu, program ini juga menyediakan metode untuk menelusuri pohon dengan tiga cara (pre-order, in-order, dan post-order) serta menghitung ukuran dan tinggi pohon. Fungsi lain termasuk menghapus seluruh pohon atau subpohon tertentu, serta menampilkan karakteristik pohon seperti ukuran dan rata-rata node per level. Pada bagian akhir program, terdapat demonstrasi penggunaan berbagai fungsi ini dengan membangun sebuah pohon, melakukan beberapa operasi pada node, dan menampilkan hasil penelusuran serta karakteristik pohon.
 
 ## Unguided 
 
