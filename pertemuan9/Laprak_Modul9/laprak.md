@@ -4,7 +4,7 @@
 ## Dasar Teori
 Graf dan pohon adalah dua konsep dasar dalam teori graf yang digunakan untuk mewakili hubungan antara entitas. Graf adalah struktur data non-linear yang terdiri dari node atau vertex yang terhubung oleh sisi. Graf dapat berarah atau tidak berarah, tergantung pada apakah sisi memiliki arah atau tidak. Pada sisi lain, pohon adalah suatu jenis graf yang terhubung, tidak berarah, dan tidak memiliki sirkuit. Setiap node dalam pohon terhubung ke setiap node lainnya dengan jalan yang unik, dan tidak ada lebih dari satu jalan antara dua node. Graf pohon digunakan dalam berbagai aplikasi, seperti file system, XML document, dan lain-lain, sedangkan hutan adalah kumpulan pohon yang tidak saling terhubung dalam sebuah graf asiklik tak berarah.
 
-### Graf
+### - Graf
 Graf atau graph adalah struktur data yang digunakan untuk merepresentasikan hubungan antara objek dalam bentuk node atau vertex dan sambungan antara node tersebut dalam bentuk sisi atau edge. Graph terdiri dari kumpulan simpul untuk menyimpan data, diantara dua buah simpul terdapat hubungan saling keterkaitan yang secara matematis dapat dinyatakan sebagai : G = (V, E) 
 Dimana G adalah Graph, V adalah simpul atau vertex dan E sebagai sisi atau edge. 
 
@@ -14,7 +14,7 @@ Dimana G adalah Graph, V adalah simpul atau vertex dan E sebagai sisi atau edge.
 
 Berikut adalah contoh soal untuk pencarian sekuensial beserta penjelasannya:
 
-### Tree atau Pohon
+### - Tree atau Pohon
 Binary search adalah algoritma pencarian untuk data terurut. Pencarian dilakukan dengan membandingkan data yang dicari dengan data di tengah. Jika sama, data ditemukan. Jika tidak, pencarian dilanjutkan pada bagian kiri atau kanan dari data tengah, tergantung pada perbandingan antara data yang dicari dengan data tengah. Proses ini diulang hingga data ditemukan atau tidak ada lagi yang bisa diperiksa. Singkatnya Binary Search adalah algoritma pencarian pada array/list dengan elemen terurut. Algoritma ini sering digabungkan dengan algoritma sorting karena data harus diurutkan terlebih dahulu. 
 
 Konsep Binary Search:
