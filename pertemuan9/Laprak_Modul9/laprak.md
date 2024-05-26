@@ -32,38 +32,43 @@ Graf juga dapat dikategorikan berdasarkan adanya bobot pada sisi-sisinya:<br/>
 ![Screenshot Soal Unguided 1](ssunguided(3).png)
 
 #### Representasi Graph dengan Linked List
-![Screenshot Soal Unguided 1](ssunguided(4).png)
-
 ![Screenshot Soal Unguided 1](ssunguided(5).png)
 
+![Screenshot Soal Unguided 1](ssunguided(4).png)
+
 ### Tree atau Pohon
-Binary search adalah algoritma pencarian untuk data terurut. Pencarian dilakukan dengan membandingkan data yang dicari dengan data di tengah. Jika sama, data ditemukan. Jika tidak, pencarian dilanjutkan pada bagian kiri atau kanan dari data tengah, tergantung pada perbandingan antara data yang dicari dengan data tengah. Proses ini diulang hingga data ditemukan atau tidak ada lagi yang bisa diperiksa. Singkatnya Binary Search adalah algoritma pencarian pada array/list dengan elemen terurut. Algoritma ini sering digabungkan dengan algoritma sorting karena data harus diurutkan terlebih dahulu. 
+Pohon (tree) adalah struktur data yang sangat umum dan kuat yang menyerupai pohon di alam. Pohon terdiri dari satu set node yang terhubung dan tertaut dalam grafik terurut, di mana setiap node memiliki paling banyak satu simpul induk, dan dapat memiliki nol atau lebih simpul anak dengan urutan tertentu. Struktur data pohon digunakan untuk menyimpan data hirarkis seperti struktur keluarga, skema pertandingan, dan struktur organisasi. Dengan analogi yang kuat dengan pohon di alam, struktur data pohon memungkinkan penyimpanan dan manipulasi data dengan cara yang terstruktur dan terorganisir. Istilah dalam struktur data tree dapat dirangkum 
+sebagai berikut :
 
-Konsep Binary Search:
-- Data diambil dari posisi 1 sampai akhir (N).
-- Data dibagi menjadi dua untuk mendapatkan posisi tengah.
-- Data yang dicari dibandingkan dengan data di posisi tengah.
-  - Jika data yang dicari lebih besar dari data tengah, pencarian dilanjutkan di bagian kanan.
-  - Jika data yang dicari lebih kecil, pencarian dilanjutkan di bagian kiri.
-- Proses pembagian terus berlanjut hingga data ditemukan atau tidak ada lagi data yang bisa dibagi.
-- Jika data sama dengan data tengah, pencarian berhenti karena data ditemukan.
+![Screenshot Soal Unguided 1](ssunguided(6).png)
 
-Berikut adalah contoh soal untuk pencarian sekuensial beserta penjelasannya:
-#### Int A[6] = {3, 4, 12, 18, 25, 27}
-![Screenshot Soal Unguided 1](ssunguided(3).png)
-
-Terdapat sebuah array yang menampung 6 elemen pada gambar di atas. Nilai yang akan dicari pada array tersebut adalah 18.
-- Jadi karena konsep dari binary search ini adalah membagi array menjadi dua bagian, maka pertama-tama kita cari nilai tengahnya dulu. Total elemen dibagi 2 yaitu 6/2 = 3.
-- Maka elemen ketiga pada array adalah nilai tengahnya, yaitu angka 12 pada indeks ke-2.
-- Kemudian kita cek apakah 18 > 12 atau 18 < 12?
-- Karena 18 lebih besar dari 12, maka kemungkinan besar angka 18 berada setelah 12 atau di sebelah kanan. Selanjutnya, kita cari ke kanan dan kita dapat mengabaikan elemen yang ada di kiri.
-- Setelah itu, kita cari lagi nilai tengahnya di bagian kanan array, yang tersisa adalah [18, 25, 27]. Nilai tengah dari bagian ini adalah 25 pada indeks ke-4.
-- Kemudian kita cek apakah 18 > 25 atau 18 < 25?
-- Ternyata 18 lebih kecil dari 25, maka selanjutnya kita cari ke kiri bagian ini, yaitu [18].
-- Karena tersisa hanya satu elemen saja, maka elemen tersebut adalah nilai tengahnya. Setelah dicek ternyata elemen pada indeks ke-3 adalah elemen yang dicari, maka telah selesai proses pencariannya.
-
-Jadi, nilai 18 ditemukan pada indeks ke-3 dari array. Proses ini menunjukkan bagaimana binary search efisien dalam menemukan nilai dalam array yang terurut.
-
+Binary tree atau pohon biner merupakan struktur data pohon akan tetapi setiap simpul dalam pohon diprasyaratkan memiliki simpul satu level di bawahnya (child) tidak lebih dari 2 simpul, artinya jumlah child yang diperbolehkan yakni 0, 1, dan 2. 
+a. Create: digunakan untuk membentuk binary tree baru yang masih kosong. 
+b. Clear: digunakan untuk mengosongkan binary tree yang sudah ada atau 
+menghapus semua node pada binary tree. 
+c. isEmpty: digunakan untuk memeriksa apakah binary tree masih kosong atau 
+tidak. 
+d. Insert: digunakan untuk memasukkan sebuah node kedalam tree. 
+e. Find: digunakan untuk mencari root, parent, left child, atau right child dari 
+suatu node dengan syarat tree tidak boleh kosong. 
+f. Update: digunakan untuk mengubah isi dari node yang ditunjuk oleh pointer 
+current dengan syarat tree tidak boleh kosong.
+Modul 10 Graph dan Tree 
+g. Retrive: digunakan untuk mengetahui isi dari node yang ditunjuk pointer 
+current dengan syarat tree tidak boleh kosong. 
+h. Delete Sub: digunakan untuk menghapus sebuah subtree (node beserta seluruh 
+descendant-nya) yang ditunjuk pointer current dengan syarat tree tidak boleh 
+kosong. 
+i. Characteristic: digunakan untuk mengetahui karakteristik dari suatu tree. 
+Yakni size, height, serta average lenght-nya. 
+j. Traverse: digunakan untuk mengunjungi seluruh node-node pada tree dengan 
+cara traversal. Terdapat 3 metode traversal yang dibahas dalam modul ini yakni 
+Pre-Order, In-Order, dan Post-Order.
+    - 1. Pre-Order 
+    Penelusuran secara pre-order memiliki alur: 
+    a. Cetak data pada simpul root 
+    b. Secara rekursif mencetak seluruh data pada subpohon kiri 
+    c. Secara rekursif mencetak seluruh data pada subpohon kanan 
 
 ## Guided 
 
