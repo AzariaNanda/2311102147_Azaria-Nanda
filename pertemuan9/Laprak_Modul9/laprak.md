@@ -18,15 +18,13 @@ Jenis-jenis graf yang umum dikenal meliputi:
 3. *Graf Teratur*: Graf ini memiliki sifat di mana setiap simpul memiliki jumlah sisi yang sama. Misalnya, jika setiap simpul memiliki tiga sisi yang menghubungkannya dengan simpul lain, maka graf tersebut disebut graf 3-teratur.
 4. *Graf Bipartisi*: Graf ini dapat dibagi menjadi dua kelompok simpul, di mana tidak ada sisi yang menghubungkan simpul-simpul dalam kelompok yang sama. Sisi-sisi hanya menghubungkan simpul dari kelompok yang berbeda.
 
-Selain itu, graf juga dapat dibedakan berdasarkan arah tepinya:
+Selain itu, graf juga dapat dibedakan berdasarkan arah tepinya:<br/>
+1. *Graf Tak Berarah  (Undirected graph)*: Graf ini tidak memiliki arah pada sisi-sisinya. Artinya, jika ada sisi yang menghubungkan dua simpul, kita bisa bergerak di antara kedua simpul tersebut dalam kedua arah.
+2. *Graf Berarah  (Directed Graph)*: Graf ini memiliki arah pada sisi-sisinya. Setiap sisi memiliki arah tertentu, sehingga kita hanya bisa bergerak dari satu simpul ke simpul lainnya sesuai arah yang ditentukan oleh sisi tersebut.
 
-1. *Graf Tak Berarah*: Graf ini tidak memiliki arah pada sisi-sisinya. Artinya, jika ada sisi yang menghubungkan dua simpul, kita bisa bergerak di antara kedua simpul tersebut dalam kedua arah.
-2. *Graf Berarah*: Graf ini memiliki arah pada sisi-sisinya. Setiap sisi memiliki arah tertentu, sehingga kita hanya bisa bergerak dari satu simpul ke simpul lainnya sesuai arah yang ditentukan oleh sisi tersebut.
-
-Graf juga dapat dikategorikan berdasarkan adanya bobot pada sisi-sisinya:
-
-1. *Graf Berbobot*: Graf ini memiliki bobot atau nilai pada setiap sisi yang menghubungkan simpul. Bobot ini bisa merepresentasikan jarak, biaya, atau nilai lainnya yang relevan dalam konteks penggunaan graf tersebut.
-2. *Graf Tidak Berbobot*: Graf ini tidak memiliki bobot pada sisi-sisinya. Sisi-sisi hanya menunjukkan hubungan antar simpul tanpa memberikan informasi tambahan mengenai jarak atau biaya.
+Graf juga dapat dikategorikan berdasarkan adanya bobot pada sisi-sisinya:<br/> 
+1. *Graf Berbobot (Weighted Graph)*: Graf ini memiliki bobot atau nilai pada setiap sisi yang menghubungkan simpul. Bobot ini bisa merepresentasikan jarak, biaya, atau nilai lainnya yang relevan dalam konteks penggunaan graf tersebut.
+2. *Graf Tidak Berbobot (Unweighted Graph)*: Graf ini tidak memiliki bobot pada sisi-sisinya. Sisi-sisi hanya menunjukkan hubungan antar simpul tanpa memberikan informasi tambahan mengenai jarak atau biaya.
 
 Berikut adalah contoh soal untuk pencarian sekuensial beserta penjelasannya:
 
