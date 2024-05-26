@@ -11,8 +11,10 @@ Dimana G adalah Graph, V adalah simpul atau vertex dan E sebagai sisi atau edge.
 ![Screenshot Soal Unguided 1](ssunguided(1).png)
 
 #### Jenis-jenis Graph
-Jenis-jenis graf yang umum dikenal meliputi:
 
+![Screenshot Soal Unguided 1](ssunguided(2).png)
+
+Jenis-jenis graf yang umum dikenal meliputi:<br/>
 1. *Graf Sederhana*: Graf ini tidak memiliki sisi ganda atau gelang. Setiap sisi hanya menghubungkan dua simpul dan setiap pasangan simpul terhubung oleh satu sisi saja.
 2. *Graf Tak-Sederhana*: Graf ini bisa memiliki sisi ganda atau gelang. Sisi ganda berarti ada lebih dari satu sisi yang menghubungkan sepasang simpul, sementara gelang adalah sisi yang menghubungkan simpul ke dirinya sendiri.
 3. *Graf Teratur*: Graf ini memiliki sifat di mana setiap simpul memiliki jumlah sisi yang sama. Misalnya, jika setiap simpul memiliki tiga sisi yang menghubungkannya dengan simpul lain, maka graf tersebut disebut graf 3-teratur.
@@ -25,6 +27,7 @@ Selain itu, graf juga dapat dibedakan berdasarkan arah tepinya:<br/>
 Graf juga dapat dikategorikan berdasarkan adanya bobot pada sisi-sisinya:<br/> 
 1. *Graf Berbobot (Weighted Graph)*: Graf ini memiliki bobot atau nilai pada setiap sisi yang menghubungkan simpul. Bobot ini bisa merepresentasikan jarak, biaya, atau nilai lainnya yang relevan dalam konteks penggunaan graf tersebut.
 2. *Graf Tidak Berbobot (Unweighted Graph)*: Graf ini tidak memiliki bobot pada sisi-sisinya. Sisi-sisi hanya menunjukkan hubungan antar simpul tanpa memberikan informasi tambahan mengenai jarak atau biaya.
+
 
 Berikut adalah contoh soal untuk pencarian sekuensial beserta penjelasannya:
 
