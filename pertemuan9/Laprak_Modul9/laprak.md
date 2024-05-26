@@ -4,17 +4,33 @@
 ## Dasar Teori
 Graf dan pohon adalah dua konsep dasar dalam teori graf yang digunakan untuk mewakili hubungan antara entitas. Graf adalah struktur data non-linear yang terdiri dari node atau vertex yang terhubung oleh sisi. Graf dapat berarah atau tidak berarah, tergantung pada apakah sisi memiliki arah atau tidak. Pada sisi lain, pohon adalah suatu jenis graf yang terhubung, tidak berarah, dan tidak memiliki sirkuit. Setiap node dalam pohon terhubung ke setiap node lainnya dengan jalan yang unik, dan tidak ada lebih dari satu jalan antara dua node. Graf pohon digunakan dalam berbagai aplikasi, seperti file system, XML document, dan lain-lain, sedangkan hutan adalah kumpulan pohon yang tidak saling terhubung dalam sebuah graf asiklik tak berarah.
 
-### - Graf
+### Graf
 Graf atau graph adalah struktur data yang digunakan untuk merepresentasikan hubungan antara objek dalam bentuk node atau vertex dan sambungan antara node tersebut dalam bentuk sisi atau edge. Graph terdiri dari kumpulan simpul untuk menyimpan data, diantara dua buah simpul terdapat hubungan saling keterkaitan yang secara matematis dapat dinyatakan sebagai : G = (V, E) 
 Dimana G adalah Graph, V adalah simpul atau vertex dan E sebagai sisi atau edge. 
 
 ![Screenshot Soal Unguided 1](ssunguided(1).png)
 
 #### Jenis-jenis Graph
+Jenis-jenis graf yang umum dikenal meliputi:
+
+1. *Graf Sederhana*: Graf ini tidak memiliki sisi ganda atau gelang. Setiap sisi hanya menghubungkan dua simpul dan setiap pasangan simpul terhubung oleh satu sisi saja.
+2. *Graf Tak-Sederhana*: Graf ini bisa memiliki sisi ganda atau gelang. Sisi ganda berarti ada lebih dari satu sisi yang menghubungkan sepasang simpul, sementara gelang adalah sisi yang menghubungkan simpul ke dirinya sendiri.
+3. *Graf Teratur*: Graf ini memiliki sifat di mana setiap simpul memiliki jumlah sisi yang sama. Misalnya, jika setiap simpul memiliki tiga sisi yang menghubungkannya dengan simpul lain, maka graf tersebut disebut graf 3-teratur.
+4. *Graf Bipartisi*: Graf ini dapat dibagi menjadi dua kelompok simpul, di mana tidak ada sisi yang menghubungkan simpul-simpul dalam kelompok yang sama. Sisi-sisi hanya menghubungkan simpul dari kelompok yang berbeda.
+
+Selain itu, graf juga dapat dibedakan berdasarkan arah tepinya:
+
+1. *Graf Tak Berarah*: Graf ini tidak memiliki arah pada sisi-sisinya. Artinya, jika ada sisi yang menghubungkan dua simpul, kita bisa bergerak di antara kedua simpul tersebut dalam kedua arah.
+2. *Graf Berarah*: Graf ini memiliki arah pada sisi-sisinya. Setiap sisi memiliki arah tertentu, sehingga kita hanya bisa bergerak dari satu simpul ke simpul lainnya sesuai arah yang ditentukan oleh sisi tersebut.
+
+Graf juga dapat dikategorikan berdasarkan adanya bobot pada sisi-sisinya:
+
+1. *Graf Berbobot*: Graf ini memiliki bobot atau nilai pada setiap sisi yang menghubungkan simpul. Bobot ini bisa merepresentasikan jarak, biaya, atau nilai lainnya yang relevan dalam konteks penggunaan graf tersebut.
+2. *Graf Tidak Berbobot*: Graf ini tidak memiliki bobot pada sisi-sisinya. Sisi-sisi hanya menunjukkan hubungan antar simpul tanpa memberikan informasi tambahan mengenai jarak atau biaya.
 
 Berikut adalah contoh soal untuk pencarian sekuensial beserta penjelasannya:
 
-### - Tree atau Pohon
+### Tree atau Pohon
 Binary search adalah algoritma pencarian untuk data terurut. Pencarian dilakukan dengan membandingkan data yang dicari dengan data di tengah. Jika sama, data ditemukan. Jika tidak, pencarian dilanjutkan pada bagian kiri atau kanan dari data tengah, tergantung pada perbandingan antara data yang dicari dengan data tengah. Proses ini diulang hingga data ditemukan atau tidak ada lagi yang bisa diperiksa. Singkatnya Binary Search adalah algoritma pencarian pada array/list dengan elemen terurut. Algoritma ini sering digabungkan dengan algoritma sorting karena data harus diurutkan terlebih dahulu. 
 
 Konsep Binary Search:
