@@ -43,19 +43,25 @@ sebagai berikut :
 ![Screenshot Soal Unguided 1](ssunguided(6).png)
 
 #### Operasi pada Tree 
-- Create: digunakan untuk membentuk binary tree baru yang masih kosong. 
-- Clear: digunakan untuk mengosongkan binary tree yang sudah ada atau 
-menghapus semua node pada binary tree. 
-- isEmpty: digunakan untuk memeriksa apakah binary tree masih kosong atau 
-tidak. 
-- Insert: digunakan untuk memasukkan sebuah node kedalam tree. 
-- Find: digunakan untuk mencari root, parent, left child, atau right child dari 
-suatu node dengan syarat tree tidak boleh kosong. 
-- Update: digunakan untuk mengubah isi dari node yang ditunjuk oleh pointer current dengan syarat tree tidak boleh kosong.
-- Retrive: digunakan untuk mengetahui isi dari node yang ditunjuk pointer current dengan syarat tree tidak boleh kosong. 
-- Delete Sub: digunakan untuk menghapus sebuah subtree (node beserta seluruh descendant-nya) yang ditunjuk pointer current dengan syarat tree tidak boleh kosong. 
-- Characteristic: digunakan untuk mengetahui karakteristik dari suatu tree. Yakni size, height, serta average lenght-nya. 
-- Traverse: digunakan untuk mengunjungi seluruh node-node pada tree dengan cara traversal. 
+- *Create*: Ini seperti kita sedang membuat ruang kosong untuk menaruh elemen-elemen baru. Jika kita membayangkan sebuah rumah, Create adalah seperti membuka pintu masuk ke dalam rumah yang masih kosong, siap untuk diisi dengan perabotan atau dekorasi.
+  
+- *Clear*: Bayangkan kita sedang membersihkan seluruh isi rumah dari perabotan, dekorasi, dan barang-barang lainnya. Clear dalam binary tree adalah seperti membereskan seluruh node yang ada di dalamnya, membuatnya kembali kosong seperti semula.
+  
+- *isEmpty*: Fungsinya seperti mengecek apakah rumah tersebut kosong atau tidak. Jika rumah kosong, kita mungkin harus melakukan pembangunan kembali. Dalam binary tree, isEmpty menunjukkan apakah tree tersebut tidak memiliki node sama sekali atau tidak.
+  
+- *Insert*: Ketika kita ingin menambahkan kursi atau meja baru ke dalam rumah, kita memasukkannya ke dalam ruangan yang tepat. Insert pada binary tree adalah cara kita menambahkan node baru ke dalam struktur, pastikan ditempatkan di tempat yang sesuai dengan aturan struktur pohon biner.
+  
+- *Find*: Ini adalah seperti kita mencari-cari di dalam rumah untuk menemukan informasi tentang sebuah barang atau ruangan. Dalam binary tree, Find membantu kita menemukan informasi tentang root, parent, left child, atau right child dari suatu node.
+  
+- *Update*: Bayangkan kita ingin mengganti sofa lama dengan yang baru di dalam rumah. Update pada binary tree adalah cara kita mengubah nilai atau isi dari suatu node yang sudah ada dengan nilai baru.
+  
+- *Retrieve*: Ketika kita ingin mengetahui informasi detail tentang sebuah barang di rumah, Retrieve membantu kita untuk mengetahui isi dari node yang ditunjuk oleh pointer current.
+  
+- *Delete Sub*: Jika kita ingin membersihkan atau menghapus seluruh isi sebuah kamar di rumah, Delete Sub pada binary tree membantu kita untuk menghapus sebuah subtree (node beserta seluruh descendant-nya) yang ditunjuk pointer current.
+  
+- *Characteristic*: Ini adalah seperti kita sedang mengukur atau mengetahui berbagai karakteristik rumah seperti ukuran, tinggi, atau panjang rata-rata. Dalam binary tree, characteristic membantu kita mengetahui ukuran (jumlah node), tinggi (jumlah level dari root ke leaf terjauh), serta rata-rata panjang (ukuran dibagi tinggi) dari pohon biner tersebut.
+  
+- *Traverse*: Ini adalah seperti kita sedang melakukan perjalanan atau eksplorasi di seluruh ruang rumah untuk melihat setiap detailnya. Dalam binary tree, Traverse membantu kita mengunjungi seluruh node-node pada tree dengan cara traversal tertentu seperti pre-order, in-order, atau post-order.
 
 Terdapat 3 metode traversal yang dibahas dalam modul ini yakni Pre-Order, In-Order, dan Post-Order:
 #### Pre-Order 
