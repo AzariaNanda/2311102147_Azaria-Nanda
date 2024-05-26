@@ -58,7 +58,6 @@ suatu node dengan syarat tree tidak boleh kosong.
 - Traverse: digunakan untuk mengunjungi seluruh node-node pada tree dengan cara traversal. 
 
 Terdapat 3 metode traversal yang dibahas dalam modul ini yakni Pre-Order, In-Order, dan Post-Order.
-
 ##### Pre-Order 
 Penelusuran secara pre-order memiliki alur:<br/>
     a. Cetak data pada simpul root<br/>
