@@ -28,8 +28,13 @@ Graf juga dapat dikategorikan berdasarkan adanya bobot pada sisi-sisinya:<br/>
 1. *Graf Berbobot (Weighted Graph)*: Graf ini memiliki bobot atau nilai pada setiap sisi yang menghubungkan simpul. Bobot ini bisa merepresentasikan jarak, biaya, atau nilai lainnya yang relevan dalam konteks penggunaan graf tersebut.
 2. *Graf Tidak Berbobot (Unweighted Graph)*: Graf ini tidak memiliki bobot pada sisi-sisinya. Sisi-sisi hanya menunjukkan hubungan antar simpul tanpa memberikan informasi tambahan mengenai jarak atau biaya.
 
+#### Representasi Graph dengan Matriks
+![Screenshot Soal Unguided 1](ssunguided(3).png)
 
-Berikut adalah contoh soal untuk pencarian sekuensial beserta penjelasannya:
+#### Representasi Graph dengan Linked List
+![Screenshot Soal Unguided 1](ssunguided(4).png)
+
+![Screenshot Soal Unguided 1](ssunguided(4).png)
 
 ### Tree atau Pohon
 Binary search adalah algoritma pencarian untuk data terurut. Pencarian dilakukan dengan membandingkan data yang dicari dengan data di tengah. Jika sama, data ditemukan. Jika tidak, pencarian dilanjutkan pada bagian kiri atau kanan dari data tengah, tergantung pada perbandingan antara data yang dicari dengan data tengah. Proses ini diulang hingga data ditemukan atau tidak ada lagi yang bisa diperiksa. Singkatnya Binary Search adalah algoritma pencarian pada array/list dengan elemen terurut. Algoritma ini sering digabungkan dengan algoritma sorting karena data harus diurutkan terlebih dahulu. 
