@@ -56,13 +56,13 @@ suatu node dengan syarat tree tidak boleh kosong.
 - Delete Sub: digunakan untuk menghapus sebuah subtree (node beserta seluruh descendant-nya) yang ditunjuk pointer current dengan syarat tree tidak boleh kosong. 
 - Characteristic: digunakan untuk mengetahui karakteristik dari suatu tree. Yakni size, height, serta average lenght-nya. 
 - Traverse: digunakan untuk mengunjungi seluruh node-node pada tree dengan cara traversal. 
-Terdapat 3 metode traversal yang dibahas dalam modul ini yakni 
-Pre-Order, In-Order, dan Post-Order.
+
+Terdapat 3 metode traversal yang dibahas dalam modul ini yakni Pre-Order, In-Order, dan Post-Order.<br/>
     - Pre-Order 
     Penelusuran secara pre-order memiliki alur: 
-    a. Cetak data pada simpul root 
-    b. Secara rekursif mencetak seluruh data pada subpohon kiri 
-    c. Secara rekursif mencetak seluruh data pada subpohon kanan 
+    a. Cetak data pada simpul root<br/>
+    b. Secara rekursif mencetak seluruh data pada subpohon kiri<br/>
+    c. Secara rekursif mencetak seluruh data pada subpohon kanan<br/>
 
 ## Guided 
 
