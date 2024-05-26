@@ -2,35 +2,18 @@
 <p align="center">Azaria Nanda Putri - 2311102147</p>
 
 ## Dasar Teori
-    
-Algortima sequential searching adalah pencarian data semantik menggunakan teknologi array
-satu dimensi untuk melakukan proses pencarian tanpa melalui semua elemen array secara berurutan, sehingga
-tidak perlu dilakukan pengurutan data terlebih dahulu. Singkatnya Searching adalah proses mencari data dalam sebuah array dengan memeriksa setiap indeks menggunakan teknik perulangan. Ada dua metode dalam algoritma pencarian, yaitu:
+Graf dan pohon adalah dua konsep dasar dalam teori graf yang digunakan untuk mewakili hubungan antara entitas. Graf adalah struktur data non-linear yang terdiri dari node atau vertex yang terhubung oleh sisi. Graf dapat berarah atau tidak berarah, tergantung pada apakah sisi memiliki arah atau tidak. Pada sisi lain, pohon adalah suatu jenis graf yang terhubung, tidak berarah, dan tidak memiliki sirkuit. Setiap node dalam pohon terhubung ke setiap node lainnya dengan jalan yang unik, dan tidak ada lebih dari satu jalan antara dua node. Graf pohon digunakan dalam berbagai aplikasi, seperti file system, XML document, dan lain-lain, sedangkan hutan adalah kumpulan pohon yang tidak saling terhubung dalam sebuah graf asiklik tak berarah.
 
-### Sequential Search
-Sequential Search adalah algoritma pencarian untuk data yang acak atau tidak terurut. Ini adalah teknik paling sederhana, di mana setiap elemen array dibaca satu per satu dari indeks terkecil hingga terbesar, atau sebaliknya. Konsepnya adalah:
-- Membandingkan setiap elemen array satu per satu.
-- Pencarian dimulai dari indeks pertama hingga terakhir.
-- Pencarian berhenti saat data ditemukan. Jika tidak ditemukan hingga akhir array, pencarian berhenti.
-- Perulangan terjadi sebanyak jumlah elemen dalam array (N).
+### Graf
+Graf atau graph adalah struktur data yang digunakan untuk merepresentasikan hubungan antara objek dalam bentuk node atau vertex dan sambungan antara node tersebut dalam bentuk sisi atau edge. Graph terdiri dari kumpulan simpul untuk menyimpan data, diantara dua buah simpul terdapat hubungan saling keterkaitan yang secara matematis dapat dinyatakan sebagai : G = (V, E) 
+Dimana G adalah Graph, V adalah simpul atau vertex dan E sebagai sisi atau edge. 
+![Screenshot Soal Unguided 1](ssunguided(3).png)
 
-Algoritma Sequential Search adalah sebagai berikut:
-- i ← 0
-- ketemu ← false
--  Selama (tidak ketemu) dan (i < N), lakukan:
--  Jika (Data[i] = x) maka ketemu ← true, jika tidak, i ← i + 1
--  Jika (ketemu) maka i adalah indeks data yang dicari, jika tidak, data tidak ditemukan.
+#### Jenis-jenis Graph
 
 Berikut adalah contoh soal untuk pencarian sekuensial beserta penjelasannya:
-#### Int A[6] = {13, 87, 14, 21, 75, 53}
-![Screenshot Soal Unguided 1](ssunguided(4).png)
 
-- Misal nilai yang dicari adalah X = 21, maka elemen yang diperiksa adalah 13, 87, 14, 21. (ditemukan)
-Jadi indeks larik yang dikembalikan : I = 3
-- Misal nilai yang dicari adalah X = 15, maka elemen yang diperiksa adalah 13, 87, 14, 21, 75, 53. (tidak ditemukan)
-Jadi indeks larik yang dikembalikan : I = 0
-
-### Binary Search
+### Tree atau Pohon
 Binary search adalah algoritma pencarian untuk data terurut. Pencarian dilakukan dengan membandingkan data yang dicari dengan data di tengah. Jika sama, data ditemukan. Jika tidak, pencarian dilanjutkan pada bagian kiri atau kanan dari data tengah, tergantung pada perbandingan antara data yang dicari dengan data tengah. Proses ini diulang hingga data ditemukan atau tidak ada lagi yang bisa diperiksa. Singkatnya Binary Search adalah algoritma pencarian pada array/list dengan elemen terurut. Algoritma ini sering digabungkan dengan algoritma sorting karena data harus diurutkan terlebih dahulu. 
 
 Konsep Binary Search:
@@ -61,120 +44,436 @@ Jadi, nilai 18 ditemukan pada indeks ke-3 dari array. Proses ini menunjukkan bag
 
 ## Guided 
 
-### 1. Latihan Searching
+### 1. Latihan Graph
 
 ```C++
 #include <iostream>
+#include <iomanip>
 
 using namespace std;
 
+string simpul[7] = {
+    "Ciamis", "Bandung", "Bekasi", "Tasikmalaya", "Cianjur", "Purwokerto", "Yogyakarta"
+};
+
+int busur[7][7] = {
+    {0, 7, 8, 0, 0 ,0 ,0},
+    {0, 0, 5, 0, 0 , 15, 0},
+    {0, 6, 0, 0 , 5, 0, 0},
+    {0, 5, 0, 0, 2, 4, 0},
+    {23, 0, 0, 10, 0, 0, 8},
+    {0, 0, 0, 0, 7, 0, 3},
+    {0, 0, 0, 0, 9, 4, 0}
+};
+
+void tampilGraph(){
+    for (int baris = 0; baris < 7; baris++){
+        cout << " " << setiosflags(ios::left) << setw(15) << simpul[baris] <<": ";
+        for (int kolom = 0; kolom < 7; kolom++){
+            if (busur[baris][kolom] != 0){
+                cout << " " << simpul[kolom] << "(" << busur[baris][kolom] << ")";
+            }
+        }cout << endl;
+    }
+}
+
 int main(){
-    int n = 10;
-    int data[n] = {9,4,1,7,5,12,4,13,4,10};
-    int cari = 10;
-    bool ketemu = false;
-    int i;
-
-    for (i = 0; i < n; i++){
-        if(data[i] == cari){
-            ketemu = true;
-            break;
-        }
-    }
-
-    cout << "Program Sequential Search" << endl;
-    cout << "data : {9,4,1,7,5,12,4,13,4,10}" << endl;
-
-    if (ketemu){
-        cout << "\nAngka " << cari << " ditemukan pada indeks ke-" << i << endl;
-    }else{
-        cout << "data tidak ditemukan" << endl;
-    }
-
+    tampilGraph();
     return 0;
 }
 ```
-Program ini adalah implementasi dari algoritma Sequential Search dalam bahasa C++. Sequential Search digunakan untuk mencari suatu nilai dalam sebuah array dengan memeriksa setiap elemen array satu per satu hingga nilai yang dicari ditemukan atau seluruh elemen telah diperiksa.
-Berikut adalah penjelasan langkah-langkah dalam program:
-- n: ukuran dari array, yaitu 10.
-- data: array yang berisi 10 elemen: {9, 4, 1, 7, 5, 12, 4, 13, 4, 10}.
-- cari: nilai yang ingin dicari dalam array, yaitu 10.
-- ketemu: variabel boolean yang digunakan untuk menandakan apakah nilai yang dicari ditemukan atau tidak, diinisialisasi dengan false.
-- i: variabel untuk iterasi.
-Program menggunakan loop for untuk memeriksa setiap elemen dalam array data. Jika elemen pada indeks i sama dengan nilai cari, maka ketemu diubah menjadi true dan loop dihentikan menggunakan break. Setelah itu Program akan mencetak pesan "Program Sequential Search" dan isi array.
-- Jika nilai cari ditemukan (ketemu bernilai true), program mencetak indeks di mana nilai tersebut ditemukan.
-- Jika nilai cari tidak ditemukan, program mencetak pesan bahwa data tidak ditemukan
+Program di atas adalah program C++ yang mendefinisikan dan menampilkan graf berarah menggunakan representasi matriks ketetanggaan. Program ini menggunakan dua array: simpul yang menyimpan nama-nama kota dan busur yang menyimpan bobot busur yang menghubungkan kota-kota tersebut. Fungsi 'tampilGraph' mencetak graf dengan menampilkan setiap kota dan koneksi-koneksinya beserta bobot masing-masing. Misalnya, jika ada busur dari "Ciamis" ke "Bandung" dengan bobot 7, maka itu akan ditampilkan sebagai "Bandung(7)". Program ini menampilkan informasi ini untuk semua kota yang ada di array simpul dan menampilkan hasilnya saat program dijalankan.
 
-### 2. Latihan Binary Search
+### 2. Latihan Tree
 
 ```C++
-#include<iostream>
-#include<conio.h>
-#include<iomanip>
+#include <iostream>
+#include <iomanip>
 
 using namespace std;
 
-int dataArray[7] = {1, 8, 2, 5, 4, 9, 7};
-int cari;
+struct Pohon
+{
+    char data;
+    Pohon *left, *right, *parent;
+};
 
-void Selection_Sort(){
-    int temp, min, i, j;
-    for(i = 0; i < 7; i++){
-        min = i;
-        for(j = i + 1; j < 7; j++){
-            if(dataArray[j] < dataArray[min]){
-                min = j;
+Pohon *root, *baru;
+
+void init()
+{
+    root = NULL;
+}
+
+bool isEmpty()
+{
+    return root == NULL;
+}
+
+void buatNode(char data)
+{
+    if (isEmpty())
+    {
+        root = new Pohon();
+        root->data = data;
+        root->left = NULL;
+        root->right = NULL;
+        root->parent = NULL;
+        cout << "\n Node " << data << " berhasil dibuat sebagai root."
+             << endl;
+    }
+    else
+    {
+        cout << "\n Tree sudah ada!" << endl;
+    }
+}
+
+Pohon *insertLeft(char data, Pohon *node)
+{
+    if (isEmpty())
+    {
+        cout << "\n Buat tree terlebih dahulu!" << endl;
+        return NULL;
+    }
+    else
+    {
+        if (node->left != NULL)
+        {
+            cout << "\n Node " << node->data << " sudah ada child kiri !" << endl;
+            return NULL;
+        }
+        else
+        {
+            Pohon *baru = new Pohon();
+            baru->data = data;
+            baru->left = NULL;
+            baru->right = NULL;
+            baru->parent = node;
+            node->left = baru;
+            cout << "\n Node " << data << " berhasil ditambahkan kechild kiri " << baru->parent->data << endl;
+            return baru;
+        }
+    }
+}
+
+Pohon *insertRight(char data, Pohon *node)
+{
+    if (isEmpty())
+    {
+        cout << "\n Buat tree terlebih dahulu!" << endl;
+        return NULL;
+    }
+    else
+    {
+        if (node->right != NULL)
+        {
+            cout << "\n Node " << node->data << " sudah ada child kanan !" << endl;
+            return NULL;
+        }
+        else
+        {
+            Pohon *baru = new Pohon();
+            baru->data = data;
+            baru->left = NULL;
+            baru->right = NULL;
+            baru->parent = node;
+            node->right = baru;
+            cout << "\n Node " << data << " berhasil ditambahkan ke child kanan " << baru->parent->data << endl;
+            return baru;
+        }
+    }
+}
+
+void update(char data, Pohon *node)
+{
+    if (isEmpty())
+    {
+        cout << "\n Buat tree terlebih dahulu!" << endl;
+    }
+    else
+    {
+        if (!node)
+        {
+            cout << "\n Node yang ingin diganti tidak ada!!" << endl;
+        }
+        else
+        {
+            char temp = node->data;
+            node->data = data;
+            cout << "\n Node " << temp << " berhasil diubah menjadi "
+                 << data << endl;
+        }
+    }
+}
+
+void retrieve(Pohon *node)
+{
+    if (isEmpty())
+    {
+        cout << "\n Buat tree terlebih dahulu!" << endl;
+    }
+    else
+    {
+        if (!node)
+        {
+            cout << "\n Node yang ditunjuk tidak ada!" << endl;
+        }
+        else
+        {
+            cout << "\n Data node : " << node->data << endl;
+        }
+    }
+}
+
+void find(Pohon *node)
+{
+    if (isEmpty())
+    {
+        cout << "\n Buat tree terlebih dahulu!" << endl;
+    }
+    else
+    {
+        if (!node)
+        {
+            cout << "\n Node yang ditunjuk tidak ada!" << endl;
+        }
+        else
+        {
+            cout << "\n Data Node : " << node->data << endl;
+            cout << " Root : " << root->data << endl;
+            if (!node->parent)
+                cout << " Parent : (tidak punya parent)" << endl;
+            else
+                cout << " Parent : " << node->parent->data << endl;
+            if (node->parent != NULL && node->parent->left != node &&
+                node->parent->right == node)
+                cout << " Sibling : " << node->parent->left->data << endl;
+            else if (node->parent != NULL && node->parent->right != node && node->parent->left == node)
+                cout << " Sibling : " << node->parent->right->data << endl;
+            else
+                cout << " Sibling : (tidak punya sibling)" << endl;
+            if (!node->left)
+                cout << " Child Kiri : (tidak punya Child kiri)" << endl;
+            else
+                cout << " Child Kiri : " << node->left->data << endl;
+            if (!node->right)
+                cout << " Child Kanan : (tidak punya Child kanan)" << endl;
+            else
+                cout << " Child Kanan : " << node->right->data << endl;
+        }
+    }
+}
+
+// Penelusuran (Traversal)
+// preOrder
+void preOrder(Pohon *node = root)
+{
+    if (isEmpty())
+    {
+        cout << "\n Buat tree terlebih dahulu!" << endl;
+    }
+    else
+    {
+        if (node != NULL)
+        {
+            cout << " " << node->data << ", ";
+            preOrder(node->left);
+            preOrder(node->right);
+        }
+    }
+}
+
+// inOrder
+void inOrder(Pohon *node = root)
+{
+    if (isEmpty())
+    {
+        cout << "\n Buat tree terlebih dahulu!" << endl;
+    }
+    else
+    {
+        if (node != NULL)
+        {
+            inOrder(node->left);
+            cout << " " << node->data << ", ";
+            inOrder(node->right);
+        }
+    }
+}
+
+// postOrder
+void postOrder(Pohon *node = root)
+{
+    if (isEmpty())
+    {
+        cout << "\n Buat tree terlebih dahulu!" << endl;
+    }
+    else
+    {
+        if (node != NULL)
+        {
+            postOrder(node->left);
+            postOrder(node->right);
+            cout << " " << node->data << ", ";
+        }
+    }
+}
+
+// Hapus Node Tree
+void deleteTree(Pohon *node)
+{
+    if (isEmpty())
+    {
+        cout << "\n Buat tree terlebih dahulu!" << endl;
+    }
+    else
+    {
+        if (node != NULL)
+        {
+            if (node != root)
+            {
+                node->parent->left = NULL;
+                node->parent->right = NULL;
+            }
+            deleteTree(node->left);
+            deleteTree(node->right);
+            if (node == root)
+            {
+                delete root;
+                root = NULL;
+            }
+            else
+            {
+                delete node;
             }
         }
-        temp = dataArray[i];
-        dataArray[i] = dataArray[min];
-        dataArray[min] = temp;
     }
 }
 
-void BinarySearch(){
-    int awal, akhir, tengah;
-    bool b_flag = false;
-    awal = 0;
-    akhir = 6;
-    while(!b_flag && awal <= akhir){
-        tengah = (awal + akhir)/2;
-        if(dataArray[tengah] == cari){
-            b_flag = true;
-        } else if(dataArray[tengah] < cari){
-            awal = tengah + 1;
-        } else {
-            akhir = tengah - 1;
+// Hapus SubTree
+void deleteSub(Pohon *node)
+{
+    if (isEmpty())
+    {
+        cout << "\n Buat tree terlebih dahulu!" << endl;
+    }
+    else
+    {
+        deleteTree(node->left);
+        deleteTree(node->right);
+        cout << "\n Node subtree " << node->data << " berhasil dihapus." << endl;
+    }
+}
+
+void clear()
+{
+    if (isEmpty())
+    {
+        cout << "\n Buat tree terlebih dahulu!!" << endl;
+    }
+    else
+    {
+        deleteTree(root);
+        cout << "\n Pohon berhasil dihapus." << endl;
+    }
+}
+
+// Cek Size Tree
+int size(Pohon *node = root)
+{
+    if (isEmpty())
+    {
+        cout << "\n Buat tree terlebih dahulu!!" << endl;
+        return 0;
+    }
+    else
+    {
+        if (!node)
+        {
+            return 0;
+        }
+        else
+        {
+            return 1 + size(node->left) + size(node->right);
         }
     }
-    if(b_flag){
-        cout << "\nData ditemukan pada index ke-" << tengah << endl;
-    } else {
-        cout << "\nData tidak ditemukan" << endl;
+}
+
+// Cek Height Level Tree
+int height(Pohon *node = root)
+{
+    if (isEmpty())
+    {
+        cout << "\n Buat tree terlebih dahulu!" << endl;
+        return 0;
+    }
+    else
+    {
+        if (!node)
+        {
+            return 0;
+        }
+        else
+        {
+            int heightKiri = height(node->left);
+            int heightKanan = height(node->right);
+            if (heightKiri >= heightKanan)
+            {
+                return heightKiri + 1;
+            }
+            else
+            {
+                return heightKanan + 1;
+            }
+        }
     }
 }
 
-int main(){
-    cout << "BINARY SEARCH" << endl;
-    cout << "\nData : ";
-    for(int x = 0; x < 7; x++){
-        cout << setw(3) << dataArray[x];
-    }
-    cout << endl;
+// Karakteristik Tree
+void characteristic()
+{
+    cout << "\n Size Tree : " << size() << endl;
+    cout << " Height Tree : " << height() << endl;
+    cout << " Average Node of Tree : " << size() / height() << endl;
+}
 
-    cout << "Masukkan data yang ingin dicari : ";
-    cin >> cari;
-    
-    cout << "\nData diurutkan : ";
-    Selection_Sort();
+int main()
+{
+    buatNode('A');
+    Pohon *nodeB, *nodeC, *nodeD, *nodeE, *nodeF, *nodeG, *nodeH, *nodeI, *nodeJ;
+    nodeB = insertLeft('B', root);
+    nodeC = insertRight('C', root);
+    nodeD = insertLeft('D', nodeB);
+    nodeE = insertRight('E', nodeB);
+    nodeF = insertLeft('F', nodeC);
+    nodeG = insertLeft('G', nodeE);
+    nodeH = insertRight('H', nodeE);
+    nodeI = insertLeft('I', nodeG);
+    nodeJ = insertRight('J', nodeG);
+    update('Z', nodeC);
+    update('C', nodeC);
+    retrieve(nodeC);
+    find(nodeC);
 
-    for(int x = 0; x < 7; x++){
-        cout << setw(3) << dataArray[x];
-    }
-    cout << endl;
-    BinarySearch();
-    _getche();
-    return 0;
+    cout << "\n PreOrder :" << endl;
+    preOrder(root);
+    cout << "\n"<< endl;
+
+    cout << " InOrder :" << endl;
+    inOrder(root);
+    cout << "\n" << endl;
+
+    cout << " PostOrder :" << endl;
+    postOrder(root);
+    cout << "\n" << endl;
+
+    characteristic();
+    deleteSub(nodeE);
+    cout << "\n PreOrder :" << endl;
+    preOrder();
+    cout << "\n" << endl;
+
+    characteristic();
 }
 ```
 Program ini adalah implementasi dari algoritma Binary Search untuk mencari sebuah nilai dalam array yang telah diurutkan menggunakan algoritma Selection Sort.
